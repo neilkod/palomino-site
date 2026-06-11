@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Palomino — fast RAW photo culling for macOS</title>
+<meta name="description" content="Palomino is a fast, focused RAW photo culling app for macOS. Rate keepers, skip rejects, and hand a tight selection to your editor — as fast as possible.">
+<meta property="og:title" content="Palomino — fast RAW photo culling for macOS">
+<meta property="og:description" content="Rate keepers, skip rejects, and hand a tight selection to your editor — as fast as possible.">
+<meta property="og:image" content="assets/screenshot-preview.jpg">
+<style>
+  :root {
+    --bg: #0d0d0d;
+    --panel: #161616;
+    --text: #e8e8e8;
+    --muted: #9a9a9a;
+    --accent: #F5A623;
+    --border: #2a2a2a;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 24px; }
+  header { padding: 96px 0 56px; text-align: center; }
+  h1 { font-size: 3.2rem; font-weight: 700; letter-spacing: -0.02em; }
+  h1 .accent { color: var(--accent); }
+  .tagline { font-size: 1.35rem; color: var(--muted); margin-top: 12px; }
+  .pitch { max-width: 640px; margin: 24px auto 0; color: var(--text); font-size: 1.05rem; }
+  .cta { margin-top: 36px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 12px 28px; border-radius: 10px;
+    font-weight: 600; text-decoration: none; font-size: 1rem;
+  }
+  .btn-primary { background: var(--accent); color: #161000; }
+  .btn-primary:hover { filter: brightness(1.1); }
+  .btn-secondary { border: 1px solid var(--border); color: var(--text); }
+  .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+  .req { margin-top: 14px; font-size: 0.85rem; color: var(--muted); }
+  section { padding: 48px 0; }
+  .shot { margin: 0 0 56px; }
+  .shot img {
+    width: 100%; border-radius: 12px; border: 1px solid var(--border);
+    display: block; box-shadow: 0 24px 64px rgba(0,0,0,0.5);
+  }
+  .shot figcaption { margin-top: 14px; color: var(--muted); font-size: 0.95rem; text-align: center; max-width: 760px; margin-left: auto; margin-right: auto; }
+  .shot figcaption strong { color: var(--text); }
+  h2 { font-size: 1.6rem; letter-spacing: -0.01em; margin-bottom: 28px; text-align: center; }
+  .features {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+  }
+  .feature {
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: 12px; padding: 22px;
+  }
+  .feature h3 { font-size: 1.02rem; margin-bottom: 8px; }
+  .feature h3 span { color: var(--accent); margin-right: 8px; }
+  .feature p { color: var(--muted); font-size: 0.92rem; }
+  .keys { text-align: center; color: var(--muted); font-size: 0.95rem; }
+  .keys kbd {
+    background: var(--panel); border: 1px solid var(--border); border-bottom-width: 2px;
+    border-radius: 6px; padding: 2px 8px; font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.85rem; color: var(--text);
+  }
+  footer { padding: 56px 0 72px; text-align: center; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); margin-top: 48px; }
+  footer a { color: var(--muted); }
+  @media (max-width: 640px) { h1 { font-size: 2.3rem; } header { padding: 64px 0 40px; } }
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <h1>Palomino<span class="accent">.</span></h1>
+  <p class="tagline">Fast, focused RAW photo culling for macOS.</p>
+  <p class="pitch">Palomino does one thing: get you through a large shoot quickly — rating keepers, skipping rejects — so you can hand a tight selection to your editing software. No editing, no organizing, no cloud sync. Just culling, as fast as possible.</p>
+  <div class="cta">
+    <a class="btn btn-primary" href="https://github.com/neilkod/palomino-site/releases/latest">Download for macOS</a>
+    <a class="btn btn-secondary" href="mailto:nkodner@gmail.com?subject=Palomino">Get in touch</a>
+  </div>
+  <p class="req">Requires macOS 14 Sonoma or later · Apple silicon &amp; Intel</p>
+</header>
+
+<section class="wrap">
+  <figure class="shot">
+    <img src="assets/screenshot-preview.jpg" alt="Palomino preview view with info panel, histogram, and filmstrip">
+    <figcaption><strong>Built for the next photo.</strong> Embedded JPEG previews and a background prefetch window mean the next frame is already in memory before you press the arrow key. Full EXIF, live RGB histogram, and a filmstrip that flags your picks.</figcaption>
+  </figure>
+  <figure class="shot">
+    <img src="assets/screenshot-grid.jpg" alt="Palomino grid view with filter bar and quality badges">
+    <figcaption><strong>Filters define your universe.</strong> One click narrows the shoot to picks, rejects, star ratings, color labels, capture days — even burst groups and out-of-focus shots found by background analysis. Arrow keys navigate only what matches.</figcaption>
+  </figure>
+  <figure class="shot">
+    <img src="assets/screenshot-export.jpg" alt="Palomino export sheet">
+    <figcaption><strong>Hand off and move on.</strong> Export by flag or minimum rating, split high-ISO frames into a denoiser folder, and optionally trash what didn't make the cut — with the exact count shown before anything is touched.</figcaption>
+  </figure>
+</section>
+
+<section class="wrap">
+  <h2>Why it's fast</h2>
+  <div class="features">
+    <div class="feature">
+      <h3><span>⚡︎</span>Embedded previews</h3>
+      <p>Reads the camera-written JPEG preview inside every RAW file instead of decoding sensor data — 10–100× faster, indistinguishable at viewing distance.</p>
+    </div>
+    <div class="feature">
+      <h3><span>⌨</span>Keyboard-first</h3>
+      <p>1–5 to rate, P to pick, X to reject — every action auto-advances. Your hands never leave the keys, and there's an overlay (?) when you forget one.</p>
+    </div>
+    <div class="feature">
+      <h3><span>◎</span>Quality hints</h3>
+      <p>Background analysis flags overexposed, underexposed, and out-of-focus shots, and clusters bursts so you can keep the best frame and reject the rest in one key.</p>
+    </div>
+    <div class="feature">
+      <h3><span>⇆</span>Plays well with others</h3>
+      <p>Ratings and labels are written to standard XMP sidecars, so your work round-trips with any XMP-aware editing tool. Sessions resume instantly where you left off.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap keys">
+  <p><kbd>←</kbd> <kbd>→</kbd> navigate &nbsp; <kbd>1</kbd>–<kbd>5</kbd> rate &nbsp; <kbd>P</kbd> pick &nbsp; <kbd>X</kbd> reject &nbsp; <kbd>G</kbd> grid &nbsp; <kbd>C</kbd> compare &nbsp; <kbd>E</kbd> export</p>
+</section>
+
+<footer>
+  <p class="wrap">© 2026 Neil Kodner. Palomino supports ARW, DNG, NEF, CR3, RAF, ORF, HEIC, JPEG, and 20+ other formats.</p>
+</footer>
+
+</body>
+</html>
