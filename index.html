@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Palomino — fast RAW photo culling for macOS</title>
-<meta name="description" content="Palomino is a fast, focused RAW photo culling app for macOS. Rate keepers, skip rejects, and hand a tight selection to your editor — as fast as possible.">
-<meta property="og:title" content="Palomino — fast RAW photo culling for macOS">
-<meta property="og:description" content="Rate keepers, skip rejects, and hand a tight selection to your editor — as fast as possible.">
+<title>Palomino: fast RAW photo culling for macOS</title>
+<meta name="description" content="Palomino is a fast, focused RAW photo culling app for macOS. Rate the keepers, skip the rejects, and hand a tight selection to your editor.">
+<meta property="og:title" content="Palomino: fast RAW photo culling for macOS">
+<meta property="og:description" content="Rate the keepers, skip the rejects, and hand a tight selection to your editor.">
 <meta property="og:image" content="assets/screenshot-preview.jpg">
 <style>
   :root {
@@ -77,7 +77,7 @@
 <header class="wrap">
   <h1>Palomino<span class="accent">.</span></h1>
   <p class="tagline">Fast, focused RAW photo culling for macOS.</p>
-  <p class="pitch">Palomino does one thing: get you through a large shoot quickly — rating keepers, skipping rejects — so you can hand a tight selection to your editing software. No editing, no organizing, no cloud sync. Just culling, as fast as possible.</p>
+  <p class="pitch">Palomino helps you get through a large shoot quickly. Rate the keepers, skip the rejects, and hand a tight selection to your editing software. It doesn't edit, organize, or sync anything. It makes culling fast, and that's the whole job.</p>
   <div class="cta">
     <a class="btn btn-primary" href="https://github.com/neilkod/palomino-site/releases/latest">Download for macOS</a>
     <a class="btn btn-secondary" href="mailto:nkodner@gmail.com?subject=Palomino">Get in touch</a>
@@ -88,15 +88,15 @@
 <section class="wrap">
   <figure class="shot">
     <img src="assets/screenshot-preview.jpg" alt="Palomino preview view with info panel, histogram, and filmstrip">
-    <figcaption><strong>Built for the next photo.</strong> Embedded JPEG previews and a background prefetch window mean the next frame is already in memory before you press the arrow key. Full EXIF, live RGB histogram, and a filmstrip that flags your picks.</figcaption>
+    <figcaption><strong>Preview view.</strong> The next photo is already in memory before you press the arrow key, because Palomino prefetches ahead of you in the background. The info panel shows full exposure data and a live RGB histogram, and the filmstrip flags your picks.</figcaption>
   </figure>
   <figure class="shot">
     <img src="assets/screenshot-grid.jpg" alt="Palomino grid view with filter bar and quality badges">
-    <figcaption><strong>Filters define your universe.</strong> One click narrows the shoot to picks, rejects, star ratings, color labels, capture days — even burst groups and out-of-focus shots found by background analysis. Arrow keys navigate only what matches.</figcaption>
+    <figcaption><strong>Grid view.</strong> Filters control what the arrow keys see. Narrow the shoot to picks, rejects, star ratings, color labels, or capture days, and navigation skips everything else. Background analysis also finds burst groups and out-of-focus shots, each one a single click to review.</figcaption>
   </figure>
   <figure class="shot">
     <img src="assets/screenshot-export.jpg" alt="Palomino export sheet">
-    <figcaption><strong>Hand off and move on.</strong> Export by flag or minimum rating, split high-ISO frames into a denoiser folder, and optionally trash what didn't make the cut — with the exact count shown before anything is touched.</figcaption>
+    <figcaption><strong>Export.</strong> Copy your selects to a folder by flag or minimum star rating. You can split high-ISO photos into a separate folder for denoising, and optionally move unrated files to the Trash, with the exact count shown before anything happens.</figcaption>
   </figure>
 </section>
 
@@ -105,19 +105,19 @@
   <div class="features">
     <div class="feature">
       <h3><span>⚡︎</span>Embedded previews</h3>
-      <p>Reads the camera-written JPEG preview inside every RAW file instead of decoding sensor data — 10–100× faster, indistinguishable at viewing distance.</p>
+      <p>Palomino reads the JPEG preview your camera already wrote into each RAW file. That's 10 to 100 times faster than decoding the sensor data, and it looks identical at normal viewing size.</p>
     </div>
     <div class="feature">
       <h3><span>⌨</span>Keyboard-first</h3>
-      <p>1–5 to rate, P to pick, X to reject — every action auto-advances. Your hands never leave the keys, and there's an overlay (?) when you forget one.</p>
+      <p>Press 1 through 5 to rate, P to pick, X to reject. Each action advances to the next photo, so you can work through a shoot without touching the mouse. Press ? for the full shortcut list.</p>
     </div>
     <div class="feature">
       <h3><span>◎</span>Quality hints</h3>
-      <p>Background analysis flags overexposed, underexposed, and out-of-focus shots, and clusters bursts so you can keep the best frame and reject the rest in one key.</p>
+      <p>Background analysis flags overexposed, underexposed, and soft photos, and groups burst sequences so you can keep the best frame and reject the rest with one shortcut.</p>
     </div>
     <div class="feature">
-      <h3><span>⇆</span>Plays well with others</h3>
-      <p>Ratings and labels are written to standard XMP sidecars, so your work round-trips with any XMP-aware editing tool. Sessions resume instantly where you left off.</p>
+      <h3><span>⇆</span>Standard sidecars</h3>
+      <p>Ratings and labels are written to standard XMP sidecar files, so they carry over to any editor that reads XMP. Sessions reopen exactly where you left off.</p>
     </div>
   </div>
 </section>

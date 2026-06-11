@@ -6,7 +6,7 @@ Landing page and build distribution for [Palomino](https://neilkod.github.io/pal
 
 ## Publishing a build
 
-Builds are shared as GitHub release assets on **this** repo (not the private app repo — release assets there wouldn't be publicly downloadable). The site's "Download for macOS" button points to `/releases/latest`, so publishing a release makes the button work with no site changes:
+Builds are shared as GitHub release assets on **this** repo, not the private app repo, where release assets wouldn't be publicly downloadable. The site's "Download for macOS" button points to `/releases/latest`, so publishing a release makes the button work with no site changes:
 
 ```sh
 gh release create v0.1 Palomino.dmg --repo neilkod/palomino-site --title "Palomino v0.1"
@@ -22,7 +22,7 @@ gh release upload v0.1 Palomino.dmg --repo neilkod/palomino-site --clobber
 
 ## Updating the site
 
-- Everything is in `index.html` — single file, inline CSS, no build step. Edit, commit, push to `master`; Pages redeploys automatically (~30s).
+- Everything is in `index.html`: single file, inline CSS, no build step. Edit, commit, push to `master`; Pages redeploys automatically (~30s).
 - Pages is configured to serve from `master` branch root. `.nojekyll` disables Jekyll processing.
 
 ## Updating screenshots
