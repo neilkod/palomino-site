@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy – Palomino</title>
+<meta name="description" content="Palomino privacy policy. The app does not collect, transmit, or sell your personal data.">
+<style>
+  :root {
+    --bg: #0d0d0d;
+    --panel: #161616;
+    --text: #e8e8e8;
+    --muted: #9a9a9a;
+    --accent: #F5A623;
+    --border: #2a2a2a;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+  header { padding: 72px 0 40px; }
+  header a { color: var(--muted); text-decoration: none; font-size: 0.9rem; }
+  header a:hover { color: var(--accent); }
+  h1 { font-size: 2.2rem; font-weight: 700; letter-spacing: -0.02em; margin-top: 20px; }
+  .updated { color: var(--muted); font-size: 0.85rem; margin-top: 8px; }
+  .lede { font-size: 1.1rem; color: var(--muted); margin: 24px 0 48px; border-left: 3px solid var(--accent); padding-left: 16px; }
+  section { margin-bottom: 48px; }
+  h2 { font-size: 1.15rem; font-weight: 600; color: var(--accent); margin-bottom: 12px; letter-spacing: -0.01em; }
+  p { color: var(--muted); margin-bottom: 12px; }
+  p:last-child { margin-bottom: 0; }
+  ul { color: var(--muted); padding-left: 1.4em; margin-bottom: 12px; }
+  ul li { margin-bottom: 6px; }
+  a { color: var(--text); }
+  a:hover { color: var(--accent); }
+  footer { padding: 48px 0 64px; text-align: center; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); margin-top: 32px; }
+  footer a { color: var(--muted); }
+  @media (max-width: 640px) { h1 { font-size: 1.8rem; } header { padding: 48px 0 32px; } }
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <a href="index.html">← Palomino</a>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Effective June 12, 2026</p>
+  <p class="lede">Palomino does not collect, transmit, or sell your personal data. All processing happens on your Mac.</p>
+</header>
+
+<main class="wrap">
+
+  <section>
+    <h2>What Palomino stores</h2>
+    <p>Palomino writes data only to your Mac, in three places:</p>
+    <ul>
+      <li><strong>App preferences</strong> — settings like filmstrip position and auto-advance, stored in macOS UserDefaults. These never leave your device.</li>
+      <li><strong>Session files</strong> — a <code>.palomino-session.json</code> file written inside each folder you open, containing the ratings, picks, rejects, and color labels you assigned. This file stays with your photos and is never transmitted anywhere.</li>
+      <li><strong>XMP sidecar files</strong> — standard <code>.xmp</code> files written alongside each photo, containing ratings and labels in a format compatible with Lightroom, Capture One, and other editors. These stay on your disk.</li>
+    </ul>
+    <p>Recent folder history is also stored locally in UserDefaults so the app can show you folders you opened before.</p>
+  </section>
+
+  <section>
+    <h2>Network activity</h2>
+    <p>Palomino makes no network requests except for one: validating an in-app purchase with Apple's App Store. That transaction is handled entirely by Apple's StoreKit framework using your Apple Account credentials. Palomino does not see, store, or transmit your Apple Account information.</p>
+    <p>Apple's privacy policy governs what Apple collects during that transaction: <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a></p>
+  </section>
+
+  <section>
+    <h2>Analytics and tracking</h2>
+    <p>There are none. Palomino contains no analytics libraries, crash reporters, advertising SDKs, or telemetry of any kind. No behavioral data is collected.</p>
+  </section>
+
+  <section>
+    <h2>Third-party services</h2>
+    <p>Palomino has no third-party dependencies. Every framework it uses is from Apple (AppKit, SwiftUI, ImageIO, StoreKit, Accelerate, CoreGraphics, OSLog). No data passes through any third-party service.</p>
+  </section>
+
+  <section>
+    <h2>Your privacy choices</h2>
+    <p>Because Palomino collects no personal data and performs no tracking, there is nothing to opt out of. You can:</p>
+    <ul>
+      <li>Delete session files (<code>.palomino-session.json</code>) from any folder to remove Palomino's records of your ratings for that shoot.</li>
+      <li>Delete XMP sidecar files to remove embedded ratings and labels.</li>
+      <li>Use macOS privacy controls (System Settings &rsaquo; Privacy &amp; Security) to review or revoke Palomino's folder access at any time.</li>
+    </ul>
+    <p>California residents: Palomino does not sell or share personal information as defined by the California Consumer Privacy Act, because no personal information is collected.</p>
+    <p>European residents: No personal data is processed, so GDPR does not apply to Palomino's operation.</p>
+  </section>
+
+  <section>
+    <h2>Children</h2>
+    <p>Palomino does not knowingly collect any information from anyone, including children.</p>
+  </section>
+
+  <section>
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes in a meaningful way, the updated version will be posted here and the effective date above will be updated.</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Questions about privacy? Email <a href="mailto:nkodner@gmail.com">nkodner@gmail.com</a>.</p>
+  </section>
+
+</main>
+
+<footer>
+  <p class="wrap"><a href="index.html">Palomino</a> &nbsp;&middot;&nbsp; &copy; 2026 Neil Kodner</p>
+</footer>
+
+</body>
+</html>
