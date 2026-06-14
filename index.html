@@ -3,13 +3,123 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0d0d0d">
 <title>Palomino: fast RAW photo culling for macOS</title>
-<meta name="description" content="Palomino is a fast, focused RAW photo culling app for macOS. Rate the keepers, skip the rejects, and hand a tight selection to your editor.">
-<meta property="og:title" content="Palomino: fast RAW photo culling for macOS">
-<meta property="og:description" content="Rate the keepers, skip the rejects, and hand a tight selection to your editor.">
-<meta property="og:image" content="assets/screenshot-preview.jpg">
-<meta property="og:url" content="https://palomino-app.com/">
+<meta name="description" content="Palomino is a fast, focused RAW photo culling app for macOS. Rate the keepers, skip the rejects, and hand a tight selection to your editor. Your photos never leave your Mac.">
 <link rel="canonical" href="https://palomino-app.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Palomino">
+<meta property="og:title" content="Palomino: fast RAW photo culling for macOS">
+<meta property="og:description" content="Rate the keepers, skip the rejects, and hand a tight selection to your editor. Your photos never leave your Mac.">
+<meta property="og:url" content="https://palomino-app.com/">
+<meta property="og:image" content="https://palomino-app.com/assets/screenshot-preview.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="800">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Palomino: fast RAW photo culling for macOS">
+<meta name="twitter:description" content="Rate the keepers, skip the rejects, and hand a tight selection to your editor. Your photos never leave your Mac.">
+<meta name="twitter:image" content="https://palomino-app.com/assets/screenshot-preview.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Palomino",
+  "applicationCategory": "PhotographyApplication",
+  "operatingSystem": "macOS 15 Sequoia or later",
+  "description": "Fast, focused RAW photo culling for macOS. Rate the keepers, skip the rejects, and hand a tight selection to your editor. Your photos never leave your Mac.",
+  "url": "https://palomino-app.com/",
+  "image": "https://palomino-app.com/assets/screenshot-preview.jpg",
+  "screenshot": [
+    "https://palomino-app.com/assets/screenshot-preview.jpg",
+    "https://palomino-app.com/assets/screenshot-grid.jpg",
+    "https://palomino-app.com/assets/screenshot-export.jpg"
+  ],
+  "downloadUrl": "https://github.com/neilkod/palomino-site/releases/latest",
+  "featureList": [
+    "Reads embedded JPEG previews from RAW files for fast loading",
+    "Keyboard-first rating, picks, and rejects",
+    "Background quality hints for exposure and focus",
+    "Burst grouping",
+    "Standard XMP sidecar ratings and labels",
+    "Export by flag or minimum star rating",
+    "No accounts or cloud, and your photos never leave your Mac"
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Free",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "Exports up to 50 photos per session"
+    },
+    {
+      "@type": "Offer",
+      "name": "Palomino Pro",
+      "price": "29.99",
+      "priceCurrency": "USD",
+      "description": "One-time purchase that removes the export limit"
+    }
+  ],
+  "author": { "@type": "Person", "name": "Neil Kodner" },
+  "publisher": { "@type": "Person", "name": "Neil Kodner" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Palomino free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Palomino is free to download and use. The free version exports up to 50 photos per session. Palomino Pro removes the export limit for a one-time $29.99 purchase, with no subscription and no recurring charges."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Palomino edit or change my photos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Palomino reads your RAW files to show and rate them, and writes ratings and labels to standard XMP sidecar files. It never alters the original image files."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Palomino send my photos anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Your photos and ratings never leave your Mac. Palomino has no analytics, tracking, or accounts, and the only data that can leave is a debug log, and only if you save it and send it yourself for a bug report."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What RAW formats does Palomino support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Palomino supports ARW, DNG, NEF, CR3, RAF, ORF, HEIC, JPEG, and more than 20 other formats."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do I need to run Palomino?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Palomino requires macOS 15 Sequoia or later and runs on both Apple silicon and Intel Macs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Palomino make culling fast?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Palomino reads the JPEG preview your camera already embedded in each RAW file, which is much faster than decoding the full sensor data, and it prefetches the next photo in the background so navigation feels instant."
+      }
+    }
+  ]
+}
+</script>
 <style>
   :root {
     --bg: #0d0d0d;
@@ -42,6 +152,7 @@
   .btn-primary:hover { filter: brightness(1.1); }
   .btn-secondary { border: 1px solid var(--border); color: var(--text); }
   .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+  a:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
   .req { margin-top: 14px; font-size: 0.85rem; color: var(--muted); }
   section { padding: 48px 0; }
   .shot { margin: 0 0 56px; }
@@ -75,6 +186,11 @@
   .testimonial { display: inline-block; max-width: 560px; width: 100%; }
   .testimonial img { width: 100%; border-radius: 18px; }
   .testimonial figcaption { margin-top: 12px; color: var(--muted); font-size: 0.85rem; }
+  .lead { max-width: 640px; margin: 0 auto 28px; text-align: center; color: var(--text); font-size: 1.05rem; }
+  .faq { max-width: 720px; margin: 0 auto; text-align: left; }
+  .faq h3 { font-size: 1.05rem; margin: 26px 0 6px; }
+  .faq p { color: var(--muted); font-size: 0.95rem; }
+  .faq h3:first-of-type { margin-top: 0; }
   @media (max-width: 640px) { h1 { font-size: 2.3rem; } header { padding: 64px 0 40px; } }
 </style>
 </head>
@@ -140,11 +256,48 @@
   <p><kbd>←</kbd> <kbd>→</kbd> navigate &nbsp; <kbd>1</kbd>–<kbd>5</kbd> rate &nbsp; <kbd>P</kbd> pick &nbsp; <kbd>X</kbd> reject &nbsp; <kbd>G</kbd> grid &nbsp; <kbd>C</kbd> compare &nbsp; <kbd>E</kbd> export</p>
 </section>
 
+<section class="wrap">
+  <h2>Your photos never leave your Mac</h2>
+  <p class="lead">Palomino does its work on your Mac. There are no accounts, no cloud, no analytics, and no tracking, and your photos, ratings, and folders stay on the machine. The only network activity is Apple handling your Pro purchase, which never involves your photos.</p>
+  <div class="features">
+    <div class="feature">
+      <h3><span>⛬</span>Nothing to upload</h3>
+      <p>Palomino ships in the macOS App Sandbox without the network entitlement, so the app cannot upload your photos anywhere. You can verify this yourself in the app's entitlements.</p>
+    </div>
+    <div class="feature">
+      <h3><span>⌂</span>No accounts, no cloud</h3>
+      <p>Nothing to sign up for and nothing synced anywhere. Your ratings are written to standard XMP sidecar files next to your photos, where they stay.</p>
+    </div>
+    <div class="feature">
+      <h3><span>✓</span>You control the only exit</h3>
+      <p>The one piece of data that can ever leave is a debug log, and only when you choose to save it and send it to us for a bug report. Until you do, nothing goes anywhere.</p>
+    </div>
+  </div>
+</section>
+
 <section class="wrap" style="text-align:center; padding-bottom: 16px;">
   <h2>Pricing</h2>
   <p style="color: var(--muted); font-size: 0.95rem; max-width: 580px; margin: 0 auto;">
     Palomino is free to download. The free version exports up to 50 photos per session, which covers most hobbyist shoots without any payment. Palomino Pro removes the export limit for a one-time $29.99 purchase. No subscription, no recurring charges. Upgrade from inside the app under Settings → Pro.
   </p>
+</section>
+
+<section class="wrap">
+  <h2>Frequently asked questions</h2>
+  <div class="faq">
+    <h3>Is Palomino free?</h3>
+    <p>Palomino is free to download and use. The free version exports up to 50 photos per session. Palomino Pro removes the export limit for a one-time $29.99 purchase, with no subscription and no recurring charges.</p>
+    <h3>Does Palomino edit or change my photos?</h3>
+    <p>No. Palomino reads your RAW files to show and rate them, and writes ratings and labels to standard XMP sidecar files. It never alters the original image files.</p>
+    <h3>Does Palomino send my photos anywhere?</h3>
+    <p>No. Your photos and ratings never leave your Mac. Palomino has no analytics, tracking, or accounts, and the only data that can leave is a debug log, and only if you save it and send it yourself for a bug report.</p>
+    <h3>What RAW formats does Palomino support?</h3>
+    <p>Palomino supports ARW, DNG, NEF, CR3, RAF, ORF, HEIC, JPEG, and more than 20 other formats.</p>
+    <h3>What do I need to run Palomino?</h3>
+    <p>Palomino requires macOS 15 Sequoia or later and runs on both Apple silicon and Intel Macs.</p>
+    <h3>How does Palomino make culling fast?</h3>
+    <p>Palomino reads the JPEG preview your camera already embedded in each RAW file, which is much faster than decoding the full sensor data, and it prefetches the next photo in the background so navigation feels instant.</p>
+  </div>
 </section>
 
 <footer>

@@ -1,0 +1,47 @@
+# Palomino
+
+> Palomino is a fast, focused RAW photo culling app for macOS. You rate the keepers, skip the rejects, and hand a tight selection to your editor. It does not edit, organize, or sync anything. It makes culling fast, and that is the whole job. Everything runs on your Mac, so your photos never leave the machine.
+
+Palomino is a native macOS app for photographers who need to get through a large RAW shoot quickly. It reads the JPEG preview embedded in each RAW file instead of decoding the full sensor data, which is much faster, and it prefetches the next photo in the background so navigation feels instant. Ratings and labels are written to standard XMP sidecar files, so they carry over to any editor that reads XMP.
+
+## Pricing
+
+- Free to download and use. The free version exports up to 50 photos per session.
+- Palomino Pro removes the export limit for a one-time $29.99 purchase. No subscription, no recurring charges. Upgrade inside the app under Settings then Pro.
+
+## Download and requirements
+
+- Download: https://github.com/neilkod/palomino-site/releases/latest
+- Requires macOS 15 Sequoia or later.
+- Runs on both Apple silicon and Intel Macs.
+
+## Privacy
+
+Palomino runs on your Mac. It ships in the macOS App Sandbox without the network entitlement, so the app cannot upload your files. There are no accounts, no cloud, no analytics, and no tracking, and your photos, ratings, and folder names never leave the machine. The only data that can ever leave is a debug log, and only when you choose to save it and send it for a bug report. The Pro purchase is handled by Apple through StoreKit, not by a Palomino server, and never involves your photos.
+
+## Key features
+
+- Reads embedded JPEG previews from RAW files, which is 10 to 100 times faster than decoding the sensor data.
+- Keyboard-first workflow: 1 to 5 to rate, P to pick, X to reject, and each action advances to the next photo.
+- Background quality hints flag overexposed, underexposed, and soft photos, and group burst sequences.
+- Filters control what the arrow keys see: picks, rejects, star ratings, color labels, or capture days.
+- Standard XMP sidecar files for ratings and labels, so they carry into any XMP-aware editor.
+- Export by flag or minimum star rating, with an option to split high-ISO photos into a separate folder for denoising.
+- Sessions reopen exactly where you left off.
+
+## Supported formats
+
+ARW, DNG, NEF, CR3, RAF, ORF, HEIC, JPEG, and more than 20 other formats.
+
+## Frequently asked questions
+
+- Is Palomino free? Yes, it is free to download and exports up to 50 photos per session. Pro removes the limit for a one-time $29.99 purchase.
+- Does Palomino edit my photos? No. It writes ratings and labels to XMP sidecar files and never alters the original image files.
+- Does Palomino send my photos anywhere? No. Your photos never leave your Mac and the app cannot upload them. The only thing that can leave is a debug log you save and send yourself.
+- How does Palomino make culling fast? It reads the embedded JPEG preview instead of decoding the full RAW, and prefetches the next photo in the background.
+
+## Links
+
+- Homepage: https://palomino-app.com/
+- Download: https://github.com/neilkod/palomino-site/releases/latest
+- Privacy policy: https://palomino-app.com/privacy.html
