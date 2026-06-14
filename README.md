@@ -1,8 +1,8 @@
 # palomino-site
 
-Landing page and build distribution for [Palomino](https://neilkod.github.io/palomino-site/), a fast RAW photo culling app for macOS. The app source lives in the private `neilkod/palomino` repo; this repo is public so GitHub Pages can serve the site and releases can host builds.
+Landing page and build distribution for [Palomino](https://palomino-app.com/), a fast RAW photo culling app for macOS. The app source lives in the private `neilkod/palomino` repo; this repo is public so GitHub Pages can serve the site and releases can host builds.
 
-**Live site:** https://neilkod.github.io/palomino-site/
+**Live site:** https://palomino-app.com/
 
 ## Publishing a build
 
