@@ -34,7 +34,6 @@
     "https://palomino-app.com/assets/screenshot-grid.jpg",
     "https://palomino-app.com/assets/screenshot-export.jpg"
   ],
-  "downloadUrl": "https://github.com/neilkod/palomino-site/releases/latest",
   "featureList": [
     "Reads embedded JPEG previews from RAW files for fast loading",
     "Keyboard-first rating, picks, and rejects",
@@ -74,7 +73,7 @@
       "name": "Is Palomino free?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Palomino is free to download and use. The free version exports up to 50 photos per session. Palomino Pro removes the export limit for a one-time $29.99 purchase, with no subscription and no recurring charges."
+        "text": "Palomino will be free to download and use. The free version exports up to 50 photos per session. Palomino Pro removes the export limit for a one-time $29.99 purchase, with no subscription and no recurring charges."
       }
     },
     {
@@ -98,7 +97,7 @@
       "name": "What RAW formats does Palomino support?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Palomino supports ARW, DNG, NEF, CR3, RAF, ORF, HEIC, JPEG, and more than 20 other formats."
+        "text": "Palomino supports ARW, DNG, 3FR, NEF, CR3, RAF, ORF, HEIC, JPEG, and more than 20 other formats."
       }
     },
     {
@@ -150,6 +149,7 @@
   }
   .btn-primary { background: var(--accent); color: #161000; }
   .btn-primary:hover { filter: brightness(1.1); }
+  .btn-coming-soon { appearance: none; -webkit-appearance: none; border: 0; font-family: inherit; background: var(--border); color: var(--muted); cursor: default; }
   .btn-secondary { border: 1px solid var(--border); color: var(--text); }
   .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
   a:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
@@ -201,11 +201,11 @@
   <p class="tagline">Fast, focused RAW photo culling for macOS.</p>
   <p class="pitch">Palomino helps you get through a large shoot quickly. Rate the keepers, skip the rejects, and hand a tight selection to your editing software. It doesn't edit, organize, or sync anything. It makes culling fast, and that's the whole job.</p>
   <div class="cta">
-    <a class="btn btn-primary" href="https://github.com/neilkod/palomino-site/releases/latest">Download for macOS</a>
+    <button class="btn btn-coming-soon" type="button" disabled>Coming soon</button>
     <a class="btn btn-secondary" href="mailto:&#110;&#107;&#111;&#100;&#110;&#101;&#114;&#064;&#103;&#109;&#97;&#105;&#108;&#046;&#99;&#111;&#109;?subject=Palomino">Get in touch</a>
   </div>
   <p class="req">Requires macOS 15 Sequoia or later · Apple silicon &amp; Intel</p>
-  <p class="req" style="margin-top:6px">Free to download. Exports up to 50 photos per session. Palomino Pro removes the limit for a one-time $29.99 purchase.</p>
+  <p class="req" style="margin-top:6px">Palomino will be free to download, with exports up to 50 photos per session. Palomino Pro removes the limit for a one-time $29.99 purchase.</p>
 </header>
 
 <section class="wrap testimonial-wrap">
@@ -278,7 +278,7 @@
 <section class="wrap" style="text-align:center; padding-bottom: 16px;">
   <h2>Pricing</h2>
   <p style="color: var(--muted); font-size: 0.95rem; max-width: 580px; margin: 0 auto;">
-    Palomino is free to download. The free version exports up to 50 photos per session, which covers most hobbyist shoots without any payment. Palomino Pro removes the export limit for a one-time $29.99 purchase. No subscription, no recurring charges. Upgrade from inside the app under Settings → Pro.
+    Palomino will be free to download. The free version exports up to 50 photos per session, which covers most hobbyist shoots without any payment. Palomino Pro removes the export limit for a one-time $29.99 purchase. No subscription, no recurring charges. You'll upgrade from inside the app under Settings → Pro.
   </p>
 </section>
 
@@ -286,13 +286,13 @@
   <h2>Frequently asked questions</h2>
   <div class="faq">
     <h3>Is Palomino free?</h3>
-    <p>Palomino is free to download and use. The free version exports up to 50 photos per session. Palomino Pro removes the export limit for a one-time $29.99 purchase, with no subscription and no recurring charges.</p>
+    <p>Palomino will be free to download and use. The free version exports up to 50 photos per session. Palomino Pro removes the export limit for a one-time $29.99 purchase, with no subscription and no recurring charges.</p>
     <h3>Does Palomino edit or change my photos?</h3>
     <p>No. Palomino reads your RAW files to show and rate them, and writes ratings and labels to standard XMP sidecar files. It never alters the original image files.</p>
     <h3>Does Palomino send my photos anywhere?</h3>
     <p>No. Your photos and ratings never leave your Mac. Palomino has no analytics, tracking, or accounts, and the only data that can leave is a debug log, and only if you save it and send it yourself for a bug report.</p>
     <h3>What RAW formats does Palomino support?</h3>
-    <p>Palomino supports ARW, DNG, NEF, CR3, RAF, ORF, HEIC, JPEG, and more than 20 other formats.</p>
+    <p>Palomino supports ARW, DNG, 3FR, NEF, CR3, RAF, ORF, HEIC, JPEG, and more than 20 other formats.</p>
     <h3>What do I need to run Palomino?</h3>
     <p>Palomino requires macOS 15 Sequoia or later and runs on both Apple silicon and Intel Macs.</p>
     <h3>How does Palomino make culling fast?</h3>
@@ -301,7 +301,7 @@
 </section>
 
 <footer>
-  <p class="wrap">© 2026 Neil Kodner. Palomino supports ARW, DNG, NEF, CR3, RAF, ORF, HEIC, JPEG, and 20+ other formats.</p>
+  <p class="wrap">© 2026 Neil Kodner. Palomino supports ARW, DNG, 3FR, NEF, CR3, RAF, ORF, HEIC, JPEG, and 20+ other formats.</p>
   <p class="wrap" style="margin-top:10px"><a href="privacy.html">Privacy Policy</a></p>
 </footer>
 
