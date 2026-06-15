@@ -40,6 +40,10 @@ ARW, DNG, NEF, CR3, RAF, ORF, HEIC, JPEG, and more than 20 other formats.
 - Does Palomino send my photos anywhere? No. Your photos never leave your Mac and the app cannot upload them. The only thing that can leave is a debug log you save and send yourself.
 - How does Palomino make culling fast? It reads the embedded JPEG preview instead of decoding the full RAW, and prefetches the next photo in the background.
 
+## For Hasselblad shooters
+
+Palomino reads Hasselblad 3FR and FFF files directly using the embedded JPEG preview, so you can cull thousands of frames fast and then hand your keepers to Phocus to develop. It complements Phocus rather than replacing it: cull in Palomino, export the keepers to a folder, open that folder in Phocus. Details: https://palomino-app.com/hasselblad/
+
 ## Links
 
 - Homepage: https://palomino-app.com/
