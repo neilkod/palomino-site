@@ -36,11 +36,15 @@
   ],
   "featureList": [
     "Reads embedded JPEG previews from RAW files for fast loading",
-    "Keyboard-first rating, picks, and rejects",
+    "Keyboard-first rating, picks, color labels, and rejects",
     "Background quality hints for exposure and focus",
-    "Burst grouping",
+    "Burst grouping with a best-of-burst suggestion",
+    "Face detection with a closed-eye flag and face-priority zoom",
+    "Named export presets",
+    "Session stats with a culling rate",
+    "Light, dark, or system appearance",
     "Standard XMP sidecar ratings and labels",
-    "Export by flag or minimum star rating",
+    "Export by flag or minimum star rating, with a high-ISO split",
     "No accounts or cloud, and your photos never leave your Mac"
   ],
   "offers": [
@@ -217,8 +221,8 @@
 
 <section class="wrap">
   <figure class="shot">
-    <img src="assets/screenshot-preview.jpg" loading="lazy" alt="Palomino preview view with info panel, histogram, and filmstrip">
-    <figcaption><strong>Preview view.</strong> The next photo is already in memory before you press the arrow key, because Palomino prefetches ahead of you in the background. The info panel shows full exposure data and a live RGB histogram, and the filmstrip flags your picks.</figcaption>
+    <img src="assets/screenshot-preview.jpg" loading="lazy" alt="Palomino preview view with info panel and filmstrip">
+    <figcaption><strong>Preview view.</strong> The next photo is already in memory before you press the arrow key, because Palomino prefetches ahead of you in the background. The info panel shows the camera, lens, and full exposure data, and the filmstrip flags your picks.</figcaption>
   </figure>
   <figure class="shot">
     <img src="assets/screenshot-grid.jpg" loading="lazy" alt="Palomino grid view with filter bar and quality badges">
@@ -226,7 +230,7 @@
   </figure>
   <figure class="shot">
     <img src="assets/screenshot-export.jpg" loading="lazy" alt="Palomino export sheet">
-    <figcaption><strong>Export.</strong> Copy your selects to a folder by flag or minimum star rating. You can split high-ISO photos into a separate folder for denoising, and optionally move unrated files to the Trash, with the exact count shown before anything happens.</figcaption>
+    <figcaption><strong>Export.</strong> Copy your selects to a folder by flag or minimum star rating, and save the settings you reuse as named presets. You can split high-ISO photos into a separate folder for denoising, and optionally move unrated files to the Trash, with the exact count shown before anything happens.</figcaption>
   </figure>
 </section>
 
@@ -243,7 +247,7 @@
     </div>
     <div class="feature">
       <h3><span>◎</span>Quality hints</h3>
-      <p>Background analysis flags overexposed, underexposed, and soft photos, and groups burst sequences so you can keep the best frame and reject the rest with one shortcut.</p>
+      <p>Background analysis flags overexposed, underexposed, soft, and closed-eye photos, and groups burst sequences, so the work of a first pass is already done when you open the folder.</p>
     </div>
     <div class="feature">
       <h3><span>⇆</span>Standard sidecars</h3>
@@ -252,8 +256,30 @@
   </div>
 </section>
 
+<section class="wrap">
+  <h2>Tools for culling at volume</h2>
+  <div class="features">
+    <div class="feature">
+      <h3><span>♕</span>Best of a burst</h3>
+      <p>Palomino ranks the frames in a burst by sharpness and marks the suggested keeper with a crown. With the reject-others shortcut, you keep the crowned frame and reject the rest of the burst in two keys.</p>
+    </div>
+    <div class="feature">
+      <h3><span>⊙</span>Face-priority zoom</h3>
+      <p>Press V to zoom straight to the largest face at 300 percent, so checking eyes and focus takes one key. A badge flags photos where someone blinked.</p>
+    </div>
+    <div class="feature">
+      <h3><span>◧</span>Color labels and filters</h3>
+      <p>Press 6 through 9 to set a red, yellow, green, or blue label. Filters then narrow the arrow keys to picks, ratings, labels, bursts, or capture days, and skip everything else.</p>
+    </div>
+    <div class="feature">
+      <h3><span>∑</span>Session stats</h3>
+      <p>A session summary shows your total time, photos per minute, and the spread of ratings, so you can see how the cull went and where your time was spent.</p>
+    </div>
+  </div>
+</section>
+
 <section class="wrap keys">
-  <p><kbd>←</kbd> <kbd>→</kbd> move &nbsp; <kbd>1</kbd>–<kbd>5</kbd> rate &nbsp; <kbd>P</kbd> pick &nbsp; <kbd>X</kbd> reject &nbsp; <kbd>G</kbd> grid &nbsp; <kbd>C</kbd> compare &nbsp; <kbd>E</kbd> export</p>
+  <p><kbd>←</kbd> <kbd>→</kbd> move &nbsp; <kbd>1</kbd>–<kbd>5</kbd> rate &nbsp; <kbd>P</kbd> pick &nbsp; <kbd>X</kbd> reject &nbsp; <kbd>V</kbd> face zoom &nbsp; <kbd>G</kbd> grid &nbsp; <kbd>C</kbd> compare &nbsp; <kbd>E</kbd> export</p>
 </section>
 
 <section class="wrap">
@@ -262,7 +288,7 @@
   <div class="features">
     <div class="feature">
       <h3><span>⛬</span>Nothing to upload</h3>
-      <p>Palomino ships in the macOS App Sandbox without the network entitlement, so the app cannot upload your photos anywhere. You can verify this yourself in the app's entitlements.</p>
+      <p>Palomino runs in the macOS App Sandbox and has no analytics, no tracking, and no third-party SDKs. It never sends your photos or ratings anywhere.</p>
     </div>
     <div class="feature">
       <h3><span>⌂</span>No accounts, no cloud</h3>
