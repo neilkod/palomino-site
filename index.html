@@ -207,7 +207,7 @@
   <p class="tagline">Fast, focused RAW photo culling for macOS.</p>
   <p class="pitch">Palomino helps you get through a large shoot quickly. Rate the keepers, skip the rejects, and hand a tight selection to your editing software. It doesn't edit, organize, or sync anything. It makes culling fast, and that's the whole job.</p>
   <div class="cta">
-    <a class="btn btn-cta" href="https://apps.apple.com/us/app/palomino/id6779869483?mt=12" target="_blank" rel="noopener">Download now</a>
+    <a id="appstore-link" class="btn btn-cta" href="https://apps.apple.com/us/app/palomino/id6779869483?mt=12" target="_blank" rel="noopener">Download now</a>
     <a class="btn btn-secondary" href="mailto:&#110;&#107;&#111;&#100;&#110;&#101;&#114;&#064;&#103;&#109;&#97;&#105;&#108;&#046;&#99;&#111;&#109;?subject=Palomino">Get in touch</a>
   </div>
   <p class="req">Requires macOS 15 Sequoia or later · Apple silicon &amp; Intel</p>
@@ -332,6 +332,21 @@
   <p class="wrap">© 2026 Neil Kodner. Palomino supports ARW, DNG, 3FR, NEF, CR3, RAF, ORF, HEIC, JPEG, and 20+ other formats.</p>
   <p class="wrap" style="margin-top:10px"><a href="/hasselblad/">Shooting Hasselblad?</a> &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy Policy</a></p>
 </footer>
+
+<script>
+  (function () {
+    var isMac = /Mac/.test(navigator.platform || navigator.userAgent);
+    var isTouch = navigator.maxTouchPoints > 1;
+    if (!isMac || isTouch) return;
+    var link = document.getElementById("appstore-link");
+    if (!link) return;
+    link.addEventListener("click", function (e) {
+      if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      e.preventDefault();
+      window.location.href = link.href.replace(/^https:\/\//, "macappstore://");
+    });
+  })();
+</script>
 
 </body>
 </html>
