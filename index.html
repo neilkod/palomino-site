@@ -130,6 +130,7 @@
     --text: #e8e8e8;
     --muted: #9a9a9a;
     --accent: #F5A623;
+    --cta: #0A84FF;
     --border: #2a2a2a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -153,7 +154,8 @@
   }
   .btn-primary { background: var(--accent); color: #161000; }
   .btn-primary:hover { filter: brightness(1.1); }
-  .btn-coming-soon { appearance: none; -webkit-appearance: none; border: 0; font-family: inherit; background: var(--border); color: var(--muted); cursor: default; }
+  .btn-cta { background: var(--cta); color: #fff; }
+  .btn-cta:hover { filter: brightness(1.1); }
   .btn-secondary { border: 1px solid var(--border); color: var(--text); }
   .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
   a:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
@@ -205,7 +207,7 @@
   <p class="tagline">Fast, focused RAW photo culling for macOS.</p>
   <p class="pitch">Palomino helps you get through a large shoot quickly. Rate the keepers, skip the rejects, and hand a tight selection to your editing software. It doesn't edit, organize, or sync anything. It makes culling fast, and that's the whole job.</p>
   <div class="cta">
-    <button class="btn btn-coming-soon" type="button" disabled>Coming soon</button>
+    <a class="btn btn-cta" href="https://apps.apple.com/us/app/palomino/id6779869483?mt=12" target="_blank" rel="noopener">Download now</a>
     <a class="btn btn-secondary" href="mailto:&#110;&#107;&#111;&#100;&#110;&#101;&#114;&#064;&#103;&#109;&#97;&#105;&#108;&#046;&#99;&#111;&#109;?subject=Palomino">Get in touch</a>
   </div>
   <p class="req">Requires macOS 15 Sequoia or later · Apple silicon &amp; Intel</p>
