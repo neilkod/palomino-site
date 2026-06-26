@@ -1,0 +1,116 @@
+/* Palomino marketing site, shared stylesheet.
+   Single source of truth for the visual system. Three layers:
+   1. Universal core: design tokens, reset, body base, focus ring.
+   2. Marketing layout under .marketing (index.html, hasselblad/index.html).
+   3. Legal layout under .legal (privacy.html).
+   Each page matches only its own scope plus the core, so the two layouts
+   never inherit from each other. */
+
+/* 1. Universal core */
+:root {
+  --bg: #0d0d0d;
+  --panel: #161616;
+  --text: #e8e8e8;
+  --muted: #9a9a9a;
+  --accent: #F5A623;
+  --cta: #0A84FF;
+  --border: #2a2a2a;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+/* 2. Marketing layout */
+.marketing { line-height: 1.6; }
+.marketing .wrap { max-width: 980px; margin: 0 auto; padding: 0 24px; }
+.marketing header { padding: 96px 0 56px; text-align: center; }
+.marketing h1 { font-size: 3.2rem; font-weight: 700; letter-spacing: -0.02em; }
+.marketing h1 .accent { color: var(--accent); }
+.marketing .tagline { font-size: 1.35rem; color: var(--muted); margin-top: 12px; }
+.marketing .pitch { max-width: 640px; margin: 24px auto 0; color: var(--text); font-size: 1.05rem; }
+.marketing .cta { margin-top: 36px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.marketing .btn {
+  display: inline-block; padding: 12px 28px; border-radius: 10px;
+  font-weight: 600; text-decoration: none; font-size: 1rem;
+}
+.marketing .btn-primary { background: var(--accent); color: #161000; }
+.marketing .btn-primary:hover { filter: brightness(1.1); }
+.marketing .btn-coming-soon { appearance: none; -webkit-appearance: none; border: 0; font-family: inherit; background: var(--border); color: var(--muted); cursor: default; }
+.marketing .btn-cta { background: var(--cta); color: #fff; }
+.marketing .btn-cta:hover { filter: brightness(1.1); }
+.marketing .btn-secondary { border: 1px solid var(--border); color: var(--text); }
+.marketing .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+.marketing .badge-row { margin-top: 18px; text-align: center; }
+.marketing .appstore-badge { height: 40px; width: auto; display: inline-block; }
+.marketing .appstore-badge:hover { filter: brightness(1.1); }
+.marketing .req { margin-top: 14px; font-size: 0.85rem; color: var(--muted); }
+.marketing section { padding: 48px 0; }
+.marketing .shot { margin: 0 0 56px; }
+.marketing .shot img {
+  width: 100%; border-radius: 12px; border: 1px solid var(--border);
+  display: block; box-shadow: 0 24px 64px rgba(0,0,0,0.5);
+}
+.marketing .shot figcaption { margin-top: 14px; color: var(--muted); font-size: 0.95rem; text-align: center; max-width: 760px; margin-left: auto; margin-right: auto; }
+.marketing .shot figcaption strong { color: var(--text); }
+.marketing h2 { font-size: 1.6rem; letter-spacing: -0.01em; margin-bottom: 28px; text-align: center; }
+.marketing .features {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+.marketing .feature {
+  background: var(--panel); border: 1px solid var(--border);
+  border-radius: 12px; padding: 22px;
+}
+.marketing .feature h3 { font-size: 1.02rem; margin-bottom: 8px; }
+.marketing .feature h3 span { color: var(--accent); margin-right: 8px; }
+.marketing .feature p { color: var(--muted); font-size: 0.92rem; }
+.marketing .keys { text-align: center; color: var(--muted); font-size: 0.95rem; }
+.marketing .keys kbd {
+  background: var(--panel); border: 1px solid var(--border); border-bottom-width: 2px;
+  border-radius: 6px; padding: 2px 8px; font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.85rem; color: var(--text);
+}
+.marketing footer { padding: 56px 0 72px; text-align: center; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); margin-top: 48px; }
+.marketing footer a { color: var(--muted); }
+.marketing .testimonial-wrap { padding: 0 0 64px; text-align: center; }
+.marketing .testimonial { display: inline-block; max-width: 560px; width: 100%; }
+.marketing .testimonial img { width: 100%; border-radius: 18px; }
+.marketing .testimonial figcaption { margin-top: 12px; color: var(--muted); font-size: 0.85rem; }
+.marketing .lead { max-width: 640px; margin: 0 auto 28px; text-align: center; color: var(--text); font-size: 1.05rem; }
+.marketing .faq { max-width: 720px; margin: 0 auto; text-align: left; }
+.marketing .faq h3 { font-size: 1.05rem; margin: 26px 0 6px; }
+.marketing .faq p { color: var(--muted); font-size: 0.95rem; }
+.marketing .faq h3:first-of-type { margin-top: 0; }
+
+/* 3. Legal layout */
+.legal { line-height: 1.7; }
+.legal .wrap { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+.legal header { padding: 72px 0 40px; }
+.legal header a { color: var(--muted); text-decoration: none; font-size: 0.9rem; }
+.legal header a:hover { color: var(--accent); }
+.legal h1 { font-size: 2.2rem; font-weight: 700; letter-spacing: -0.02em; margin-top: 20px; }
+.legal .updated { color: var(--muted); font-size: 0.85rem; margin-top: 8px; }
+.legal .lede { font-size: 1.1rem; color: var(--muted); margin: 24px 0 48px; border-left: 3px solid var(--accent); padding-left: 16px; }
+.legal section { margin-bottom: 48px; }
+.legal h2 { font-size: 1.15rem; font-weight: 600; color: var(--accent); margin-bottom: 12px; letter-spacing: -0.01em; }
+.legal p { color: var(--muted); margin-bottom: 12px; }
+.legal p:last-child { margin-bottom: 0; }
+.legal ul { color: var(--muted); padding-left: 1.4em; margin-bottom: 12px; }
+.legal ul li { margin-bottom: 6px; }
+.legal a { color: var(--text); }
+.legal a:hover { color: var(--accent); }
+.legal footer { padding: 48px 0 64px; text-align: center; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); margin-top: 32px; }
+.legal footer a { color: var(--muted); }
+
+/* Mobile breakpoint */
+@media (max-width: 640px) {
+  .marketing h1 { font-size: 2.3rem; }
+  .marketing header { padding: 64px 0 40px; }
+  .legal h1 { font-size: 1.8rem; }
+  .legal header { padding: 48px 0 32px; }
+}
