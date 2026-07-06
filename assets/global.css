@@ -13,7 +13,6 @@
   --text: #e8e8e8;
   --muted: #9a9a9a;
   --accent: #F5A623;
-  --cta: #0A84FF;
   --border: #2a2a2a;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -41,8 +40,6 @@ a:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-
 .marketing .btn-primary { background: var(--accent); color: #161000; }
 .marketing .btn-primary:hover { filter: brightness(1.1); }
 .marketing .btn-coming-soon { appearance: none; -webkit-appearance: none; border: 0; font-family: inherit; background: var(--border); color: var(--muted); cursor: default; }
-.marketing .btn-cta { background: var(--cta); color: #fff; }
-.marketing .btn-cta:hover { filter: brightness(1.1); }
 .marketing .btn-secondary { border: 1px solid var(--border); color: var(--text); }
 .marketing .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
 .marketing .badge-row { margin-top: 18px; text-align: center; }
