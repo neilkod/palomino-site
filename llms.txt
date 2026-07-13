@@ -11,7 +11,7 @@ Palomino is a native macOS app for photographers who need to get through a large
 
 ## Download and requirements
 
-- Download: https://github.com/neilkod/palomino-site/releases/latest
+- Download on the Mac App Store: https://apps.apple.com/us/app/palomino/id6779869483?mt=12
 - Requires macOS 15 Sequoia or later.
 - Runs on both Apple silicon and Intel Macs.
 
@@ -50,5 +50,5 @@ Palomino reads Hasselblad 3FR and FFF files directly using the embedded JPEG pre
 ## Links
 
 - Homepage: https://palomino-app.com/
-- Download: https://github.com/neilkod/palomino-site/releases/latest
+- Download on the Mac App Store: https://apps.apple.com/us/app/palomino/id6779869483?mt=12
 - Privacy policy: https://palomino-app.com/privacy.html
