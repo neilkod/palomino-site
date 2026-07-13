@@ -17,7 +17,7 @@ Palomino is a native macOS app for photographers who need to get through a large
 
 ## Privacy
 
-Palomino runs on your Mac. It is sandboxed by macOS and uses no third-party SDKs or trackers. There are no accounts, no cloud, no analytics, and no tracking, and your photos, ratings, and folder names never leave the machine. The only data that can ever leave is a debug log, and only when you choose to save it and send it for a bug report. The Pro purchase is handled by Apple through StoreKit, not by a Palomino server, and never involves your photos.
+Palomino the app runs on your Mac. It is sandboxed by macOS and uses no third-party SDKs or trackers. There are no accounts, no cloud, no analytics, and no tracking, and your photos, ratings, and folder names never leave the machine. The only data that can ever leave is a debug log, and only when you choose to save it and send it for a bug report. The Pro purchase is handled by Apple through StoreKit, not by a Palomino server, and never involves your photos. The palomino-app.com website separately uses Cloudflare Web Analytics to measure page views; see the privacy policy for details.
 
 ## Key features
 
@@ -40,7 +40,7 @@ ARW, DNG, NEF, CR3, RAF, ORF, HEIC, JPEG, and more than 20 other formats.
 
 - Is Palomino free? Yes, it is free to download and exports up to 50 photos per session. Pro removes the limit for a one-time $29.99 purchase.
 - Does Palomino edit my photos? No. It writes ratings and labels to XMP sidecar files and never alters the original image files.
-- Does Palomino send my photos anywhere? No. Your photos and ratings never leave your Mac, and Palomino has no analytics or trackers. The only thing that can leave is a debug log you save and send yourself.
+- Does Palomino send my photos anywhere? No. Your photos and ratings never leave your Mac, and the app itself has no analytics or trackers. The only thing that can leave is a debug log you save and send yourself.
 - How does Palomino make culling fast? It reads the embedded JPEG preview instead of decoding the full RAW, and prefetches the next photo in the background.
 
 ## For Hasselblad shooters
