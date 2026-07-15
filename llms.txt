@@ -47,6 +47,10 @@ ARW, DNG, NEF, CR3, RAF, ORF, HEIC, JPEG, and more than 20 other formats.
 
 Palomino reads Hasselblad 3FR and FFF files directly using the embedded JPEG preview, so you can cull thousands of frames fast and then hand your keepers to Phocus to develop. It complements Phocus rather than replacing it: cull in Palomino, export the keepers to a folder, open that folder in Phocus. With Phocus sidecars turned on in Settings, exporting a 3FR file also writes a Phocus sidecar so your star rating appears in Phocus. Details: https://palomino-app.com/hasselblad/
 
+## For Fujifilm shooters
+
+Palomino reads Fujifilm RAF files directly using the embedded JPEG preview, which the camera renders with your film simulation, so you cull with the look you shot: Classic Chrome stays Classic Chrome. It handles X series and GFX files with the same speed; a 102 megapixel GFX frame browses as quickly as anything else because Palomino never decodes the sensor data. Cull before import so Lightroom or Capture One only ever builds previews for your keepers. Details: https://palomino-app.com/fuji/
+
 ## Links
 
 - Homepage: https://palomino-app.com/

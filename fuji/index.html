@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0d0d0d">
+<meta name="robots" content="index, follow">
+<title>Cull Fujifilm shoots fast, before Lightroom imports them | Palomino</title>
+<meta name="description" content="Palomino is a fast culling app for macOS that reads the JPEG preview inside every RAF file, film simulation included. Cull thousands of Fujifilm frames in minutes, from X-T5 bursts to 100-megapixel GFX shoots, and import only the keepers.">
+<link rel="canonical" href="https://palomino-app.com/fuji/">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/assets/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Palomino">
+<meta property="og:title" content="Cull Fujifilm shoots fast, before Lightroom imports them | Palomino">
+<meta property="og:description" content="Move through thousands of RAF files in minutes, then send your keepers to Lightroom or Capture One.">
+<meta property="og:url" content="https://palomino-app.com/fuji/">
+<meta property="og:image" content="https://palomino-app.com/assets/screenshot-preview.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="800">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cull Fujifilm shoots fast, before Lightroom imports them | Palomino">
+<meta name="twitter:description" content="Move through thousands of RAF files in minutes, then send your keepers to Lightroom or Capture One.">
+<meta name="twitter:image" content="https://palomino-app.com/assets/screenshot-preview.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Why is Lightroom slow with RAF files?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Lightroom decodes the full sensor data and builds previews for every imported frame. X-Trans demosaicing is demanding at 40 megapixels, and 102 megapixel GFX files are large on top of that, so importing a full card takes a long time. Culling before import with a preview-based tool like Palomino means Lightroom only ever does that work for your keepers." } },
+    { "@type": "Question", "name": "Does Palomino show my film simulation?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The preview embedded in a RAF is rendered by the camera with the film simulation you shot, and that preview is exactly what Palomino displays. Classic Chrome, Velvia, Acros, and every other simulation appear as you set them." } },
+    { "@type": "Question", "name": "Does Palomino work with GFX files?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Palomino reads the embedded preview, so a 102 megapixel GFX frame browses as quickly as a 26 megapixel X series frame. File size affects copying and storage, not culling speed." } },
+    { "@type": "Question", "name": "Is the preview full resolution?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No, and no culling tool that reads embedded previews shows the full pixel grid. The preview is the JPEG your camera rendered into the file, which is plenty for judging composition, exposure, expressions, and focus at normal magnifications. Pixel-level inspection belongs in your editor, on the keepers." } },
+    { "@type": "Question", "name": "Which Fujifilm cameras does it work with?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Palomino works with any camera that writes RAF files, from the X100 series and X-T line to the GFX medium format bodies." } }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Palomino", "item": "https://palomino-app.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Fujifilm culling" }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/assets/global.css">
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "3b5cef76a9524b47889d1e8b460025d5"}'></script>
+</head>
+<body class="marketing">
+<header class="wrap">
+  <nav aria-label="Breadcrumb" style="text-align:center; margin-bottom:28px; font-size:0.95rem; color:var(--muted);"><a href="/" style="color:var(--text); font-weight:700; text-decoration:none;">Palomino<span class="accent">.</span></a> <span aria-hidden="true">&rsaquo;</span> Fujifilm culling</nav>
+  <h1>Cull your Fujifilm shoot before Lightroom sees it<span class="accent">.</span></h1>
+  <p class="tagline">Palomino moves you through a big RAF shoot in minutes.</p>
+  <p class="pitch">Palomino is a fast, focused culling app for macOS. It reads the JPEG preview embedded in every Fujifilm RAF file, so you move through thousands of frames without waiting on a single RAW to decode. Rate the keepers, skip the rest, and hand a tight selection to Lightroom or Capture One. Your photos never leave your Mac.</p>
+  <div class="badge-row"><a class="js-appstore-link" href="https://apps.apple.com/us/app/palomino/id6779869483?mt=12" target="_blank" rel="noopener"><img class="appstore-badge" src="/assets/download-on-the-mac-app-store.svg" alt="Download Palomino on the Mac App Store" width="156" height="40"></a></div>
+  <p class="req">Palomino is free to download, with exports up to 50 photos per session. Palomino Pro removes the limit for a one-time $29.99 purchase.</p>
+  <p class="req" style="margin-top:6px">Palomino runs on macOS 15 Sequoia or later, on both Apple silicon and Intel Macs. It reads RAF files from X series and GFX bodies with the same embedded-preview speed it gives every other RAW format.</p>
+</header>
+
+<section class="wrap">
+  <h2>Why a Fujifilm shoot is slow to cull in an editor</h2>
+  <p class="lead">Lightroom and Capture One decode the full sensor file and build a preview for every frame you import, including the frames you are about to reject. A 40 megapixel X-Trans file takes real work to demosaic, and GFX files are heavier still: a 102 megapixel frame can pass 200MB uncompressed, so a full card from an event runs to hundreds of gigabytes. Importing all of that just to throw most of it away is the slow part of the job.</p>
+  <p class="lead">Palomino skips it. Fujifilm writes a finished JPEG preview into every RAF, and Palomino shows you that preview instead of decoding the RAW. The next frame is loaded before you ask for it, so moving through the shoot never stalls, whatever the sensor resolution.</p>
+</section>
+
+<section class="wrap">
+  <h2>Your film simulation, as shot</h2>
+  <p class="lead">The preview inside a RAF is rendered by the camera with the film simulation you shot: Classic Chrome stays Classic Chrome, Acros stays Acros. Cull in Palomino and you judge every frame with the look you chose at the moment you pressed the shutter. Import the same file into Lightroom and the default preview is Adobe's rendering until you assign a camera-matching profile, which is one more step between you and your own pictures. Culling from the embedded preview means the decision you make matches the photograph you meant to take.</p>
+</section>
+
+<section class="wrap">
+  <figure class="shot">
+    <img src="/assets/screenshot-preview.jpg" loading="lazy" alt="Palomino preview view: a large image with an info panel and a filmstrip of thumbnails along the bottom">
+    <figcaption><strong>The preview view</strong> puts one frame front and center with a filmstrip underneath. Palomino reads the embedded preview instead of decoding the full sensor file, and it loads the next shot before you ask for it, so moving frame to frame never stalls. The info panel shows the camera, lens, and full exposure data, and your picks light up in the filmstrip as you rate from the keyboard.</figcaption>
+  </figure>
+  <div class="features">
+    <div class="feature"><h3><span aria-hidden="true">&#9889;&#65038;</span>Reads RAF directly</h3><p>Palomino opens Fujifilm RAF files using the embedded JPEG preview, so there is no conversion step and no waiting. X series and GFX files work the same way.</p></div>
+    <div class="feature"><h3><span aria-hidden="true">&#9000;</span>Keyboard-first culling</h3><p>Press 1 to 5 to rate, P to pick, and X to reject. Each press moves you to the next frame, so you can work a whole shoot without touching the mouse.</p></div>
+    <div class="feature"><h3><span aria-hidden="true">&#8646;</span>Hands keepers to your editor</h3><p>Ratings and labels are written to standard XMP sidecar files, which Lightroom, Capture One, and Bridge read. Export your selects to a folder, import that folder, and your stars arrive with it.</p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Tools for portraits and bursts</h2>
+  <div class="features">
+    <div class="feature"><h3><span aria-hidden="true">&#9813;</span>Best of a burst</h3><p>Palomino groups frames shot in quick succession and marks the sharpest one with a crown. A 40-frames-per-second run from an X-H2S becomes a single decision: confirm the crown, reject the rest with one shortcut.</p></div>
+    <div class="feature"><h3><span aria-hidden="true">&#8857;</span>Face-priority zoom</h3><p>Press V to jump to 300 percent on the largest face, so you can check eyes and focus on a portrait in one key. A badge marks frames where someone blinked.</p></div>
+    <div class="feature"><h3><span aria-hidden="true">&#9703;</span>Color labels</h3><p>Press 6 to 9 to tag frames red, yellow, green, or blue, then filter to one label. Labels are written to XMP, so they travel to Lightroom and Capture One.</p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>The workflow</h2>
+  <p class="lead">Cull the whole card in Palomino, then import only the keepers. Your editor never builds a preview for a frame you rejected.</p>
+  <div class="features">
+    <div class="feature"><h3><span>1</span>Open the card in Palomino</h3><p>Point Palomino at your shoot. Thumbnails and previews come from the embedded JPEGs, so a thousand RAF files load fast.</p></div>
+    <div class="feature"><h3><span>2</span>Rate and reject</h3><p>Move through every frame with the keyboard, flagging keepers and rejecting the rest. Filters narrow the view to exactly what you want.</p></div>
+    <div class="feature"><h3><span>3</span>Export keepers to a folder</h3><p>Palomino copies your selects into a folder by flag or star rating, optionally splitting high-ISO frames out for denoising.</p></div>
+    <div class="feature"><h3><span>4</span>Import into Lightroom or Capture One</h3><p>Your editor ingests a folder of keepers with XMP ratings attached. It builds previews for the frames worth your time and none for the rest.</p></div>
+  </div>
+</section>
+
+<section class="wrap keys">
+  <p><kbd>&larr;</kbd> <kbd>&rarr;</kbd> move &nbsp; <kbd>1</kbd>&ndash;<kbd>5</kbd> rate &nbsp; <kbd>P</kbd> pick &nbsp; <kbd>X</kbd> reject &nbsp; <kbd>V</kbd> face zoom &nbsp; <kbd>G</kbd> grid &nbsp; <kbd>C</kbd> compare &nbsp; <kbd>E</kbd> export</p>
+</section>
+
+<section class="wrap">
+  <h2>Your photos never leave your Mac</h2>
+  <p class="lead">Palomino does its work on your machine. The app runs in the macOS App Sandbox and has no analytics, no tracking, and no third-party SDKs, and it never sends your photos or ratings anywhere. The only network activity is Apple handling a Pro purchase, which never involves your photos. Your RAF files, ratings, and folder names stay where they are.</p>
+</section>
+
+<section class="wrap">
+  <h2>Frequently asked questions</h2>
+  <div class="faq">
+    <h3>Why is Lightroom slow with RAF files?</h3>
+    <p>Lightroom decodes the full sensor data and builds previews for every imported frame. X-Trans demosaicing is demanding at 40 megapixels, and 102 megapixel GFX files are large on top of that, so importing a full card takes a long time. Culling before import with a preview-based tool like Palomino means Lightroom only ever does that work for your keepers.</p>
+    <h3>Does Palomino show my film simulation?</h3>
+    <p>Yes. The preview embedded in a RAF is rendered by the camera with the film simulation you shot, and that preview is exactly what Palomino displays. Classic Chrome, Velvia, Acros, and every other simulation appear as you set them.</p>
+    <h3>Does Palomino work with GFX files?</h3>
+    <p>Yes. Palomino reads the embedded preview, so a 102 megapixel GFX frame browses as quickly as a 26 megapixel X series frame. File size affects copying and storage, not culling speed.</p>
+    <h3>Is the preview full resolution?</h3>
+    <p>No, and no culling tool that reads embedded previews shows the full pixel grid. The preview is the JPEG your camera rendered into the file, which is plenty for judging composition, exposure, expressions, and focus at normal magnifications. Pixel-level inspection belongs in your editor, on the keepers.</p>
+    <h3>Which Fujifilm cameras does it work with?</h3>
+    <p>Palomino works with any camera that writes RAF files, from the X100 series and X-T line to the GFX medium format bodies.</p>
+  </div>
+</section>
+
+<section class="wrap" style="text-align:center;">
+  <h2>Try it on your next shoot</h2>
+  <p class="lead">Palomino is on the Mac App Store, free to download. Open your next Fujifilm shoot in it and cull the card down to your keepers before Lightroom ever sees a file.</p>
+  <div class="badge-row"><a class="js-appstore-link" href="https://apps.apple.com/us/app/palomino/id6779869483?mt=12" target="_blank" rel="noopener"><img class="appstore-badge" src="/assets/download-on-the-mac-app-store.svg" loading="lazy" alt="Download Palomino on the Mac App Store" width="156" height="40"></a></div>
+</section>
+
+<footer>
+  <p class="wrap">&copy; 2026 Neil Kodner. Palomino supports ARW, DNG, 3FR, NEF, CR3, RAF, ORF, FFF, HEIC, JPEG, and 20+ other formats.</p>
+  <p class="wrap" style="margin-top:10px"><a href="/">Palomino home</a> &nbsp;&middot;&nbsp; <a href="/privacy.html">Privacy Policy</a></p>
+  <p class="wrap" style="margin-top:10px; font-size:0.8rem;">Written by Konrad Michels, a Palomino collaborator who also writes about Hasselblad and Phocus at <a href="https://blog.tonalphoto.com/" target="_blank" rel="noopener">blog.tonalphoto.com</a>.</p>
+</footer>
+
+<script>
+  (function () {
+    var isMac = /Mac/.test(navigator.platform || navigator.userAgent);
+    var isTouch = navigator.maxTouchPoints > 1;
+    if (!isMac || isTouch) return;
+    document.querySelectorAll(".js-appstore-link").forEach(function (link) {
+      link.addEventListener("click", function (e) {
+        if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+        e.preventDefault();
+        window.location.href = link.href.replace(/^https:\/\//, "macappstore://");
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
