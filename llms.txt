@@ -23,6 +23,7 @@ Palomino the app runs on your Mac. It is sandboxed by macOS and uses no third-pa
 
 - Reads embedded JPEG previews from RAW files, which is 10 to 100 times faster than decoding the sensor data.
 - Keyboard-first workflow: 1 to 5 to rate, P to pick, X to reject, 6 to 9 for color labels, and each rating or flag advances to the next photo.
+- Batch selection in the grid view: Command-click, Shift-click, or Command-A selects several photos, and one keystroke applies a rating, flag, or color label to all of them with a single undo.
 - Background quality hints flag overexposed, underexposed, and soft photos, and group burst sequences with a best-of-burst suggestion.
 - Face detection adds a face-priority zoom on the V key and a closed-eye flag, running on the Neural Engine in the background.
 - Filters control what the arrow keys see: picks, rejects, star ratings, color labels, or capture days.
