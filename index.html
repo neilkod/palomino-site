@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0d0d0d">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d0d0d">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf8f5">
 <title>Palomino: fast RAW photo culling for macOS</title>
 <meta name="description" content="Palomino is a fast, focused RAW photo culling app for macOS. Rate the keepers, skip the rejects, and hand a tight selection to your editor. Your photos never leave your Mac.">
 <link rel="canonical" href="https://palomino-app.com/">
@@ -11,18 +12,20 @@
 <link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="icon" href="/assets/favicon-16.png" type="image/png" sizes="16x16">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/BricolageGrotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Palomino">
 <meta property="og:title" content="Palomino: fast RAW photo culling for macOS">
 <meta property="og:description" content="Rate the keepers, skip the rejects, and hand a tight selection to your editor. Your photos never leave your Mac.">
 <meta property="og:url" content="https://palomino-app.com/">
-<meta property="og:image" content="https://palomino-app.com/assets/screenshot-preview.jpg">
-<meta property="og:image:width" content="1280">
-<meta property="og:image:height" content="800">
+<meta property="og:image" content="https://palomino-app.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Palomino: fast RAW photo culling for macOS">
 <meta name="twitter:description" content="Rate the keepers, skip the rejects, and hand a tight selection to your editor. Your photos never leave your Mac.">
-<meta name="twitter:image" content="https://palomino-app.com/assets/screenshot-preview.jpg">
+<meta name="twitter:image" content="https://palomino-app.com/assets/og-image.jpg">
+<script>(function(){try{var t=localStorage.getItem("palomino-theme");if(t==="light"||t==="dark"){document.documentElement.setAttribute("data-theme",t);}}catch(e){}})();</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -32,24 +35,26 @@
   "operatingSystem": "macOS 15 Sequoia or later",
   "description": "Fast, focused RAW photo culling for macOS. Rate the keepers, skip the rejects, and hand a tight selection to your editor. Your photos never leave your Mac.",
   "url": "https://palomino-app.com/",
-  "image": "https://palomino-app.com/assets/screenshot-preview.jpg",
+  "image": "https://palomino-app.com/assets/og-image.jpg",
   "screenshot": [
     "https://palomino-app.com/assets/screenshot-preview.jpg",
     "https://palomino-app.com/assets/screenshot-grid.jpg",
+    "https://palomino-app.com/assets/screenshot-compare.jpg",
     "https://palomino-app.com/assets/screenshot-export.jpg"
   ],
   "featureList": [
     "Reads embedded JPEG previews from RAW files for fast loading",
     "Keyboard-first rating, picks, color labels, and rejects",
     "Batch selection in the grid to rate, flag, or label several photos at once",
-    "Background quality hints for exposure and focus",
+    "Filters for picks, ratings, bursts, overexposed, underexposed, and out-of-focus photos",
+    "Side-by-side Compare view with a reference pane",
     "Burst grouping with a best-of-burst suggestion",
     "Face detection with a closed-eye flag and face-priority zoom",
-    "Named export presets",
+    "Named export presets with file name templates",
+    "Export by flag or minimum star rating, with Copy, Clone, or Link modes, a high-ISO split, and verified copies",
     "Session stats with a culling rate",
     "Light, dark, or system appearance",
     "Standard XMP sidecar ratings and labels",
-    "Export by flag or minimum star rating, with a high-ISO split",
     "No accounts or cloud, and your photos never leave your Mac"
   ],
   "offers": [
@@ -133,115 +138,151 @@
 </head>
 <body class="marketing">
 
-<header class="wrap">
-  <h1>Palomino<span class="accent">.</span></h1>
-  <p class="tagline">Fast, focused RAW photo culling for macOS.</p>
-  <p class="pitch">Palomino helps you get through a large shoot quickly. Rate the keepers, skip the rejects, and hand a tight selection to your editing software. It doesn't edit, organize, or sync anything. It makes culling fast, and that's the whole job.</p>
-  <div class="cta">
-    <a class="btn btn-secondary" href="mailto:&#112;&#97;&#108;&#111;&#109;&#105;&#110;&#111;&#45;&#102;&#101;&#101;&#100;&#98;&#97;&#99;&#107;&#64;&#97;&#103;&#101;&#110;&#116;&#109;&#97;&#105;&#108;&#46;&#116;&#111;?subject=Palomino">Get in touch</a>
+<nav class="site-nav" aria-label="Site">
+  <div class="nav-inner">
+    <a class="brand" href="/"><img src="/assets/app-icon.png" width="30" height="30" alt="Palomino app icon"><span class="wordmark">Palomino<span class="accent">.</span></span></a>
+    <div class="nav-links">
+      <a href="#speed">Speed</a>
+      <a href="#tour">Tour</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="btn-nav js-appstore-link" href="https://apps.apple.com/us/app/palomino/id6779869483?mt=12" target="_blank" rel="noopener">Download</a>
+    <button class="theme-toggle js-theme-toggle" type="button" aria-label="Switch between light and dark theme">
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9"/></svg>
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+    </button>
   </div>
-  <div class="badge-row"><a class="js-appstore-link" href="https://apps.apple.com/us/app/palomino/id6779869483?mt=12" target="_blank" rel="noopener"><img class="appstore-badge" src="assets/download-on-the-mac-app-store.svg" alt="Download Palomino on the Mac App Store" width="156" height="40"></a></div>
-  <p class="req">Requires macOS 15 Sequoia or later · Apple silicon &amp; Intel</p>
-  <p class="req" style="margin-top:6px">Palomino is free to download, with exports up to 50 photos per session. Palomino Pro removes the limit for a one-time $29.99 purchase.</p>
+</nav>
+
+<header class="hero wrap">
+  <h1>Fast RAW photo culling for the Mac<span class="accent">.</span></h1>
+  <p class="tagline">Palomino gets you through a 2,000-photo shoot in one sitting.</p>
+  <p class="pitch">I built Palomino to get you through a large shoot quickly: rate the keepers, skip the rejects, and hand a tight selection to your editing software. It doesn't edit, organize, or sync anything, because making culling fast is the only job I set out to do.</p>
+  <div class="badge-row"><a class="js-appstore-link" href="https://apps.apple.com/us/app/palomino/id6779869483?mt=12" target="_blank" rel="noopener"><img class="appstore-badge" src="assets/download-on-the-mac-app-store.svg" alt="Download Palomino on the Mac App Store" width="187" height="48"></a></div>
+  <p class="req">Palomino requires macOS 15 Sequoia or later and runs on Apple silicon and Intel Macs.</p>
+  <p class="req">Palomino is free to download, with exports up to 50 photos per session. Palomino Pro removes the limit for a one-time $29.99 purchase.</p>
 </header>
 
-<section class="wrap testimonial-wrap">
+<div class="hero-shot">
+  <div class="ratio-box">
+    <img src="assets/screenshot-preview.jpg" width="2000" height="1250" fetchpriority="high" alt="Palomino preview view showing a BMX rider mid-air, with filter and EXIF panels on the right and a filmstrip of burst-grouped photos along the bottom">
+  </div>
+</div>
+
+<section class="wrap testimonial-wrap reveal">
   <figure class="testimonial">
-    <img src="assets/testimonial.png" alt="iMessage from a photographer: This app has seriously cut my HB image culling time by 95%">
+    <img src="assets/testimonial.png" loading="lazy" alt="iMessage from a photographer: This app has seriously cut my HB image culling time by 95%">
     <figcaption>A photographer, via iMessage</figcaption>
   </figure>
 </section>
 
-<section class="wrap">
-  <figure class="shot">
-    <img src="assets/screenshot-preview.jpg" loading="lazy" alt="Palomino preview view with info panel and filmstrip">
-    <figcaption><strong>Preview view.</strong> The next photo is already in memory before you press the arrow key, because Palomino prefetches ahead of you in the background. The info panel shows the camera, lens, and full exposure data, and the filmstrip flags your picks.</figcaption>
-  </figure>
-  <figure class="shot">
-    <img src="assets/screenshot-grid.jpg" loading="lazy" alt="Palomino grid view with filter bar and quality badges">
-    <figcaption><strong>Grid view.</strong> Filters control what the arrow keys see. Narrow the shoot to picks, rejects, star ratings, color labels, or capture days, and navigation skips everything else. Background analysis also finds burst groups and out-of-focus shots, each one a single click to review.</figcaption>
-  </figure>
-  <figure class="shot">
-    <img src="assets/screenshot-export.jpg" loading="lazy" alt="Palomino export sheet">
-    <figcaption><strong>Export.</strong> Copy your selects to a folder by flag or minimum star rating, and save the settings you reuse as named presets. You can split high-ISO photos into a separate folder for denoising, and optionally move unrated files to the Trash, with the exact count shown before anything happens.</figcaption>
-  </figure>
-</section>
-
-<section class="wrap">
+<section id="speed" class="wrap reveal">
   <h2>Why it's fast</h2>
   <div class="features">
     <div class="feature">
-      <h3><span>⚡︎</span>Embedded previews</h3>
+      <h3><span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg></span>Embedded previews</h3>
       <p>Palomino reads the JPEG preview your camera already wrote into each RAW file. That's 10 to 100 times faster than decoding the sensor data, and it looks identical at normal viewing size.</p>
     </div>
     <div class="feature">
-      <h3><span>⌨</span>Keyboard-first</h3>
+      <h3><span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="M6 8h.01"/><path d="M10 8h.01"/><path d="M14 8h.01"/><path d="M18 8h.01"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/><path d="M7 16h10"/></svg></span>Keyboard-first</h3>
       <p>Press 1 through 5 to rate, P to pick, X to reject. Each action advances to the next photo, so you can work through a shoot without touching the mouse. In the grid, hold Command or Shift while clicking to select several photos, and one keystroke rates, flags, or labels all of them with a single undo. Press ? for the full shortcut list.</p>
     </div>
     <div class="feature">
-      <h3><span>◎</span>Quality hints</h3>
+      <h3><span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/></svg></span>Quality hints</h3>
       <p>Background analysis flags overexposed, underexposed, soft, and closed-eye photos, and groups burst sequences, so the work of a first pass is already done when you open the folder.</p>
     </div>
     <div class="feature">
-      <h3><span>⇆</span>Standard sidecars</h3>
+      <h3><span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg></span>Standard sidecars</h3>
       <p>Ratings and labels are written to standard XMP sidecar files, so they carry over to any editor that reads XMP. Sessions reopen exactly where you left off.</p>
     </div>
   </div>
 </section>
 
-<section class="wrap">
+<section id="tour" class="wrap reveal">
+  <h2>A tour of the app</h2>
+  <figure class="shot">
+    <div class="ratio-box">
+      <img src="assets/screenshot-grid.jpg" width="2000" height="1250" loading="lazy" alt="Palomino grid view filtered to picked photos, with a filter bar for picks, rejects, ratings, bursts, and exposure problems, and burst badges on the thumbnails">
+    </div>
+    <figcaption><strong>Grid view.</strong> The filter bar narrows the shoot to picks, rejects, star ratings, bursts, or the photos that background analysis flagged as overexposed, underexposed, or out of focus. Filters control what the arrow keys see, so navigation skips everything you filtered out. Burst badges group rapid sequences, and a crown marks each group's suggested keeper.</figcaption>
+  </figure>
+  <figure class="shot">
+    <div class="ratio-box">
+      <img src="assets/screenshot-compare.jpg" width="2000" height="1250" loading="lazy" alt="Palomino compare view showing two burst frames of a BMX rider side by side, with a reference pane on the left">
+    </div>
+    <figcaption><strong>Compare view.</strong> Select two rivals and press C to see them side by side. One pane holds your reference while you browse the rest of the burst in the other, and you can zoom, rate, pick, or promote the challenger without leaving the view.</figcaption>
+  </figure>
+  <figure class="shot">
+    <div class="ratio-box">
+      <img src="assets/screenshot-export.jpg" width="2000" height="1250" loading="lazy" alt="Palomino export sheet with a Copy, Clone, and Link mode, preset, file naming, high-ISO split, and verification options">
+    </div>
+    <figcaption><strong>Export.</strong> Copy your selects to a folder by flag or minimum star rating, or skip the copy: Clone uses an APFS copy-on-write clone and Link creates a hard link, so a same-drive export lands in well under a second with no extra disk space. Rename files with tokens as they copy, and save the settings you reuse as named presets. High-ISO photos can split into their own folder for denoising, exports are verified after copying, and moving unrated files to the Trash shows the exact count before anything happens.</figcaption>
+  </figure>
+</section>
+
+<section id="video" class="wrap reveal">
+  <h2>Watch me cull a shoot</h2>
+  <div class="video-frame js-video" data-video-id="wt1PNIzENYQ">
+    <button class="video-poster js-video-play" type="button" aria-label="Play the screen recording of a culling session">
+      <img src="assets/video-poster.jpg" width="1280" height="720" loading="lazy" alt="Video still of Palomino culling BMX photos in the grid view">
+      <span class="play-badge" aria-hidden="true"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></span>
+    </button>
+  </div>
+  <p class="video-caption">I recorded this screen capture while culling 2,124 RAW files from a BMX jam in Cupertino: 116 GB shot on a Sony A1 II at 50 megapixels, down to a handful of keepers. The screenshots on this page come from the same shoot. You can also <a href="https://youtu.be/wt1PNIzENYQ" target="_blank" rel="noopener">watch it on YouTube</a>.</p>
+</section>
+
+<section class="wrap reveal">
   <h2>Tools for culling at volume</h2>
   <div class="features">
     <div class="feature">
-      <h3><span>♕</span>Best of a burst</h3>
+      <h3><span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.735H5.81a1 1 0 0 1-.957-.735L2.02 6.02a.5.5 0 0 1 .798-.52l4.276 3.664a1 1 0 0 0 1.516-.294z"/><path d="M5 21h14"/></svg></span>Best of a burst</h3>
       <p>Palomino ranks the frames in a burst by sharpness and marks the suggested keeper with a crown. With the reject-others shortcut, you keep the crowned frame and reject the rest of the burst in two keys.</p>
     </div>
     <div class="feature">
-      <h3><span>⊙</span>Face-priority zoom</h3>
+      <h3><span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01"/><path d="M15 9h.01"/></svg></span>Face-priority zoom</h3>
       <p>Press V to zoom straight to the largest face at 300 percent, so checking eyes and focus takes one key. A badge flags photos where someone blinked.</p>
     </div>
     <div class="feature">
-      <h3><span>◧</span>Color labels and filters</h3>
+      <h3><span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg></span>Color labels and filters</h3>
       <p>Press 6 through 9 to set a red, yellow, green, or blue label. Filters then narrow the arrow keys to picks, ratings, labels, bursts, or capture days, and skip everything else.</p>
     </div>
     <div class="feature">
-      <h3><span>∑</span>Session stats</h3>
+      <h3><span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></span>Session stats</h3>
       <p>A session summary shows your total time, photos per minute, and the spread of ratings, so you can see how the cull went and where your time was spent.</p>
     </div>
   </div>
 </section>
 
-<section class="wrap keys">
+<section class="wrap keys reveal">
   <p><kbd>←</kbd> <kbd>→</kbd> move &nbsp; <kbd>1</kbd>–<kbd>5</kbd> rate &nbsp; <kbd>P</kbd> pick &nbsp; <kbd>X</kbd> reject &nbsp; <kbd>V</kbd> face zoom &nbsp; <kbd>G</kbd> grid &nbsp; <kbd>C</kbd> compare &nbsp; <kbd>E</kbd> export</p>
 </section>
 
-<section class="wrap">
+<section id="privacy" class="wrap reveal">
   <h2>Your photos never leave your Mac</h2>
-  <p class="lead">Palomino does its work on your Mac. There are no accounts and no cloud, and your photos, ratings, and folders stay on the machine. The app itself carries no analytics or tracking. The only network activity is Apple handling your Pro purchase, which never involves your photos.</p>
+  <p class="lead">I designed Palomino to do its work on your Mac. There are no accounts and no cloud, and your photos, ratings, and folders stay on the machine. The app itself carries no analytics or tracking. The only network activity is Apple handling your Pro purchase, which never involves your photos.</p>
   <div class="features">
     <div class="feature">
-      <h3><span>⛬</span>Nothing to upload</h3>
+      <h3><span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1 1 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></span>Nothing to upload</h3>
       <p>The app runs in the macOS App Sandbox and has no analytics, no tracking, and no third-party SDKs. It never sends your photos or ratings anywhere.</p>
     </div>
     <div class="feature">
-      <h3><span>⌂</span>No accounts, no cloud</h3>
+      <h3><span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></span>No accounts, no cloud</h3>
       <p>Nothing to sign up for and nothing synced anywhere. Your ratings are written to standard XMP sidecar files next to your photos, where they stay.</p>
     </div>
     <div class="feature">
-      <h3><span>✓</span>You control the only exit</h3>
-      <p>The one piece of data that can ever leave is a debug log, and only when you choose to save it and send it to us for a bug report. Until you do, nothing goes anywhere.</p>
+      <h3><span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>You control the only exit</h3>
+      <p>The one piece of data that can ever leave is a debug log, and only when you choose to save it and send it in for a bug report. Until you do, nothing goes anywhere.</p>
     </div>
   </div>
 </section>
 
-<section class="wrap" style="text-align:center; padding-bottom: 16px;">
+<section id="pricing" class="wrap center reveal">
   <h2>Pricing</h2>
-  <p style="color: var(--muted); font-size: 0.95rem; max-width: 580px; margin: 0 auto;">
-    Palomino is free to download. The free version exports up to 50 photos per session, which covers most hobbyist shoots without any payment. Palomino Pro removes the export limit for a one-time $29.99 purchase. You can upgrade from inside the app under Settings → Pro.
-  </p>
+  <p class="subnote">Palomino is free to download. The free version exports up to 50 photos per session, which covers most hobbyist shoots without any payment. Palomino Pro removes the export limit for a one-time $29.99 purchase. You can upgrade from inside the app under Settings → Pro.</p>
 </section>
 
-<section class="wrap">
+<section id="faq" class="wrap reveal">
   <h2>Frequently asked questions</h2>
   <div class="faq">
     <h3>Is Palomino free?</h3>
@@ -259,23 +300,96 @@
   </div>
 </section>
 
-<footer>
-  <p class="wrap">© 2026 Neil Kodner. Palomino supports ARW, DNG, 3FR, NEF, CR3, RAF, ORF, HEIC, JPEG, and 20+ other formats.</p>
-  <p class="wrap" style="margin-top:10px"><a href="/hasselblad/">Shooting Hasselblad?</a> &nbsp;&middot;&nbsp; <a href="/fuji/">Shooting Fujifilm?</a> &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy Policy</a></p>
+<section id="contact" class="wrap reveal">
+  <h2>Get in touch</h2>
+  <p class="subnote" style="margin-bottom:36px">I build and support Palomino myself, so a message to any of these addresses reaches me directly.</p>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <h3>Support</h3>
+      <p>Email about anything broken, confusing, or not working the way you expect.</p>
+      <a href="mailto:&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#112;&#97;&#108;&#111;&#109;&#105;&#110;&#111;&#45;&#97;&#112;&#112;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#112;&#97;&#108;&#111;&#109;&#105;&#110;&#111;&#45;&#97;&#112;&#112;&#46;&#99;&#111;&#109;</a>
+    </div>
+    <div class="contact-card">
+      <h3>Feedback</h3>
+      <p>Feature requests and ideas are welcome. I read every message myself.</p>
+      <a href="mailto:&#102;&#101;&#101;&#100;&#98;&#97;&#99;&#107;&#64;&#112;&#97;&#108;&#111;&#109;&#105;&#110;&#111;&#45;&#97;&#112;&#112;&#46;&#99;&#111;&#109;">&#102;&#101;&#101;&#100;&#98;&#97;&#99;&#107;&#64;&#112;&#97;&#108;&#111;&#109;&#105;&#110;&#111;&#45;&#97;&#112;&#112;&#46;&#99;&#111;&#109;</a>
+    </div>
+    <div class="contact-card">
+      <h3>Everything else</h3>
+      <p>Press, partnership, and general questions go here.</p>
+      <a href="mailto:&#105;&#110;&#102;&#111;&#64;&#112;&#97;&#108;&#111;&#109;&#105;&#110;&#111;&#45;&#97;&#112;&#112;&#46;&#99;&#111;&#109;">&#105;&#110;&#102;&#111;&#64;&#112;&#97;&#108;&#111;&#109;&#105;&#110;&#111;&#45;&#97;&#112;&#112;&#46;&#99;&#111;&#109;</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="social-links">
+      <a href="https://www.threads.com/@palomino.photo" target="_blank" rel="noopener" aria-label="Palomino on Threads"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"/></svg></a>
+      <a href="https://www.instagram.com/palomino.photo" target="_blank" rel="noopener" aria-label="Palomino on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+      <a href="https://www.youtube.com/@palomino-photo" target="_blank" rel="noopener" aria-label="Palomino on YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg></a>
+    </div>
+    <div class="footer-links">
+      <a href="/hasselblad/">Shooting Hasselblad?</a>
+      <a href="/fuji/">Shooting Fujifilm?</a>
+      <a href="privacy.html">Privacy policy</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <p>© 2026 Neil Kodner. Palomino supports ARW, DNG, 3FR, NEF, CR3, RAF, ORF, HEIC, JPEG, and 20+ other formats.</p>
+  </div>
 </footer>
 
 <script>
   (function () {
     var isMac = /Mac/.test(navigator.platform || navigator.userAgent);
     var isTouch = navigator.maxTouchPoints > 1;
-    if (!isMac || isTouch) return;
-    document.querySelectorAll(".js-appstore-link").forEach(function (link) {
-      link.addEventListener("click", function (e) {
-        if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
-        e.preventDefault();
-        window.location.href = link.href.replace(/^https:\/\//, "macappstore://");
+    if (isMac && !isTouch) {
+      document.querySelectorAll(".js-appstore-link").forEach(function (link) {
+        link.addEventListener("click", function (e) {
+          if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+          e.preventDefault();
+          window.location.href = link.href.replace(/^https:\/\//, "macappstore://");
+        });
       });
-    });
+    }
+
+    var toggle = document.querySelector(".js-theme-toggle");
+    if (toggle) {
+      toggle.addEventListener("click", function () {
+        var doc = document.documentElement;
+        var current = doc.getAttribute("data-theme");
+        if (!current) {
+          current = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        var next = current === "light" ? "dark" : "light";
+        doc.setAttribute("data-theme", next);
+        try { localStorage.setItem("palomino-theme", next); } catch (e) {}
+      });
+    }
+
+    var video = document.querySelector(".js-video");
+    if (video) {
+      video.querySelector(".js-video-play").addEventListener("click", function () {
+        var iframe = document.createElement("iframe");
+        iframe.src = "https://www.youtube-nocookie.com/embed/" + video.getAttribute("data-video-id") + "?autoplay=1";
+        iframe.title = "Screen recording of a Palomino culling session";
+        iframe.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+        video.replaceChildren(iframe);
+      });
+    }
+
+    if ("IntersectionObserver" in window && window.matchMedia && window.matchMedia("(prefers-reduced-motion: no-preference)").matches) {
+      document.documentElement.classList.add("reveal-init");
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: "0px 0px -40px 0px" });
+      document.querySelectorAll(".reveal").forEach(function (el) { observer.observe(el); });
+    }
   })();
 </script>
 

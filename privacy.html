@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0d0d0d">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d0d0d">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf8f5">
 <title>Privacy Policy – Palomino</title>
 <meta name="description" content="Palomino privacy policy. The app does not collect, transmit, or sell your personal data. All processing happens on your Mac.">
 <link rel="canonical" href="https://palomino-app.com/privacy.html">
@@ -11,6 +12,8 @@
 <link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="icon" href="/assets/favicon-16.png" type="image/png" sizes="16x16">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/BricolageGrotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script>(function(){try{var t=localStorage.getItem("palomino-theme");if(t==="light"||t==="dark"){document.documentElement.setAttribute("data-theme",t);}}catch(e){}})();</script>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Palomino">
 <meta property="og:title" content="Privacy Policy – Palomino">
@@ -24,8 +27,18 @@
 </head>
 <body class="legal">
 
+<nav class="site-nav" aria-label="Site">
+  <div class="nav-inner">
+    <a class="brand" href="/"><img src="/assets/app-icon.png" width="30" height="30" alt="Palomino app icon"><span class="wordmark">Palomino<span class="accent">.</span></span></a>
+    <button class="theme-toggle js-theme-toggle" type="button" aria-label="Switch between light and dark theme">
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9"/></svg>
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+    </button>
+  </div>
+</nav>
+
 <header class="wrap">
-  <a href="index.html">← Palomino</a>
+  <a href="index.html">&larr; Palomino</a>
   <h1>Privacy Policy</h1>
   <p class="updated">Effective July 13, 2026</p>
   <p class="lede">The app does not collect, transmit, or sell your personal data. All processing happens on your Mac.</p>
@@ -95,9 +108,32 @@
 
 </main>
 
-<footer>
-  <p class="wrap"><a href="index.html">Palomino</a> &nbsp;&middot;&nbsp; &copy; 2026 Neil Kodner</p>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-links">
+      <a href="index.html">Palomino home</a>
+    </div>
+    <p>&copy; 2026 Neil Kodner</p>
+  </div>
 </footer>
+
+<script>
+  (function () {
+    var toggle = document.querySelector(".js-theme-toggle");
+    if (toggle) {
+      toggle.addEventListener("click", function () {
+        var doc = document.documentElement;
+        var current = doc.getAttribute("data-theme");
+        if (!current) {
+          current = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        var next = current === "light" ? "dark" : "light";
+        doc.setAttribute("data-theme", next);
+        try { localStorage.setItem("palomino-theme", next); } catch (e) {}
+      });
+    }
+  })();
+</script>
 
 </body>
 </html>

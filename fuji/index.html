@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0d0d0d">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d0d0d">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf8f5">
 <meta name="robots" content="index, follow">
 <title>Cull Fujifilm shoots fast, before Lightroom imports them | Palomino</title>
 <meta name="description" content="Palomino is a fast culling app for macOS that reads the JPEG preview inside every RAF file, film simulation included. Cull thousands of Fujifilm frames in minutes, from X-T5 bursts to 100-megapixel GFX shoots, and import only the keepers.">
@@ -12,6 +13,8 @@
 <link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="icon" href="/assets/favicon-16.png" type="image/png" sizes="16x16">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/BricolageGrotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script>(function(){try{var t=localStorage.getItem("palomino-theme");if(t==="light"||t==="dark"){document.documentElement.setAttribute("data-theme",t);}}catch(e){}})();</script>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Palomino">
 <meta property="og:title" content="Cull Fujifilm shoots fast, before Lightroom imports them | Palomino">
@@ -56,8 +59,20 @@
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "3b5cef76a9524b47889d1e8b460025d5"}'></script>
 </head>
 <body class="marketing">
-<header class="wrap">
-  <nav aria-label="Breadcrumb" style="text-align:center; margin-bottom:28px; font-size:0.95rem; color:var(--muted);"><a href="/" style="color:var(--text); font-weight:700; text-decoration:none;">Palomino<span class="accent">.</span></a> <span aria-hidden="true">&rsaquo;</span> Fujifilm culling</nav>
+
+<nav class="site-nav" aria-label="Site">
+  <div class="nav-inner">
+    <a class="brand" href="/"><img src="/assets/app-icon.png" width="30" height="30" alt="Palomino app icon"><span class="wordmark">Palomino<span class="accent">.</span></span></a>
+    <a class="btn-nav js-appstore-link" href="https://apps.apple.com/us/app/palomino/id6779869483?mt=12" target="_blank" rel="noopener">Download</a>
+    <button class="theme-toggle js-theme-toggle" type="button" aria-label="Switch between light and dark theme">
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9"/></svg>
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+    </button>
+  </div>
+</nav>
+
+<header class="hero wrap">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Palomino</a> <span aria-hidden="true">&rsaquo;</span> Fujifilm culling</nav>
   <h1>Cull your Fujifilm shoot before Lightroom sees it<span class="accent">.</span></h1>
   <p class="tagline">Palomino moves you through a big RAF shoot in minutes.</p>
   <p class="pitch">Palomino is a fast, focused culling app for macOS. It reads the JPEG preview embedded in every Fujifilm RAF file, so you move through thousands of frames without waiting on a single RAW to decode. Rate the keepers, skip the rest, and hand a tight selection to Lightroom or Capture One. Your photos never leave your Mac.</p>
@@ -68,7 +83,7 @@
 
 <section class="wrap">
   <h2>Why a Fujifilm shoot is slow to cull in an editor</h2>
-  <p class="lead">Lightroom and Capture One decode the full sensor file and build a preview for every frame you import, including the frames you are about to reject. A 40 megapixel X-Trans file takes real work to demosaic, and GFX files are heavier still: a 102 megapixel frame can pass 200MB uncompressed, so a full card from an event runs to hundreds of gigabytes. Importing all of that just to throw most of it away is the slow part of the job.</p>
+  <p class="lead">Lightroom and Capture One decode the full sensor file and build a preview for every frame you import, including the frames you are about to reject. A 40 megapixel X-Trans file takes significant work to demosaic, and GFX files are heavier still: a 102 megapixel frame can pass 200MB uncompressed, so a full card from an event runs to hundreds of gigabytes. Importing all of that just to throw most of it away is the slow part of the job.</p>
   <p class="lead">Palomino skips it. Fujifilm writes a finished JPEG preview into every RAF, and Palomino shows you that preview instead of decoding the RAW. The next frame is loaded before you ask for it, so moving through the shoot never stalls, whatever the sensor resolution.</p>
 </section>
 
@@ -140,24 +155,45 @@
   <div class="badge-row"><a class="js-appstore-link" href="https://apps.apple.com/us/app/palomino/id6779869483?mt=12" target="_blank" rel="noopener"><img class="appstore-badge" src="/assets/download-on-the-mac-app-store.svg" loading="lazy" alt="Download Palomino on the Mac App Store" width="156" height="40"></a></div>
 </section>
 
-<footer>
-  <p class="wrap">&copy; 2026 Neil Kodner. Palomino supports ARW, DNG, 3FR, NEF, CR3, RAF, ORF, FFF, HEIC, JPEG, and 20+ other formats.</p>
-  <p class="wrap" style="margin-top:10px"><a href="/">Palomino home</a> &nbsp;&middot;&nbsp; <a href="/privacy.html">Privacy Policy</a></p>
-  <p class="wrap" style="margin-top:10px; font-size:0.8rem;">Written by Konrad Michels, a Palomino collaborator who also writes about Hasselblad and Phocus at <a href="https://blog.tonalphoto.com/" target="_blank" rel="noopener">blog.tonalphoto.com</a>.</p>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-links">
+      <a href="/">Palomino home</a>
+      <a href="/hasselblad/">Shooting Hasselblad?</a>
+      <a href="/privacy.html">Privacy policy</a>
+    </div>
+    <p>&copy; 2026 Neil Kodner. Palomino supports ARW, DNG, 3FR, NEF, CR3, RAF, ORF, FFF, HEIC, JPEG, and 20+ other formats.</p>
+    <p>Written by Konrad Michels, a Palomino collaborator who also writes about Hasselblad and Phocus at <a href="https://blog.tonalphoto.com/" target="_blank" rel="noopener">blog.tonalphoto.com</a>.</p>
+  </div>
 </footer>
 
 <script>
   (function () {
     var isMac = /Mac/.test(navigator.platform || navigator.userAgent);
     var isTouch = navigator.maxTouchPoints > 1;
-    if (!isMac || isTouch) return;
-    document.querySelectorAll(".js-appstore-link").forEach(function (link) {
-      link.addEventListener("click", function (e) {
-        if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
-        e.preventDefault();
-        window.location.href = link.href.replace(/^https:\/\//, "macappstore://");
+    if (isMac && !isTouch) {
+      document.querySelectorAll(".js-appstore-link").forEach(function (link) {
+        link.addEventListener("click", function (e) {
+          if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+          e.preventDefault();
+          window.location.href = link.href.replace(/^https:\/\//, "macappstore://");
+        });
       });
-    });
+    }
+
+    var toggle = document.querySelector(".js-theme-toggle");
+    if (toggle) {
+      toggle.addEventListener("click", function () {
+        var doc = document.documentElement;
+        var current = doc.getAttribute("data-theme");
+        if (!current) {
+          current = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        var next = current === "light" ? "dark" : "light";
+        doc.setAttribute("data-theme", next);
+        try { localStorage.setItem("palomino-theme", next); } catch (e) {}
+      });
+    }
   })();
 </script>
 

@@ -25,10 +25,12 @@ Palomino the app runs on your Mac. It is sandboxed by macOS and uses no third-pa
 - Keyboard-first workflow: 1 to 5 to rate, P to pick, X to reject, 6 to 9 for color labels, and each rating or flag advances to the next photo.
 - Batch selection in the grid view: Command-click, Shift-click, or Command-A selects several photos, and one keystroke applies a rating, flag, or color label to all of them with a single undo.
 - Background quality hints flag overexposed, underexposed, and soft photos, and group burst sequences with a best-of-burst suggestion.
+- Compare view puts two frames side by side, with one pane held as a reference while you browse the rest of a burst in the other, so picking a winner does not mean flipping back and forth.
 - Face detection adds a face-priority zoom on the V key and a closed-eye flag, running on the Neural Engine in the background.
 - Filters control what the arrow keys see: picks, rejects, star ratings, color labels, or capture days.
 - Standard XMP sidecar files for ratings and labels, so they carry into any XMP-aware editor.
 - Export by flag or minimum star rating, with named presets and an option to split high-ISO photos into a separate folder for denoising.
+- Copy, Clone, or Link export modes. Clone is a same-volume APFS copy-on-write clone and Link creates a hard link, so a same-drive export finishes in well under a second with no extra disk space; both fall back to Copy across volumes.
 - Session stats show total time, a photos-per-minute culling rate, and the rating breakdown.
 - Choose a light, dark, or system appearance.
 - Sessions reopen exactly where you left off.
@@ -57,3 +59,6 @@ Palomino reads Fujifilm RAF files directly using the embedded JPEG preview, whic
 - Homepage: https://palomino-app.com/
 - Download on the Mac App Store: https://apps.apple.com/us/app/palomino/id6779869483?mt=12
 - Privacy policy: https://palomino-app.com/privacy.html
+- Threads: https://www.threads.com/@palomino.photo
+- Instagram: https://www.instagram.com/palomino.photo
+- YouTube: https://www.youtube.com/@palomino-photo
