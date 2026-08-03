@@ -40,7 +40,7 @@
 <header class="wrap">
   <a href="index.html">&larr; Palomino</a>
   <h1>Privacy Policy</h1>
-  <p class="updated">Effective July 13, 2026</p>
+  <p class="updated">Effective August 3, 2026</p>
   <p class="lede">The app does not collect, transmit, or sell your personal data. All processing happens on your Mac.</p>
 </header>
 
@@ -59,8 +59,9 @@
 
   <section>
     <h2>Network activity</h2>
-    <p>Palomino has the macOS network entitlement (<code>com.apple.security.network.client</code>). The App Store requires it for in-app purchases, and that is the only thing Palomino uses it for. Apple's StoreKit framework uses it to load the Pro price, complete a purchase, and restore a purchase you already made. Those App Store transactions are handled by Apple using your Apple Account credentials, and Palomino does not see, store, or transmit your Apple Account information.</p>
-    <p>macOS grants that entitlement as all or nothing, so it covers any outbound connection rather than only the App Store. Palomino still contacts no servers other than Apple's, and it makes no network requests of its own. Your photos, ratings, folder names, and preferences are never sent anywhere.</p>
+    <p>Palomino has the macOS network entitlement (<code>com.apple.security.network.client</code>). It uses the network for two things: App Store purchases and checking for app updates. For purchases, Apple's StoreKit framework uses it to load the Pro price, complete a purchase, and restore a purchase you already made. Those App Store transactions are handled by Apple using your Apple Account credentials, and Palomino does not see, store, or transmit your Apple Account information.</p>
+    <p>Palomino also asks Apple's App Store whether a newer version of the app is available. The automatic check runs at most once every 24 hours. It is on by default and can be turned off in Settings, and you can run a check yourself from the app at any time. The request goes to Apple's app lookup service and contains the app's bundle identifier and your App Store region. It carries no personal data and nothing about your photos. The response contains only the latest version number, its release date, and the minimum macOS version it requires.</p>
+    <p>macOS grants that entitlement as all or nothing, so it covers any outbound connection rather than only these two uses. Palomino still contacts no servers other than Apple's. Your photos, ratings, folder names, and preferences are never sent anywhere.</p>
     <p>Apple's privacy policy governs what Apple collects during those transactions: <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a></p>
   </section>
 
