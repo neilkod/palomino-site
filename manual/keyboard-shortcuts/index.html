@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d0d0d">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf8f5">
+<meta name="robots" content="index, follow">
+<title>Keyboard shortcuts | Palomino manual</title>
+<meta name="description" content="Every keyboard shortcut in Palomino, grouped by task: navigation, rating and flagging, color labels, zoom, panels, filtering, bursts and stacks, and app commands.">
+<link rel="canonical" href="https://palomino-app.com/manual/keyboard-shortcuts/">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/assets/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/BricolageGrotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script>(function(){try{var t=localStorage.getItem("palomino-theme");if(t==="light"||t==="dark"){document.documentElement.setAttribute("data-theme",t);}}catch(e){}})();</script>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Palomino">
+<meta property="og:title" content="Keyboard shortcuts | Palomino manual">
+<meta property="og:description" content="Every keyboard shortcut in Palomino, grouped by task: navigation, rating and flagging, color labels, zoom, panels, filtering, bursts and stacks, and app commands.">
+<meta property="og:url" content="https://palomino-app.com/manual/keyboard-shortcuts/">
+<meta property="og:image" content="https://palomino-app.com/assets/screenshot-preview.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="800">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Keyboard shortcuts | Palomino manual">
+<meta name="twitter:description" content="Every keyboard shortcut in Palomino, grouped by task: navigation, rating and flagging, color labels, zoom, panels, filtering, bursts and stacks, and app commands.">
+<meta name="twitter:image" content="https://palomino-app.com/assets/screenshot-preview.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Palomino", "item": "https://palomino-app.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Manual", "item": "https://palomino-app.com/manual/" },
+    { "@type": "ListItem", "position": 3, "name": "Keyboard shortcuts" }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/assets/global.css">
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "3b5cef76a9524b47889d1e8b460025d5"}'></script>
+</head>
+<body class="manual">
+
+<nav class="site-nav" aria-label="Site">
+  <div class="nav-inner">
+    <a class="brand" href="/"><img src="/assets/app-icon.png" width="30" height="30" alt="Palomino app icon"><span class="wordmark">Palomino<span class="accent">.</span></span></a>
+    <a class="btn-nav js-appstore-link" href="https://apps.apple.com/us/app/palomino/id6779869483?mt=12" target="_blank" rel="noopener">Download</a>
+    <button class="theme-toggle js-theme-toggle" type="button" aria-label="Switch between light and dark theme">
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9"/></svg>
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="wrap manual-layout">
+  <aside class="manual-sidebar">
+    <h2>Manual</h2>
+    <ul>
+      <li><a href="/manual/">Overview</a></li>
+      <li><a href="/manual/getting-started/">Getting started</a></li>
+      <li><a href="/manual/rating-and-flagging/">Rating and flagging</a></li>
+      <li><a href="/manual/viewing-and-filtering/">Viewing and filtering</a></li>
+      <li><a href="/manual/bursts-and-stacks/">Bursts and stacks</a></li>
+      <li><a href="/manual/exporting/">Copying your selects</a></li>
+      <li><a href="/manual/ratings-and-your-editor/">Ratings and your editor</a></li>
+      <li><a href="/manual/keyboard-shortcuts/" aria-current="page">Keyboard shortcuts</a></li>
+      <li><a href="/manual/troubleshooting/">Troubleshooting</a></li>
+    </ul>
+  </aside>
+
+  <article class="manual-article">
+    <h1>Keyboard shortcuts</h1>
+    <p class="dek">Palomino is built to run from the keyboard. Press <kbd>?</kbd> inside the app to see this same list as an overlay while you work.</p>
+
+    <h2>Navigation</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Key</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td><kbd>&larr;</kbd> <kbd>&rarr;</kbd></td><td>Previous / Next</td></tr>
+          <tr><td><kbd>&uarr;</kbd> <kbd>&darr;</kbd></td><td>Previous / Next (left filmstrip)</td></tr>
+          <tr><td><kbd>Space</kbd></td><td>Next</td></tr>
+          <tr><td><kbd>G</kbd></td><td>Grid View</td></tr>
+          <tr><td><kbd>C</kbd></td><td>Compare</td></tr>
+          <tr><td><kbd>&uarr;</kbd></td><td>Promote to reference (compare)</td></tr>
+          <tr><td><kbd>N</kbd></td><td>Next unrated</td></tr>
+          <tr><td><kbd>⌘A</kbd></td><td>Select all photos (grid)</td></tr>
+          <tr><td><kbd>Tab</kbd></td><td>Filmstrip</td></tr>
+          <tr><td><kbd>Esc</kbd></td><td>Close overlay / view</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Rating and flagging</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Key</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td><kbd>1</kbd> &ndash; <kbd>5</kbd></td><td>Rate (1&ndash;5 stars)</td></tr>
+          <tr><td><kbd>⇧1</kbd> &ndash; <kbd>5</kbd></td><td>Rate, don't advance</td></tr>
+          <tr><td><kbd>0</kbd></td><td>Clear rating</td></tr>
+          <tr><td><kbd>P</kbd></td><td>Pick (again to clear)</td></tr>
+          <tr><td><kbd>X</kbd></td><td>Reject (again to clear)</td></tr>
+          <tr><td><kbd>⇧P</kbd> / <kbd>X</kbd></td><td>Pick / Reject, don't advance</td></tr>
+          <tr><td><kbd>U</kbd></td><td>Unflag</td></tr>
+          <tr><td><kbd>T</kbd></td><td>Toggle pick</td></tr>
+          <tr><td><kbd>B</kbd></td><td>Toggle intentionally soft</td></tr>
+          <tr><td><kbd>Y</kbd></td><td>Ignore closed eyes</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Color labels</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Key</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td><kbd>6</kbd></td><td>Red</td></tr>
+          <tr><td><kbd>7</kbd></td><td>Yellow</td></tr>
+          <tr><td><kbd>8</kbd></td><td>Green</td></tr>
+          <tr><td><kbd>9</kbd></td><td>Blue</td></tr>
+          <tr><td><kbd>⇧6</kbd> &ndash; <kbd>9</kbd></td><td>Label, don't advance</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>This table shows the Lightroom convention, which is the default. Choose <strong>Color label keys: Phocus</strong> in <strong>Settings</strong> (<kbd>⌘,</kbd>) to remap these keys to <kbd>6</kbd> green, <kbd>7</kbd> yellow, <kbd>8</kbd> red, with no key for blue. See <a href="/manual/rating-and-flagging/">Rating and Flagging</a>.</p>
+
+    <h2>The WASD grip</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Key</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td><kbd>W</kbd></td><td>Pick + advance</td></tr>
+          <tr><td><kbd>S</kbd></td><td>Reject + advance</td></tr>
+          <tr><td><kbd>A</kbd></td><td>Previous</td></tr>
+          <tr><td><kbd>D</kbd></td><td>Next</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Zoom and focus</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Key</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td><kbd>Z</kbd></td><td>Fit / 300%</td></tr>
+          <tr><td><kbd>=</kbd> / <kbd>+</kbd></td><td>Zoom in</td></tr>
+          <tr><td><kbd>&minus;</kbd></td><td>Zoom out</td></tr>
+          <tr><td><kbd>V</kbd></td><td>Zoom to largest face</td></tr>
+          <tr><td><kbd>⌘F</kbd></td><td>Focus mask</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Panels</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Key</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td><kbd>I</kbd></td><td>Info Panel</td></tr>
+          <tr><td><kbd>E</kbd></td><td>Copy to Folder</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Filtering</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Key</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td><kbd>F</kbd></td><td>Filter, then a key</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Bursts and stacks</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Key</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td><kbd>⌘⇧X</kbd></td><td>Reject others in burst</td></tr>
+          <tr><td><kbd>⌘⇧K</kbd></td><td>Keep all in stack</td></tr>
+          <tr><td><kbd>&darr;</kbd></td><td>Expand burst</td></tr>
+          <tr><td><kbd>&uarr;</kbd></td><td>Collapse burst</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>App commands</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Key</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td><kbd>⌘Z</kbd></td><td>Undo</td></tr>
+          <tr><td><kbd>⌘O</kbd></td><td>Open folder</td></tr>
+          <tr><td><kbd>⌘,</kbd></td><td>Settings</td></tr>
+          <tr><td><kbd>⌘⇧I</kbd></td><td>Session stats</td></tr>
+          <tr><td><kbd>?</kbd></td><td>Show shortcuts</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <nav class="manual-prevnext" aria-label="Manual navigation">
+      <a href="/manual/ratings-and-your-editor/"><span class="dir">Previous</span>Ratings and your editor</a>
+      <a class="next" href="/manual/troubleshooting/"><span class="dir">Next</span>Troubleshooting</a>
+    </nav>
+  </article>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-links">
+      <a href="/">Palomino home</a>
+      <a href="/hasselblad/">Shooting Hasselblad?</a>
+      <a href="/fuji/">Shooting Fujifilm?</a>
+      <a href="/privacy.html">Privacy policy</a>
+    </div>
+    <p>&copy; 2026 Neil Kodner. Palomino supports ARW, DNG, 3FR, NEF, CR3, RAF, ORF, FFF, HEIC, JPEG, and 20+ other formats.</p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var isMac = /Mac/.test(navigator.platform || navigator.userAgent);
+    var isTouch = navigator.maxTouchPoints > 1;
+    if (isMac && !isTouch) {
+      document.querySelectorAll(".js-appstore-link").forEach(function (link) {
+        link.addEventListener("click", function (e) {
+          if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+          e.preventDefault();
+          window.location.href = link.href.replace(/^https:\/\//, "macappstore://");
+        });
+      });
+    }
+
+    var toggle = document.querySelector(".js-theme-toggle");
+    if (toggle) {
+      toggle.addEventListener("click", function () {
+        var doc = document.documentElement;
+        var current = doc.getAttribute("data-theme");
+        if (!current) {
+          current = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        var next = current === "light" ? "dark" : "light";
+        doc.setAttribute("data-theme", next);
+        try { localStorage.setItem("palomino-theme", next); } catch (e) {}
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d0d0d">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf8f5">
+<meta name="robots" content="index, follow">
+<title>Troubleshooting | Palomino manual</title>
+<meta name="description" content="Fixes for the most common Palomino problems, from ratings not showing up in Lightroom to a folder that won't reopen.">
+<link rel="canonical" href="https://palomino-app.com/manual/troubleshooting/">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/assets/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/BricolageGrotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script>(function(){try{var t=localStorage.getItem("palomino-theme");if(t==="light"||t==="dark"){document.documentElement.setAttribute("data-theme",t);}}catch(e){}})();</script>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Palomino">
+<meta property="og:title" content="Troubleshooting | Palomino manual">
+<meta property="og:description" content="Fixes for the most common Palomino problems, from ratings not showing up in Lightroom to a folder that won't reopen.">
+<meta property="og:url" content="https://palomino-app.com/manual/troubleshooting/">
+<meta property="og:image" content="https://palomino-app.com/assets/screenshot-preview.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="800">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Troubleshooting | Palomino manual">
+<meta name="twitter:description" content="Fixes for the most common Palomino problems, from ratings not showing up in Lightroom to a folder that won't reopen.">
+<meta name="twitter:image" content="https://palomino-app.com/assets/screenshot-preview.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Palomino", "item": "https://palomino-app.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Manual", "item": "https://palomino-app.com/manual/" },
+    { "@type": "ListItem", "position": 3, "name": "Troubleshooting" }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/assets/global.css">
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "3b5cef76a9524b47889d1e8b460025d5"}'></script>
+</head>
+<body class="manual">
+
+<nav class="site-nav" aria-label="Site">
+  <div class="nav-inner">
+    <a class="brand" href="/"><img src="/assets/app-icon.png" width="30" height="30" alt="Palomino app icon"><span class="wordmark">Palomino<span class="accent">.</span></span></a>
+    <a class="btn-nav js-appstore-link" href="https://apps.apple.com/us/app/palomino/id6779869483?mt=12" target="_blank" rel="noopener">Download</a>
+    <button class="theme-toggle js-theme-toggle" type="button" aria-label="Switch between light and dark theme">
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9"/></svg>
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="wrap manual-layout">
+  <aside class="manual-sidebar">
+    <h2>Manual</h2>
+    <ul>
+      <li><a href="/manual/">Overview</a></li>
+      <li><a href="/manual/getting-started/">Getting started</a></li>
+      <li><a href="/manual/rating-and-flagging/">Rating and flagging</a></li>
+      <li><a href="/manual/viewing-and-filtering/">Viewing and filtering</a></li>
+      <li><a href="/manual/bursts-and-stacks/">Bursts and stacks</a></li>
+      <li><a href="/manual/exporting/">Copying your selects</a></li>
+      <li><a href="/manual/ratings-and-your-editor/">Ratings and your editor</a></li>
+      <li><a href="/manual/keyboard-shortcuts/">Keyboard shortcuts</a></li>
+      <li><a href="/manual/troubleshooting/" aria-current="page">Troubleshooting</a></li>
+    </ul>
+  </aside>
+
+  <article class="manual-article">
+    <h1>Troubleshooting</h1>
+    <p class="dek">Common problems and how to fix them.</p>
+
+    <h2>An "Unsaved changes" indicator appeared in the status bar</h2>
+    <p>A write failed, usually because an SD card was ejected or an external drive disconnected while the session was still running. Your ratings are still in memory. Reconnect the drive and continue culling; Palomino retries failed writes automatically the next time a write succeeds. Quit only after the indicator clears or after confirming the drive is back. Do not force-quit while the indicator is showing.</p>
+
+    <h2>My ratings aren't showing up in Lightroom after import</h2>
+    <p>Lightroom reads <code>.xmp</code> sidecar files, and Palomino writes one next to each RAW file in your source folder. Check that an <code>.xmp</code> file exists next to the RAW (for example, <code>DSC01234.xmp</code> next to <code>DSC01234.ARW</code>). If you copied photos and expected the ratings to travel with them, confirm that <strong>Include XMP sidecars</strong> is enabled in <strong>Settings</strong> (<kbd>⌘,</kbd>); it is on by default. In Lightroom, if you imported before the <code>.xmp</code> rating files were written, select the photos, right-click, and choose <strong>Metadata &gt; Read Metadata from Files</strong>.</p>
+
+    <h2>A folder I opened before won't reopen or shows no photos</h2>
+    <p>If the folder is on an SD card or external drive, the drive may be disconnected. Reconnect it and try again. If you moved or renamed the folder, open it again with <kbd>⌘O</kbd> and select its new location. Palomino has to ask you to re-select it to regain access (a macOS rule for apps that run in a restricted sandbox, not a Palomino limitation). If the folder keeps its photos in subfolders, such as a copied card with its DCIM layout, Palomino asks whether to include the subfolders when the top level has none; see <a href="/manual/getting-started/">Getting Started</a>. Your <code>.xmp</code> rating files travel with your RAWs, so your ratings are safe wherever the files are.</p>
+
+    <h2>My JPEG companion files are missing from the copy</h2>
+    <p>If your folder contains RAW+JPEG pairs, the <strong>Include JPEG companions</strong> toggle appears in the Copy to Folder sheet. Confirm it is enabled. Also check that the JPEG files are still present in the source folder: if they were moved or deleted separately from the RAW, Palomino skips the missing companion and copies only the RAW. You can confirm this in Console.app (a built-in macOS log viewer in Applications &gt; Utilities), which will show "companion missing at export" if this happened.</p>
+
+    <h2>Palomino is showing half the number of photos I expected</h2>
+    <p>If you shoot RAW+JPEG or RAW+HEIF, Palomino pairs the files automatically and shows one entry per pair. This is correct behavior, not data loss. See <a href="/manual/getting-started/">Getting Started</a> for details on how pairing works.</p>
+
+    <h2>The out-of-focus badge is wrong and the photo is sharp</h2>
+    <p>The blur detection runs on the embedded JPEG preview and uses a fixed sharpness threshold. Strong bokeh, intentional motion blur, or a macro shot with a very shallow depth of field can trigger it incorrectly. Press <kbd>B</kbd> on the photo to mark it as intentionally soft. The badge is suppressed and the override is saved with the session. See <a href="/manual/viewing-and-filtering/">Viewing and Filtering</a>.</p>
+
+    <h2>The focus mask shows no green on a photo</h2>
+    <p>An empty mask means nothing in the frame cleared the sharpness threshold, which is the mask telling you the photo missed focus everywhere. Before concluding that, raise the sensitivity slider in <strong>Settings</strong> (<kbd>⌘,</kbd>) under <strong>General</strong>: a low sensitivity setting can leave a genuinely sharp photo without any green. On a truly soft photo, very low contrast or heavy atmospheric haze can keep detail under the threshold even at the highest sensitivity; zoom to 300% with <kbd>Z</kbd> to confirm by eye. The mask judges each area against an absolute sharpness standard rather than ranking areas of the frame against each other, so it is a guide for comparing and culling rather than a laboratory measurement. See <a href="/manual/viewing-and-filtering/">Viewing and Filtering</a>.</p>
+
+    <h2>The eyes-closed badge is wrong and the eyes are open</h2>
+    <p>Palomino estimates eyes-open confidence from face detection on the embedded JPEG preview. Sunglasses, a downward glance, a profile, or a hard squint can read as closed eyes. Press <kbd>Y</kbd>, or choose <strong>Ignore Closed Eyes</strong> from the <strong>Photo</strong> menu, to hide the badge for that photo. The override is saved with the session. See <a href="/manual/rating-and-flagging/">Rating and Flagging</a>.</p>
+
+    <h2>A focus-bracketed burst is labeled "Burst" instead of "Stack"</h2>
+    <p>Palomino confirms a stack from focus-distance data or a camera-specific bracket signal in the file, never from the absence of data. A camera that does not record focus distance, or a distance reading that barely moves across the burst, leaves Palomino unable to confirm one automatically. Check that your camera writes focus distance to its files, raise the sensitivity slider under <strong>Stack detection</strong> in <strong>Settings</strong> (<kbd>⌘,</kbd>), or select the run and choose <strong>Mark as Focus Stack</strong> from the <strong>Photo</strong> menu. See <a href="/manual/bursts-and-stacks/">Bursts and Stacks</a>.</p>
+
+    <h2>Diagnostics</h2>
+    <p>When you hit a problem that these fixes do not solve, the <strong>Diagnostics</strong> section of <strong>Settings</strong> (<kbd>⌘,</kbd>) can capture what Palomino was doing so you can send it with a bug report.</p>
+    <p><strong>Debug logging</strong> records a detailed log of Palomino's activity, including the file and folder names it reads and writes. Turn on <strong>Debug logging</strong>, reproduce the problem, then click <strong>Save Debug Log…</strong> and choose where to save the <code>.log</code> file. The log covers the time from when you launched Palomino up to the moment you save. Debug logging turns itself off when you quit, so it cannot be left running by accident. Turn it back on the next time you need it.</p>
+    <p><strong>Performance telemetry</strong> records timing data that helps diagnose slow or stuttering behavior: decode time, cache hits, limiter activity, and memory use. Turn on <strong>Performance telemetry</strong>, use the app until you reproduce the slowdown, then turn the toggle back off. Turning it off writes a summary to the end of the trace. Click <strong>Save Performance Trace…</strong> and choose where to save the <code>.jsonl</code> file. Performance telemetry also resets to off when you quit Palomino. If you save before using the app, Palomino tells you there is no trace yet.</p>
+
+    <h2>Getting more help</h2>
+    <p>If a problem isn't covered here, see the <a href="/manual/">manual contents page</a> or send an email to <a href="mailto:&#112;&#97;&#108;&#111;&#109;&#105;&#110;&#111;&#45;&#102;&#101;&#101;&#100;&#98;&#97;&#99;&#107;&#64;&#97;&#103;&#101;&#110;&#116;&#109;&#97;&#105;&#108;&#46;&#116;&#111;?subject=Palomino%20feedback">&#112;&#97;&#108;&#111;&#109;&#105;&#110;&#111;&#45;&#102;&#101;&#101;&#100;&#98;&#97;&#99;&#107;&#64;&#97;&#103;&#101;&#110;&#116;&#109;&#97;&#105;&#108;&#46;&#116;&#111;</a>. Attach your debug log or performance trace if you saved one.</p>
+
+    <nav class="manual-prevnext" aria-label="Manual navigation">
+      <a href="/manual/keyboard-shortcuts/"><span class="dir">Previous</span>Keyboard shortcuts</a>
+      <a class="next" href="/manual/"><span class="dir">Next</span>Manual overview</a>
+    </nav>
+  </article>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-links">
+      <a href="/">Palomino home</a>
+      <a href="/hasselblad/">Shooting Hasselblad?</a>
+      <a href="/fuji/">Shooting Fujifilm?</a>
+      <a href="/privacy.html">Privacy policy</a>
+    </div>
+    <p>&copy; 2026 Neil Kodner. Palomino supports ARW, DNG, 3FR, NEF, CR3, RAF, ORF, FFF, HEIC, JPEG, and 20+ other formats.</p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var isMac = /Mac/.test(navigator.platform || navigator.userAgent);
+    var isTouch = navigator.maxTouchPoints > 1;
+    if (isMac && !isTouch) {
+      document.querySelectorAll(".js-appstore-link").forEach(function (link) {
+        link.addEventListener("click", function (e) {
+          if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+          e.preventDefault();
+          window.location.href = link.href.replace(/^https:\/\//, "macappstore://");
+        });
+      });
+    }
+
+    var toggle = document.querySelector(".js-theme-toggle");
+    if (toggle) {
+      toggle.addEventListener("click", function () {
+        var doc = document.documentElement;
+        var current = doc.getAttribute("data-theme");
+        if (!current) {
+          current = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        var next = current === "light" ? "dark" : "light";
+        doc.setAttribute("data-theme", next);
+        try { localStorage.setItem("palomino-theme", next); } catch (e) {}
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>

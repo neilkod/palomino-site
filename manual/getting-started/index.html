@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d0d0d">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf8f5">
+<meta name="robots" content="index, follow">
+<title>Getting started | Palomino manual</title>
+<meta name="description" content="What Palomino does, opening your first folder, culling from a card, and why previews load instantly.">
+<link rel="canonical" href="https://palomino-app.com/manual/getting-started/">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/assets/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/BricolageGrotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script>(function(){try{var t=localStorage.getItem("palomino-theme");if(t==="light"||t==="dark"){document.documentElement.setAttribute("data-theme",t);}}catch(e){}})();</script>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Palomino">
+<meta property="og:title" content="Getting started | Palomino manual">
+<meta property="og:description" content="What Palomino does, opening your first folder, culling from a card, and why previews load instantly.">
+<meta property="og:url" content="https://palomino-app.com/manual/getting-started/">
+<meta property="og:image" content="https://palomino-app.com/assets/screenshot-preview.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="800">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Getting started | Palomino manual">
+<meta name="twitter:description" content="What Palomino does, opening your first folder, culling from a card, and why previews load instantly.">
+<meta name="twitter:image" content="https://palomino-app.com/assets/screenshot-preview.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Palomino", "item": "https://palomino-app.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Manual", "item": "https://palomino-app.com/manual/" },
+    { "@type": "ListItem", "position": 3, "name": "Getting started" }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/assets/global.css">
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "3b5cef76a9524b47889d1e8b460025d5"}'></script>
+</head>
+<body class="manual">
+
+<nav class="site-nav" aria-label="Site">
+  <div class="nav-inner">
+    <a class="brand" href="/"><img src="/assets/app-icon.png" width="30" height="30" alt="Palomino app icon"><span class="wordmark">Palomino<span class="accent">.</span></span></a>
+    <a class="btn-nav js-appstore-link" href="https://apps.apple.com/us/app/palomino/id6779869483?mt=12" target="_blank" rel="noopener">Download</a>
+    <button class="theme-toggle js-theme-toggle" type="button" aria-label="Switch between light and dark theme">
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9"/></svg>
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="wrap manual-layout">
+  <aside class="manual-sidebar">
+    <h2>Manual</h2>
+    <ul>
+      <li><a href="/manual/">Overview</a></li>
+      <li><a href="/manual/getting-started/" aria-current="page">Getting started</a></li>
+      <li><a href="/manual/rating-and-flagging/">Rating and flagging</a></li>
+      <li><a href="/manual/viewing-and-filtering/">Viewing and filtering</a></li>
+      <li><a href="/manual/bursts-and-stacks/">Bursts and stacks</a></li>
+      <li><a href="/manual/exporting/">Copying your selects</a></li>
+      <li><a href="/manual/ratings-and-your-editor/">Ratings and your editor</a></li>
+      <li><a href="/manual/keyboard-shortcuts/">Keyboard shortcuts</a></li>
+      <li><a href="/manual/troubleshooting/">Troubleshooting</a></li>
+    </ul>
+  </aside>
+
+  <article class="manual-article">
+    <h1>Getting started</h1>
+    <p class="dek">What Palomino does, what it leaves to your editor, and how to open your first folder.</p>
+
+    <figure class="figure">
+      <img src="/assets/manual/window-at-a-glance.jpg" width="1400" height="875" loading="eager" alt="The Palomino window: the filmstrip of every frame on the left, the photo you are judging in the center, the info panel on the right, and the status bar along the bottom">
+      <figcaption>The Palomino window: the filmstrip on the left, the photo you are judging in the center, the info panel on the right, and the status bar along the bottom.</figcaption>
+    </figure>
+
+    <h2>What Palomino does</h2>
+    <ul>
+      <li>Loads folders of RAW files instantly using the embedded JPEG preview each camera writes at capture time.</li>
+      <li>Lets you rate, flag, and label every photo using single keystrokes, advancing automatically to the next frame.</li>
+      <li>Groups burst sequences and lets you pick the best frame and reject the rest in one step.</li>
+      <li>Copies your selects to a destination folder, ready for Lightroom, Capture One, or a denoiser.</li>
+    </ul>
+
+    <h2>What Palomino leaves to your editor</h2>
+    <ul>
+      <li>No RAW development, color grading, or retouching.</li>
+      <li>No catalog or database. Your files stay where they are.</li>
+      <li>No cloud sync, and no renaming of your original files. Copy to Folder can name the copies it writes from a template, and the originals stay untouched.</li>
+      <li>Palomino does not control the camera, so it does not capture tethered shots. It can watch a folder for new frames as your tethering software saves them.</li>
+    </ul>
+
+    <h2>Opening a folder</h2>
+    <ol>
+      <li>Click <strong>Open Folder</strong> on the welcome screen, or press <kbd>⌘O</kbd> from anywhere in the app.</li>
+      <li>Select the folder containing your photos and click <strong>Open</strong>.</li>
+      <li>Palomino scans the folder and displays the first photo. Your previous ratings and picks are restored automatically if you have been here before.</li>
+    </ol>
+    <p>You can also drag a folder directly onto the welcome screen.</p>
+
+    <h2>Folders that keep photos in subfolders</h2>
+    <p>Some folders keep their photos one level down, such as a card copied with its DCIM layout intact. When the folder you open has no photos at its top level but its subfolders contain some, Palomino shows an alert with the photo and subfolder counts and offers <strong>Include Subfolders</strong>. Accept it and the photos from every subfolder load as one set. The choice is remembered with the folder in your recents, so reopening it later includes the subfolders again without asking.</p>
+
+    <h2>Culling straight from a card</h2>
+    <p>You can open a folder that lives on a camera card: a card in a reader, or a card presented by a camera connected over USB. Palomino detects this and treats the card as read-only. A "Card, read-only" pill appears in the status bar, and your culling session is saved on this Mac instead of on the card, so nothing is written to the card itself.</p>
+    <p>Your ratings and picks work exactly as they do anywhere else, and they are waiting for you if you later open the copied folder from your hard drive. The option that moves unrated photos to the Trash is disabled for card sources, because files on a card are never changed.</p>
+
+    <h2>Background work</h2>
+    <p>When you open a folder, Palomino analyzes the photos in the background to find faces, judge sharpness, group bursts, and read capture dates. If that work runs longer than a moment, a small window titled "Background work" appears and lists what is running. The window floats above the main window without taking focus, so you can keep culling, and it closes on its own when the work finishes.</p>
+
+    <h2>Recent folders</h2>
+    <p>The welcome screen lists your recently opened folders with completion stats ("234 of 400 rated") so you can see at a glance whether a session is finished or still in progress. Each row shows a small contact sheet built from the folder's photos. Click any entry to reopen it, or move through the list with the arrow keys and press <kbd>Return</kbd> to open the selected folder.</p>
+    <p>When a recent folder cannot be opened because its card was ejected or the folder was moved or deleted, Palomino names the folder and says it is not available. From that alert you can open the folder picker to find it, remove the entry from the recents list, or cancel.</p>
+    <p>The same folders are available from <strong>File &gt; Open Recent</strong> while you are culling, so you can jump to another recent folder without closing the one you have open. Choosing the folder that is already open does nothing. If a folder is on a card or drive that is not connected, Palomino opens the folder picker at its last known location instead.</p>
+    <p>To put a folder away and pick another, choose <strong>File &gt; Close</strong> (<kbd>⌘W</kbd>). Palomino returns to the welcome screen with your session saved, so you can open the next shoot without relaunching the app.</p>
+
+    <h2>Watching for new files</h2>
+    <p>Palomino can keep the open folder in sync with new files as they arrive. Turn on <strong>Watch the open folder for new files</strong> in <strong>Settings</strong> (<kbd>⌘,</kbd>) under the General tab. It is off by default and takes effect the next time you open a folder.</p>
+    <p>With it on, any photo added to the folder you opened appears in Palomino on its own, without moving you off the photo you are judging or changing your filter. This is useful during tethered shooting, when your capture software writes new frames to the folder while you cull the ones already in.</p>
+
+    <h2>Supported formats</h2>
+    <p>Palomino opens RAW files from most major cameras, plus JPEG and HEIF.</p>
+    <p><strong>RAW formats:</strong> ARW, CR2, CR3, CRW, DCR, DNG, ERF, FFF, IIQ, MOS, NEF, NRW, ORF, PEF, RAF, RAW, RW2, RWL, SR2, SRF, SRW, TIFF, 3FR</p>
+    <p><strong>Other formats:</strong> HEIC, JPEG</p>
+
+    <h2>RAW+JPEG and RAW+HEIF pairs</h2>
+    <p>If your camera shoots in RAW+JPEG or RAW+HEIF mode, Palomino detects the pairs automatically at scan time. The JPEG or HEIF companion is used as the pixel source for previews and thumbnails: it is faster to decode, and the quality is identical at normal viewing distances. The RAW file remains the identity of the photo for ratings, copies, and sidecar writes.</p>
+    <p>A paired photo shows a small badge in the info panel so you know the companion is present. The photo count in the filmstrip reflects the pair as a single entry, not two separate files.</p>
+    <div class="callout callout-tip">
+      <p>RAW+JPEG pairing cuts your visible photo count in half on dual-slot cards. If a card that usually shows 600 photos suddenly shows 300, this is why, not data loss.</p>
+    </div>
+
+    <h2>Why previews are instant</h2>
+    <p>Palomino never decodes full RAW sensor data for the preview pane. Every RAW file contains an embedded JPEG preview that the camera writes at capture time, using the same processing engine as a camera JPEG. Palomino reads that embedded preview using Apple's ImageIO framework, which is 10 to 100 times faster than full RAW decoding. A background prefetch window keeps the next several photos already decoded in memory before you press the arrow key.</p>
+    <div class="callout callout-note">
+      <p><strong>Previews look different from my editor.</strong> The embedded preview reflects your in-camera Picture Profile or Creative Style, not your editor's default rendering. This is expected: you are culling based on the camera's interpretation, which is the same standard your camera's LCD uses. Switch to your editor for final rendering decisions.</p>
+    </div>
+
+    <nav class="manual-prevnext" aria-label="Manual navigation">
+      <a href="/manual/"><span class="dir">Previous</span>Manual overview</a>
+      <a class="next" href="/manual/rating-and-flagging/"><span class="dir">Next</span>Rating and flagging</a>
+    </nav>
+  </article>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-links">
+      <a href="/">Palomino home</a>
+      <a href="/hasselblad/">Shooting Hasselblad?</a>
+      <a href="/fuji/">Shooting Fujifilm?</a>
+      <a href="/privacy.html">Privacy policy</a>
+    </div>
+    <p>&copy; 2026 Neil Kodner. Palomino supports ARW, DNG, 3FR, NEF, CR3, RAF, ORF, FFF, HEIC, JPEG, and 20+ other formats.</p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var isMac = /Mac/.test(navigator.platform || navigator.userAgent);
+    var isTouch = navigator.maxTouchPoints > 1;
+    if (isMac && !isTouch) {
+      document.querySelectorAll(".js-appstore-link").forEach(function (link) {
+        link.addEventListener("click", function (e) {
+          if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+          e.preventDefault();
+          window.location.href = link.href.replace(/^https:\/\//, "macappstore://");
+        });
+      });
+    }
+
+    var toggle = document.querySelector(".js-theme-toggle");
+    if (toggle) {
+      toggle.addEventListener("click", function () {
+        var doc = document.documentElement;
+        var current = doc.getAttribute("data-theme");
+        if (!current) {
+          current = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        var next = current === "light" ? "dark" : "light";
+        doc.setAttribute("data-theme", next);
+        try { localStorage.setItem("palomino-theme", next); } catch (e) {}
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>

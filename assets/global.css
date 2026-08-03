@@ -5,6 +5,7 @@
    3. Universal core: reset, body base, focus ring, shared nav and footer.
    4. Marketing layout under .marketing (index.html, fuji, hasselblad).
    5. Legal layout under .legal (privacy.html).
+   6. Manual layout under .manual (the /manual/ pages).
    Theme resolution: light tokens are the default, a prefers-color-scheme media
    query supplies dark, and an html[data-theme] attribute set by the in-page
    toggle wins over both. */
@@ -98,6 +99,11 @@ h1, h2, h3, .wordmark {
 a:focus-visible, button:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
 :target { scroll-margin-top: 84px; }
+kbd {
+  background: var(--panel); border: 1px solid var(--border); border-bottom-width: 2px;
+  border-radius: 6px; padding: 2px 8px; font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.85rem; color: var(--text);
+}
 
 /* Shared sticky nav */
 .site-nav {
@@ -204,6 +210,10 @@ html[data-theme="dark"] .theme-toggle .moon { display: block; }
   box-shadow: var(--shadow); overflow: hidden;
 }
 .marketing .shot { max-width: 860px; margin: 0 auto 60px; }
+.marketing .shot > img {
+  display: block; width: 100%; height: auto; border-radius: 12px;
+  border: 1px solid var(--border); box-shadow: var(--shadow);
+}
 .marketing .shot .ratio-box {
   position: relative; border-radius: 12px; border: 1px solid var(--border);
   box-shadow: var(--shadow); overflow: hidden;
@@ -234,15 +244,12 @@ html[data-theme="dark"] .theme-toggle .moon { display: block; }
   border-radius: 14px; padding: 24px;
 }
 .marketing .feature h3 { font-size: 1.05rem; font-weight: 650; margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+.marketing .feature h3 a { color: var(--text); text-decoration: none; }
+.marketing .feature h3 a:hover { color: var(--accent-ink); }
 .marketing .feature h3 span { color: var(--accent-ink); display: inline-flex; flex-shrink: 0; }
 .marketing .feature h3 svg { width: 19px; height: 19px; display: block; }
 .marketing .feature p { color: var(--muted); font-size: 0.93rem; }
 .marketing .keys { text-align: center; color: var(--muted); font-size: 0.95rem; }
-.marketing .keys kbd {
-  background: var(--panel); border: 1px solid var(--border); border-bottom-width: 2px;
-  border-radius: 6px; padding: 2px 8px; font-family: ui-monospace, "SF Mono", Menlo, monospace;
-  font-size: 0.85rem; color: var(--text);
-}
 .marketing .testimonial-wrap { padding: 8px 0 40px; text-align: center; }
 .marketing .testimonial { display: inline-block; max-width: 520px; width: 100%; }
 .marketing .testimonial img { width: 100%; border-radius: 18px; }
@@ -314,7 +321,78 @@ html[data-theme="dark"] .theme-toggle .moon { display: block; }
 .legal a:hover { color: var(--accent-ink); }
 .legal code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.9em; background: var(--panel-2); padding: 1px 5px; border-radius: 5px; }
 
-/* 6. Motion */
+/* 6. Manual layout */
+.manual { line-height: 1.7; }
+.manual-layout {
+  display: grid; grid-template-columns: 200px 1fr; gap: 40px;
+  padding: 48px 0 80px; align-items: start;
+}
+.manual-sidebar { position: sticky; top: 84px; }
+.manual-sidebar h2 {
+  font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--muted); margin-bottom: 12px;
+}
+.manual-sidebar ul { list-style: none; display: flex; flex-direction: column; gap: 2px; }
+.manual-sidebar a {
+  display: block; padding: 6px 10px; border-radius: 7px;
+  color: var(--muted); text-decoration: none; font-size: 0.9rem;
+}
+.manual-sidebar a:hover { color: var(--text); background: var(--panel-2); }
+.manual-sidebar a[aria-current="page"] { color: var(--accent-ink); font-weight: 650; background: var(--panel-2); }
+
+.manual-article h1 {
+  font-size: clamp(1.8rem, 3.6vw, 2.3rem); font-weight: 750; letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+.manual-article > .dek { color: var(--muted); font-size: 1.05rem; margin-bottom: 32px; }
+.manual-article h2 {
+  font-size: 1.3rem; font-weight: 700; color: var(--accent-ink); letter-spacing: -0.01em;
+  margin: 40px 0 14px;
+}
+.manual-article h2:first-child { margin-top: 0; }
+.manual-article p { color: var(--text); margin-bottom: 14px; }
+.manual-article ul, .manual-article ol { color: var(--text); padding-left: 1.4em; margin-bottom: 14px; }
+.manual-article li { margin-bottom: 6px; }
+.manual-article a { color: var(--accent-ink); }
+.manual-article strong { font-weight: 650; }
+
+.manual-article .table-wrap { overflow-x: auto; margin: 20px 0; }
+.manual-article table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+.manual-article th, .manual-article td {
+  border-bottom: 1px solid var(--border); padding: 9px 12px; text-align: left;
+}
+.manual-article th { background: var(--panel-2); font-weight: 650; }
+
+.manual-article .callout {
+  background: var(--panel); border-left: 3px solid var(--border);
+  border-radius: 8px; padding: 14px 18px; margin: 20px 0; font-size: 0.95rem;
+}
+.manual-article .callout p:last-child { margin-bottom: 0; }
+.manual-article .callout p { margin-bottom: 8px; }
+.manual-article .callout-tip { border-left-color: var(--accent); }
+.manual-article .callout-warning { border-left-color: #d64545; }
+.manual-article .callout-note { border-left-color: var(--border); }
+
+.manual-article figure.figure { margin: 24px 0; }
+.manual-article figure.figure img {
+  display: block; width: 100%; height: auto; border-radius: 12px;
+  border: 1px solid var(--border); box-shadow: var(--shadow);
+}
+.manual-article figure.figure figcaption {
+  margin-top: 12px; color: var(--muted); font-size: 0.9rem; text-align: center;
+}
+
+.manual-prevnext {
+  display: flex; justify-content: space-between; gap: 16px;
+  margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--border);
+  font-size: 0.92rem;
+}
+.manual-prevnext a { color: var(--text); text-decoration: none; }
+.manual-prevnext a:hover { color: var(--accent-ink); }
+.manual-prevnext .dir { display: block; color: var(--muted); font-size: 0.78rem; margin-bottom: 2px; }
+.manual-prevnext .next { text-align: right; margin-left: auto; }
+
+/* 7. Motion */
 @media (prefers-reduced-motion: no-preference) {
   html.reveal-init .reveal { opacity: 0; transform: translateY(14px); }
   html.reveal-init .reveal.in { opacity: 1; transform: none; transition: opacity 0.55s ease, transform 0.55s ease; }
@@ -323,7 +401,7 @@ html[data-theme="dark"] .theme-toggle .moon { display: block; }
   html { scroll-behavior: auto; }
 }
 
-/* 7. Mobile */
+/* 8. Mobile */
 @media (max-width: 720px) {
   .site-nav .nav-links { display: none; }
   .site-nav .nav-inner { gap: 12px; }
@@ -332,4 +410,7 @@ html[data-theme="dark"] .theme-toggle .moon { display: block; }
   .marketing .shot { margin-bottom: 44px; }
   .legal h1 { font-size: 1.8rem; }
   .legal header { padding: 44px 0 28px; }
+  .manual-layout { grid-template-columns: 1fr; gap: 24px; padding: 32px 0 56px; }
+  .manual-sidebar { position: static; }
+  .manual-sidebar ul { flex-direction: row; flex-wrap: wrap; gap: 6px; }
 }

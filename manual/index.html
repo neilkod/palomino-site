@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d0d0d">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf8f5">
+<meta name="robots" content="index, follow">
+<title>Palomino manual</title>
+<meta name="description" content="The Palomino manual: opening a folder, rating and flagging, filtering, bursts and stacks, exporting, keyboard shortcuts, and troubleshooting.">
+<link rel="canonical" href="https://palomino-app.com/manual/">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/assets/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/BricolageGrotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script>(function(){try{var t=localStorage.getItem("palomino-theme");if(t==="light"||t==="dark"){document.documentElement.setAttribute("data-theme",t);}}catch(e){}})();</script>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Palomino">
+<meta property="og:title" content="Palomino manual">
+<meta property="og:description" content="Opening a folder, rating and flagging, filtering, bursts and stacks, exporting, keyboard shortcuts, and troubleshooting.">
+<meta property="og:url" content="https://palomino-app.com/manual/">
+<meta property="og:image" content="https://palomino-app.com/assets/screenshot-preview.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="800">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Palomino manual">
+<meta name="twitter:description" content="Opening a folder, rating and flagging, filtering, bursts and stacks, exporting, keyboard shortcuts, and troubleshooting.">
+<meta name="twitter:image" content="https://palomino-app.com/assets/screenshot-preview.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Palomino", "item": "https://palomino-app.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Manual" }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/assets/global.css">
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "3b5cef76a9524b47889d1e8b460025d5"}'></script>
+</head>
+<body class="manual marketing">
+
+<nav class="site-nav" aria-label="Site">
+  <div class="nav-inner">
+    <a class="brand" href="/"><img src="/assets/app-icon.png" width="30" height="30" alt="Palomino app icon"><span class="wordmark">Palomino<span class="accent">.</span></span></a>
+    <a class="btn-nav js-appstore-link" href="https://apps.apple.com/us/app/palomino/id6779869483?mt=12" target="_blank" rel="noopener">Download</a>
+    <button class="theme-toggle js-theme-toggle" type="button" aria-label="Switch between light and dark theme">
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9"/></svg>
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+    </button>
+  </div>
+</nav>
+
+<header class="hero wrap" style="padding: 56px 0 32px;">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Palomino</a> <span aria-hidden="true">&rsaquo;</span> Manual</nav>
+  <h1>Palomino manual<span class="accent">.</span></h1>
+  <p class="pitch">This manual covers what Palomino does, from opening a folder to copying your picks to a destination folder. Each page focuses on one part of the workflow, along with the keyboard shortcuts and settings that go with it.</p>
+  <p class="pitch">Start with Getting Started if you are new to Palomino, or jump straight to the page for whatever you are trying to do. The <kbd>?</kbd> overlay inside the app shows the same keyboard shortcuts listed here.</p>
+</header>
+
+<section class="wrap">
+  <p class="lead">Open a folder, then judge each photo and press <kbd>P</kbd> to pick it or <kbd>X</kbd> to reject it, Palomino advances to the next frame automatically. Add star ratings with <kbd>1</kbd> through <kbd>5</kbd> if you want them alongside flags. When you are done, press <kbd>E</kbd> and copy your picks to a destination folder. Ratings and flags write to XMP sidecar files next to each RAW, so your stars and picks appear as soon as you import into Lightroom or Capture One.</p>
+</section>
+
+<section class="wrap">
+  <figure class="shot">
+    <img src="/assets/manual/window-at-a-glance.jpg" width="1400" height="875" loading="lazy" alt="The Palomino window: the filmstrip of every frame on the left, the photo you are judging in the center, the info panel on the right, and the rating bar along the bottom">
+  </figure>
+</section>
+
+<section class="wrap">
+  <h2>Manual pages</h2>
+  <div class="features">
+    <div class="feature"><h3><a href="/manual/getting-started/">Getting started</a></h3><p>What Palomino does, opening a folder, and why previews load instantly.</p></div>
+    <div class="feature"><h3><a href="/manual/rating-and-flagging/">Rating and flagging</a></h3><p>Picks, rejects, star ratings, color labels, and the WASD grip.</p></div>
+    <div class="feature"><h3><a href="/manual/viewing-and-filtering/">Viewing and filtering</a></h3><p>The grid, the info panel, sort order, and filtering by flag, rating, or label.</p></div>
+    <div class="feature"><h3><a href="/manual/bursts-and-stacks/">Bursts and stacks</a></h3><p>Burst grouping, focus stacks, keeper crowns, and the compare view.</p></div>
+    <div class="feature"><h3><a href="/manual/exporting/">Copying your selects</a></h3><p>The Copy to Folder sheet, copy modes, file naming, and copy presets.</p></div>
+    <div class="feature"><h3><a href="/manual/ratings-and-your-editor/">Ratings and your editor</a></h3><p>How XMP sidecars carry your ratings into Lightroom, Capture One, and Phocus.</p></div>
+    <div class="feature"><h3><a href="/manual/keyboard-shortcuts/">Keyboard shortcuts</a></h3><p>Every shortcut in the app, grouped by task.</p></div>
+    <div class="feature"><h3><a href="/manual/troubleshooting/">Troubleshooting</a></h3><p>Fixes for the most common problems, from missing ratings to slow loading.</p></div>
+  </div>
+</section>
+
+<section class="wrap keys">
+  <p><kbd>&larr;</kbd> <kbd>&rarr;</kbd> move &nbsp; <kbd>1</kbd>&ndash;<kbd>5</kbd> rate &nbsp; <kbd>P</kbd> pick &nbsp; <kbd>X</kbd> reject &nbsp; <kbd>V</kbd> face zoom &nbsp; <kbd>G</kbd> grid &nbsp; <kbd>C</kbd> compare &nbsp; <kbd>E</kbd> export</p>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-links">
+      <a href="/">Palomino home</a>
+      <a href="/hasselblad/">Shooting Hasselblad?</a>
+      <a href="/fuji/">Shooting Fujifilm?</a>
+      <a href="/privacy.html">Privacy policy</a>
+    </div>
+    <p>&copy; 2026 Neil Kodner. Palomino supports ARW, DNG, 3FR, NEF, CR3, RAF, ORF, FFF, HEIC, JPEG, and 20+ other formats.</p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var isMac = /Mac/.test(navigator.platform || navigator.userAgent);
+    var isTouch = navigator.maxTouchPoints > 1;
+    if (isMac && !isTouch) {
+      document.querySelectorAll(".js-appstore-link").forEach(function (link) {
+        link.addEventListener("click", function (e) {
+          if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+          e.preventDefault();
+          window.location.href = link.href.replace(/^https:\/\//, "macappstore://");
+        });
+      });
+    }
+
+    var toggle = document.querySelector(".js-theme-toggle");
+    if (toggle) {
+      toggle.addEventListener("click", function () {
+        var doc = document.documentElement;
+        var current = doc.getAttribute("data-theme");
+        if (!current) {
+          current = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        var next = current === "light" ? "dark" : "light";
+        doc.setAttribute("data-theme", next);
+        try { localStorage.setItem("palomino-theme", next); } catch (e) {}
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>

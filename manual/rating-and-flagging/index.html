@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d0d0d">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf8f5">
+<meta name="robots" content="index, follow">
+<title>Rating and flagging | Palomino manual</title>
+<meta name="description" content="Picks, rejects, star ratings, color labels, the WASD grip, batch selection, and undo.">
+<link rel="canonical" href="https://palomino-app.com/manual/rating-and-flagging/">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/assets/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/BricolageGrotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script>(function(){try{var t=localStorage.getItem("palomino-theme");if(t==="light"||t==="dark"){document.documentElement.setAttribute("data-theme",t);}}catch(e){}})();</script>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Palomino">
+<meta property="og:title" content="Rating and flagging | Palomino manual">
+<meta property="og:description" content="Picks, rejects, star ratings, color labels, the WASD grip, batch selection, and undo.">
+<meta property="og:url" content="https://palomino-app.com/manual/rating-and-flagging/">
+<meta property="og:image" content="https://palomino-app.com/assets/screenshot-preview.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="800">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rating and flagging | Palomino manual">
+<meta name="twitter:description" content="Picks, rejects, star ratings, color labels, the WASD grip, batch selection, and undo.">
+<meta name="twitter:image" content="https://palomino-app.com/assets/screenshot-preview.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Palomino", "item": "https://palomino-app.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Manual", "item": "https://palomino-app.com/manual/" },
+    { "@type": "ListItem", "position": 3, "name": "Rating and flagging" }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/assets/global.css">
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "3b5cef76a9524b47889d1e8b460025d5"}'></script>
+</head>
+<body class="manual">
+
+<nav class="site-nav" aria-label="Site">
+  <div class="nav-inner">
+    <a class="brand" href="/"><img src="/assets/app-icon.png" width="30" height="30" alt="Palomino app icon"><span class="wordmark">Palomino<span class="accent">.</span></span></a>
+    <a class="btn-nav js-appstore-link" href="https://apps.apple.com/us/app/palomino/id6779869483?mt=12" target="_blank" rel="noopener">Download</a>
+    <button class="theme-toggle js-theme-toggle" type="button" aria-label="Switch between light and dark theme">
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9"/></svg>
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="wrap manual-layout">
+  <aside class="manual-sidebar">
+    <h2>Manual</h2>
+    <ul>
+      <li><a href="/manual/">Overview</a></li>
+      <li><a href="/manual/getting-started/">Getting started</a></li>
+      <li><a href="/manual/rating-and-flagging/" aria-current="page">Rating and flagging</a></li>
+      <li><a href="/manual/viewing-and-filtering/">Viewing and filtering</a></li>
+      <li><a href="/manual/bursts-and-stacks/">Bursts and stacks</a></li>
+      <li><a href="/manual/exporting/">Copying your selects</a></li>
+      <li><a href="/manual/ratings-and-your-editor/">Ratings and your editor</a></li>
+      <li><a href="/manual/keyboard-shortcuts/">Keyboard shortcuts</a></li>
+      <li><a href="/manual/troubleshooting/">Troubleshooting</a></li>
+    </ul>
+  </aside>
+
+  <article class="manual-article">
+    <h1>Rating and flagging</h1>
+    <p class="dek">Rate and flag every photo with single keystrokes. Palomino advances to the next photo automatically after each action.</p>
+
+    <h2>Picks and rejects</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Key</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td><kbd>P</kbd> or <kbd>T</kbd></td><td>Pick: marks the photo as a keeper</td></tr>
+          <tr><td><kbd>X</kbd></td><td>Reject: marks the photo as a reject</td></tr>
+          <tr><td><kbd>U</kbd></td><td>Unflag: clears both pick and reject, returns to neutral</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Press <kbd>P</kbd> or <kbd>X</kbd> a second time on a photo that already has that flag to clear it. Picks and rejects are independent of star ratings, so you can have a 3-star reject or an unrated pick.</p>
+
+    <div class="callout callout-tip">
+      <p>You can cull with one hand using the WASD keys. Keep your left hand on one cluster: <kbd>W</kbd> picks, <kbd>S</kbd> rejects, <kbd>A</kbd> goes back, and <kbd>D</kbd> advances. Picks and rejects advance automatically, so you can fly through a shoot without leaving the keys. <kbd>W</kbd> and <kbd>S</kbd> always advance (they ignore <kbd>⇧</kbd>); use <kbd>⇧P</kbd> / <kbd>⇧X</kbd> when you want to flag without moving on.</p>
+    </div>
+
+    <h2>Star ratings</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Key</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td><kbd>1</kbd>&ndash;<kbd>5</kbd></td><td>Set star rating and advance</td></tr>
+          <tr><td><kbd>⇧1</kbd>&ndash;<kbd>⇧5</kbd></td><td>Set star rating without advancing</td></tr>
+          <tr><td><kbd>0</kbd></td><td>Clear star rating</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Color labels</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Key</th><th>Color</th></tr></thead>
+        <tbody>
+          <tr><td><kbd>6</kbd></td><td>Red</td></tr>
+          <tr><td><kbd>7</kbd></td><td>Yellow</td></tr>
+          <tr><td><kbd>8</kbd></td><td>Green</td></tr>
+          <tr><td><kbd>9</kbd></td><td>Blue</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Press the same key again on a labeled photo to clear the label. Labels auto-advance to the next photo. Hold <kbd>⇧</kbd> while pressing a label key (<kbd>⇧6</kbd>&ndash;<kbd>⇧9</kbd>) to assign the label without advancing.</p>
+    <p>The table above shows the Lightroom convention, which is the default. Phocus reverses that mapping: <kbd>6</kbd> green, <kbd>7</kbd> yellow, <kbd>8</kbd> red, and no key for blue. If you work between Palomino and Phocus, choose <strong>Color label keys: Phocus</strong> in <strong>Settings</strong> (<kbd>⌘,</kbd>) and the label keys, the shortcuts overlay, and the filter prompt all follow that mapping. Under the Phocus convention <kbd>9</kbd> does nothing, and blue and purple labels remain available from the context menu and filters.</p>
+
+    <h2>Auto-advance</h2>
+    <p>By default, assigning a rating, flag, or label moves you forward to the next photo. To assign without moving on, useful when you want to look at a photo longer before deciding, hold <kbd>⇧</kbd> while pressing the key. This works for ratings (<kbd>⇧1</kbd>&ndash;<kbd>⇧5</kbd>), flags (<kbd>⇧P</kbd>, <kbd>⇧X</kbd>), and color labels (<kbd>⇧6</kbd>&ndash;<kbd>⇧9</kbd>). You can also turn auto-advance off entirely in <strong>Settings</strong> (<kbd>⌘,</kbd>).</p>
+    <div class="callout callout-note">
+      <p>Clearing actions (<kbd>0</kbd>, <kbd>U</kbd>, pressing the same label key again) never auto-advance. Only assigning a new value moves you forward.</p>
+    </div>
+
+    <h2>Rating several photos at once</h2>
+    <p>The grid view can select several photos and apply one decision to all of them. While a selection is active, the same keys change their meaning in two ways: they assign the value to every selected photo instead of toggling, and they never auto-advance. See <a href="/manual/viewing-and-filtering/">Viewing and Filtering</a> for how to build a selection with <kbd>⌘</kbd>-click, <kbd>⇧</kbd>-click, and <kbd>⌘A</kbd>.</p>
+
+    <h2>Jump to the next unrated photo</h2>
+    <p>Press <kbd>N</kbd> to jump to the next unrated photo, meaning a photo with no stars, no pick or reject flag, and no color label. It moves forward through the photos that match your current filters and wraps to the start, so repeated presses walk every unrated photo that is left.</p>
+
+    <h2>Undo</h2>
+    <p>Press <kbd>⌘Z</kbd> to undo your recent rating, flag, and label actions. Undo steps back through up to 50 actions, so a rhythm mistake several frames deep is still recoverable. A change applied to a grid selection counts as one action, so a single <kbd>⌘Z</kbd> restores every photo in the batch. Opening a new folder clears the undo history.</p>
+    <div class="callout callout-note">
+      <p><strong>I pressed the wrong key and advanced past the photo.</strong> Press the left arrow to go back, then make the correction. <kbd>⌘Z</kbd> reverses the assignment itself but does not move you back to the previous photo, so go back to it first if you want to see the frame you changed.</p>
+    </div>
+
+    <h2>Eyes-closed warning</h2>
+    <p>Palomino runs face detection in the background and flags photos where a subject's eyes may be closed. A small <code>zzz</code> badge appears on the photo in the filmstrip and the grid, and in the status bar below the photo in the main view, so you can catch a blink before you mark a frame as a keeper.</p>
+    <p>The badge is a hint, not a verdict. When you have looked at a photo and the eyes are fine, press <kbd>Y</kbd>, or choose <strong>Ignore Closed Eyes</strong> from the <strong>Photo</strong> menu, to hide the badge for that photo. The override is saved with the session, and pressing <kbd>Y</kbd> again brings the badge back.</p>
+
+    <p>See <a href="/manual/keyboard-shortcuts/">Keyboard Shortcuts</a> for the full key reference.</p>
+
+    <nav class="manual-prevnext" aria-label="Manual navigation">
+      <a href="/manual/getting-started/"><span class="dir">Previous</span>Getting started</a>
+      <a class="next" href="/manual/viewing-and-filtering/"><span class="dir">Next</span>Viewing and filtering</a>
+    </nav>
+  </article>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-links">
+      <a href="/">Palomino home</a>
+      <a href="/hasselblad/">Shooting Hasselblad?</a>
+      <a href="/fuji/">Shooting Fujifilm?</a>
+      <a href="/privacy.html">Privacy policy</a>
+    </div>
+    <p>&copy; 2026 Neil Kodner. Palomino supports ARW, DNG, 3FR, NEF, CR3, RAF, ORF, FFF, HEIC, JPEG, and 20+ other formats.</p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var isMac = /Mac/.test(navigator.platform || navigator.userAgent);
+    var isTouch = navigator.maxTouchPoints > 1;
+    if (isMac && !isTouch) {
+      document.querySelectorAll(".js-appstore-link").forEach(function (link) {
+        link.addEventListener("click", function (e) {
+          if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+          e.preventDefault();
+          window.location.href = link.href.replace(/^https:\/\//, "macappstore://");
+        });
+      });
+    }
+
+    var toggle = document.querySelector(".js-theme-toggle");
+    if (toggle) {
+      toggle.addEventListener("click", function () {
+        var doc = document.documentElement;
+        var current = doc.getAttribute("data-theme");
+        if (!current) {
+          current = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        var next = current === "light" ? "dark" : "light";
+        doc.setAttribute("data-theme", next);
+        try { localStorage.setItem("palomino-theme", next); } catch (e) {}
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>

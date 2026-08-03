@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d0d0d">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf8f5">
+<meta name="robots" content="index, follow">
+<title>Viewing and filtering | Palomino manual</title>
+<meta name="description" content="The grid, the info panel, sort order, and filtering by flag, rating, label, capture day, or quality hint.">
+<link rel="canonical" href="https://palomino-app.com/manual/viewing-and-filtering/">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/assets/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/BricolageGrotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script>(function(){try{var t=localStorage.getItem("palomino-theme");if(t==="light"||t==="dark"){document.documentElement.setAttribute("data-theme",t);}}catch(e){}})();</script>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Palomino">
+<meta property="og:title" content="Viewing and filtering | Palomino manual">
+<meta property="og:description" content="The grid, the info panel, sort order, and filtering by flag, rating, label, capture day, or quality hint.">
+<meta property="og:url" content="https://palomino-app.com/manual/viewing-and-filtering/">
+<meta property="og:image" content="https://palomino-app.com/assets/screenshot-preview.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="800">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Viewing and filtering | Palomino manual">
+<meta name="twitter:description" content="The grid, the info panel, sort order, and filtering by flag, rating, label, capture day, or quality hint.">
+<meta name="twitter:image" content="https://palomino-app.com/assets/screenshot-preview.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Palomino", "item": "https://palomino-app.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Manual", "item": "https://palomino-app.com/manual/" },
+    { "@type": "ListItem", "position": 3, "name": "Viewing and filtering" }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/assets/global.css">
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "3b5cef76a9524b47889d1e8b460025d5"}'></script>
+</head>
+<body class="manual">
+
+<nav class="site-nav" aria-label="Site">
+  <div class="nav-inner">
+    <a class="brand" href="/"><img src="/assets/app-icon.png" width="30" height="30" alt="Palomino app icon"><span class="wordmark">Palomino<span class="accent">.</span></span></a>
+    <a class="btn-nav js-appstore-link" href="https://apps.apple.com/us/app/palomino/id6779869483?mt=12" target="_blank" rel="noopener">Download</a>
+    <button class="theme-toggle js-theme-toggle" type="button" aria-label="Switch between light and dark theme">
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9"/></svg>
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="wrap manual-layout">
+  <aside class="manual-sidebar">
+    <h2>Manual</h2>
+    <ul>
+      <li><a href="/manual/">Overview</a></li>
+      <li><a href="/manual/getting-started/">Getting started</a></li>
+      <li><a href="/manual/rating-and-flagging/">Rating and flagging</a></li>
+      <li><a href="/manual/viewing-and-filtering/" aria-current="page">Viewing and filtering</a></li>
+      <li><a href="/manual/bursts-and-stacks/">Bursts and stacks</a></li>
+      <li><a href="/manual/exporting/">Copying your selects</a></li>
+      <li><a href="/manual/ratings-and-your-editor/">Ratings and your editor</a></li>
+      <li><a href="/manual/keyboard-shortcuts/">Keyboard shortcuts</a></li>
+      <li><a href="/manual/troubleshooting/">Troubleshooting</a></li>
+    </ul>
+  </aside>
+
+  <article class="manual-article">
+    <h1>Viewing and filtering</h1>
+    <p class="dek">Palomino gives you several ways to inspect your photos, and a filter controls what the arrow keys move through, in every view.</p>
+
+    <h2>Preview and zoom</h2>
+    <p>The main view shows one photo at a time. Move through photos with the left and right arrow keys, or press <kbd>Space</kbd> to advance. When the filmstrip is on the left, the up and down arrow keys also move between photos, matching the strip's top-to-bottom order. Opening or collapsing a burst, moving between grid rows, and promoting in the compare view all take priority over this, so the photo navigation applies when none of those do. With the filmstrip on the bottom, only left and right move between photos.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Key</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td><kbd>Z</kbd></td><td>Toggle between fit-to-window and 3x zoom (300%)</td></tr>
+          <tr><td><kbd>V</kbd></td><td>Zoom to the largest face, press again to zoom back out</td></tr>
+          <tr><td><kbd>=</kbd></td><td>Zoom in</td></tr>
+          <tr><td><kbd>-</kbd></td><td>Zoom out</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>When zoomed in, drag to pan. Pinch to zoom on a trackpad anchors to the pinch point. Double-click the photo to zoom to the point you clicked, and double-click again to return to fit. Click the fit-to-window button in the toolbar to reset to fit view.</p>
+    <p>Press <kbd>V</kbd> to jump to 300% on the largest face Palomino detects, the same zoom level as <kbd>Z</kbd>. This is a fast way to check eyes and sharpness on a portrait. Press <kbd>V</kbd> again to zoom back out to fit. When no face is detected, <kbd>V</kbd> does nothing.</p>
+
+    <h2>HDR photos</h2>
+    <p>Some cameras and phones save HDR photos with a gain map, extra data that records how much brighter the highlights should appear than a standard image allows. When a photo carries one, Palomino combines it with the image and shows the result at full brightness in the main view, so a properly exposed sky reads with its detail instead of looking blown out. The extra brightness appears on displays that can show a range beyond standard, which macOS decides per display; on other displays the photo shows in the standard range. Photos without a gain map, and all filmstrip and grid thumbnails, display exactly as before.</p>
+
+    <h2>Focus mask</h2>
+    <p>Press <kbd>⌘F</kbd> (or choose <strong>Focus Mask</strong> from the <strong>View</strong> menu) to paint a translucent green overlay over the areas of the photo that are in focus. The mask answers the question you would otherwise zoom in for: is the focus on the eye or on the branch behind it?</p>
+    <p>The mask stays on while you move between photos, so you can arrow through a sequence and watch the green land on or off your subject. Each photo's mask is computed when the photo appears and fades in a moment later; photos you skip past quickly are not analyzed. The mask follows the image when you zoom and pan.</p>
+    <p><strong>Settings</strong> (<kbd>⌘,</kbd>), under <strong>General</strong>, has a Focus mask section with a sensitivity slider labeled Less and More. Raising sensitivity shows more of the frame as in focus; lowering it shows less. The mask updates live if it is already on when you move the slider.</p>
+    <p>A photo with no green at all has nothing sharp in it, even at the highest sensitivity setting. That absence is the answer: the frame missed focus everywhere.</p>
+    <p>The analysis runs on the embedded JPEG preview, the same image Palomino displays. Press <kbd>⌘F</kbd> again to turn the mask off. The mask is a viewing aid only; it is never written to your files or your copies.</p>
+
+    <h2>Filmstrip</h2>
+    <p>The filmstrip shows every photo in the current folder as a thumbnail. Press <kbd>Tab</kbd> to show or hide it. While the compare view is open, <kbd>Tab</kbd> switches the active pane instead; use the filmstrip button in the title bar to show or hide the strip. By default, photos that don't match the active filter are dropped from the strip, so a filtered strip shows only the photos you are working through. To keep non-matching photos visible instead, turn off <strong>Hide filtered-out photos</strong> in <strong>Settings</strong> (<kbd>⌘,</kbd>); they then stay in the strip dimmed to 20% opacity, so you keep your place in the full set while you work a filter.</p>
+    <p>Filmstrip placement (left side or bottom edge) is also set in <strong>Settings</strong>. Drag the divider to resize the strip. The main photo shrinks to fit the space that is left rather than being covered, so the whole image stays visible.</p>
+
+    <h2>Grid view</h2>
+    <p>Press <kbd>G</kbd> to switch to the thumbnail grid. Click any thumbnail to jump to that photo. Press <kbd>G</kbd> or <kbd>Esc</kbd> to return to the single-photo view. A slider in the grid's toolbar adjusts thumbnail size.</p>
+
+    <figure class="figure">
+      <img src="/assets/manual/grid-view.jpg" width="1400" height="875" loading="lazy" alt="The grid view. Filter chips run across the top (Picked, Rejected, star ratings, Bursts, and quality hints), with the sort menu and the close button at the right end; burst frames carry a stack badge such as 2/3">
+      <figcaption>Filter chips run across the top, with the sort menu and close button at the right end. Burst frames carry a position badge such as 2/3.</figcaption>
+    </figure>
+
+    <p>In the grid you can apply ratings and flags with the same keys as in the preview: <kbd>P</kbd>, <kbd>X</kbd>, <kbd>1</kbd>&ndash;<kbd>5</kbd> all work without leaving the grid.</p>
+
+    <h3>Selecting several photos</h3>
+    <p>Hold <kbd>⌘</kbd> and click thumbnails to add them to a selection or remove them from it, or hold <kbd>⇧</kbd> and click to select the range from the current photo. Press <kbd>⌘A</kbd> to select every photo the current filter shows. A bar above the grid counts the selection, and while it is visible the culling keys act on every selected photo: ratings <kbd>1</kbd>&ndash;<kbd>5</kbd> and <kbd>0</kbd>, flags <kbd>P</kbd>, <kbd>X</kbd>, and <kbd>U</kbd>, and the color labels <kbd>6</kbd>&ndash;<kbd>9</kbd> all apply in one step. One press of <kbd>⌘Z</kbd> undoes the whole batch.</p>
+    <p>Batch changes assign the value directly. Rating five selected photos with <kbd>3</kbd> gives all five three stars, including any that already had a rating. A change that pushes photos out of the current filter also drops them from the selection, so a later batch action only ever touches photos you can see. Press <kbd>Esc</kbd> to clear the selection, or click a thumbnail without a modifier key. Leaving the grid clears the selection too.</p>
+    <p>A selection of exactly two photos can also go straight to a side-by-side comparison: press <kbd>C</kbd> and the two photos open in the compare view. See <a href="/manual/bursts-and-stacks/">Bursts and Stacks</a>.</p>
+    <p>When you turn on <strong>Collapse Bursts</strong> from the <strong>View</strong> menu, the grid shows one thumbnail per burst, the same as the filmstrip. See <a href="/manual/bursts-and-stacks/">Bursts and Stacks</a> for how to expand and collapse a burst.</p>
+
+    <h2>Info panel</h2>
+    <p>Press <kbd>I</kbd> to toggle the info panel on the right side. The panel shows:</p>
+    <ul>
+      <li>Camera body and lens</li>
+      <li>Shutter speed, aperture, ISO, focal length, and exposure compensation</li>
+      <li>Capture date and time</li>
+      <li>Pixel dimensions</li>
+      <li>Companion file indicator (for RAW+JPEG pairs)</li>
+      <li>A filter list with a live count for each filter</li>
+    </ul>
+
+    <figure class="figure">
+      <img src="/assets/manual/info-panel-filters.jpg" width="1400" height="875" loading="lazy" alt="The info panel on the right, with the filter list at the top. Each filter shows a live count, and the star row has a toggle for the at-or-above and at-or-below directions">
+      <figcaption>The filter list sits at the top of the info panel. Each filter shows a live count, and the star row toggles between the at-or-above and at-or-below directions.</figcaption>
+    </figure>
+
+    <p>The filter list lets you filter without leaving the single-photo view, and you can do the same from the keyboard by pressing <kbd>F</kbd>. See below for the full set of filters and the star direction toggle.</p>
+
+    <h2>Reading the status bar</h2>
+    <p>The status bar at the bottom of the preview window always shows:</p>
+    <ul>
+      <li><strong>Filename</strong> of the current photo</li>
+      <li><strong>Position counter</strong>: for example, "37 of 412" (reflecting the current filter)</li>
+      <li><strong>Pick count</strong> for the open folder</li>
+      <li><strong>Star rating controls</strong></li>
+      <li><strong>Crown and eyes-closed badges</strong>, when they apply to the current photo</li>
+      <li><strong>Exposure summary</strong>: shutter, aperture, ISO</li>
+    </ul>
+    <p>When a filter is active, an amber label appears in the status bar showing which filter is applied.</p>
+
+    <h2>Session stats</h2>
+    <p>Press <kbd>⌘⇧I</kbd>, or choose <strong>Session Stats</strong> from the <strong>View</strong> menu, to see how the session is going. The window shows the session time and your culling pace in photos per minute, a bar chart of how the star ratings are distributed, and the picked, rejected, and unrated counts. When the shoot contains bursts, a burst savings line adds how many groups you have resolved and how many duplicate frames you skipped. The completion card that appears after a copy links here too, so you can read the session's numbers right after the handoff.</p>
+
+    <h2>Sort order</h2>
+    <p>By default, photos are sorted by capture date and time from EXIF data. You can switch to filename, file size, or modification date from the sort menu, marked with up and down arrows. In the preview the menu sits at the right end of the toolbar, and in grid view it sits at the right end of the filter bar. The same choices live under View &gt; Sort Order in the menu bar. Capture date is the right choice for most shoots; filename order may disagree with capture order on multi-camera or multi-card jobs.</p>
+
+    <h2>Filter by flag, rating, or label</h2>
+    <p>Filters restrict what you see and move through. When a filter is active, the arrow keys skip non-matching photos, the position counter reflects only the filtered set, and the grid shows only matching thumbnails.</p>
+    <p>The filter bar at the top of the window shows chips for every available filter. Click a chip to activate it. Click an active chip to clear it and return to all photos.</p>
+    <p><strong>Available filters:</strong></p>
+    <ul>
+      <li><strong>Picked</strong>: photos you flagged with <kbd>P</kbd></li>
+      <li><strong>Rejected</strong>: photos you flagged with <kbd>X</kbd></li>
+      <li><strong>Unrated</strong>: photos with no stars and no flag</li>
+      <li><strong>★1+</strong> through <strong>★5</strong>: photos at or above a minimum star rating. You can also flip the direction to show photos at or below a rating, for example everything rated 2 stars and fewer. The direction control lives in the single-photo view and the info panel.</li>
+      <li><strong>Color labels</strong>: Red, Yellow, Green, Blue (only labels that appear in the folder are shown)</li>
+      <li><strong>Bursts</strong>: photos that belong to a burst group</li>
+      <li><strong>Stacks</strong>: photos that belong to a focus stack, detected or marked by hand</li>
+      <li><strong>Crowned</strong>: Palomino crowned these frames as the best of each burst or stack. The chip appears once the folder has crowned frames.</li>
+    </ul>
+
+    <h2>Filtering from the single-photo view</h2>
+    <p>You can filter straight from the single-photo view, without switching to the grid. Press <kbd>F</kbd> to open the filter prompt, then press one key to apply a filter:</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Key</th><th>Filter</th></tr></thead>
+        <tbody>
+          <tr><td><kbd>0</kbd></td><td>All photos, which clears the filter</td></tr>
+          <tr><td><kbd>1</kbd>&ndash;<kbd>5</kbd></td><td>Star rating</td></tr>
+          <tr><td><kbd>,</kbd> / <kbd>.</kbd></td><td>Star direction: <kbd>,</kbd> shows that rating and fewer, <kbd>.</kbd> shows that rating and more</td></tr>
+          <tr><td><kbd>6</kbd>&ndash;<kbd>9</kbd></td><td>Color label: Red, Yellow, Green, Blue (or the Phocus mapping when that convention is selected in Settings)</td></tr>
+          <tr><td><kbd>P</kbd></td><td>Picked</td></tr>
+          <tr><td><kbd>X</kbd></td><td>Rejected</td></tr>
+          <tr><td><kbd>U</kbd></td><td>Unrated</td></tr>
+          <tr><td><kbd>B</kbd></td><td>Bursts</td></tr>
+          <tr><td><kbd>S</kbd></td><td>Stacks</td></tr>
+          <tr><td><kbd>C</kbd></td><td>Crowned</td></tr>
+          <tr><td><kbd>D</kbd></td><td>Capture day, which opens the day picker</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Press <kbd>Esc</kbd>, or click outside the prompt, to close it without choosing.</p>
+    <p>For star ratings the prompt shows two direction chips. <kbd>.</kbd> keeps the "and more" direction, so ★2+ means two stars and above. <kbd>,</kbd> flips to "and fewer," so ★2− means two stars and below. The direction resets to "and more" each time you open the prompt.</p>
+
+    <figure class="figure">
+      <img src="/assets/manual/filter-prompt.jpg" width="1400" height="875" loading="lazy" alt="The filter prompt opened with F. Press a key to filter by flag, rating, label, or burst, and use the comma and period keys to switch the star direction between at-or-above and at-or-below. Each row shows how many photos match">
+      <figcaption>Press a key to filter by flag, rating, label, or burst. Each row shows how many photos match.</figcaption>
+    </figure>
+
+    <p>The info panel (<kbd>I</kbd>) carries the same filters as a list you can click, each with a live count of how many photos match, plus the same star direction toggle. The single-photo view and the info panel act on the same filtered set, so use whichever is faster for you.</p>
+
+    <h2>Quality hint filters</h2>
+    <p>After Palomino analyzes the folder in the background, three additional filter chips may appear:</p>
+    <ul>
+      <li><strong>Overexposed</strong>: more than about 2.5% of pixels are blown to white</li>
+      <li><strong>Underexposed</strong>: more than about 15% of pixels are crushed in the shadows</li>
+      <li><strong>Out of Focus</strong>: the image looks soft or motion-blurred based on an automatic sharpness check. This is a hint, not a verdict.</li>
+    </ul>
+    <p>These are hints, not verdicts. A black-background portrait, a star-trail shot, or a photo with strong bokeh may trigger them incorrectly. Filter chips for quality hints appear only after background analysis finishes for the first time.</p>
+
+    <h3>Marking a photo as intentionally soft</h3>
+    <p>If the out-of-focus badge is wrong for a particular photo, for example intentional motion blur, strong bokeh, or a macro shot, press <kbd>B</kbd> to mark it as intentionally soft. The badge is suppressed and the override is saved with the session. Pressing <kbd>B</kbd> again clears the override.</p>
+
+    <h2>Filter by capture day</h2>
+    <p>On multi-day shoots, a set of day chips appears in the filter bar showing each date found in the EXIF data. Click a day chip to restrict the view to photos from that day only. Click it again to clear.</p>
+    <p>The capture-day filter also narrows what you copy. With a day filter active, the Copy to Folder sheet offers only that day's photos that also match your rating or flag selection. To copy a full multi-day shoot, clear the day filter first. See <a href="/manual/exporting/">Copying Your Selects</a>.</p>
+    <div class="callout callout-note">
+      <p><strong>Quality hint chips haven't appeared yet.</strong> Background analysis runs after the folder loads and can take a few minutes for large folders. The chips appear as soon as any photos in the folder are flagged with a hint. If the folder was opened before and analysis already ran, results are restored from the session file instantly.</p>
+    </div>
+
+    <nav class="manual-prevnext" aria-label="Manual navigation">
+      <a href="/manual/rating-and-flagging/"><span class="dir">Previous</span>Rating and flagging</a>
+      <a class="next" href="/manual/bursts-and-stacks/"><span class="dir">Next</span>Bursts and stacks</a>
+    </nav>
+  </article>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-links">
+      <a href="/">Palomino home</a>
+      <a href="/hasselblad/">Shooting Hasselblad?</a>
+      <a href="/fuji/">Shooting Fujifilm?</a>
+      <a href="/privacy.html">Privacy policy</a>
+    </div>
+    <p>&copy; 2026 Neil Kodner. Palomino supports ARW, DNG, 3FR, NEF, CR3, RAF, ORF, FFF, HEIC, JPEG, and 20+ other formats.</p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var isMac = /Mac/.test(navigator.platform || navigator.userAgent);
+    var isTouch = navigator.maxTouchPoints > 1;
+    if (isMac && !isTouch) {
+      document.querySelectorAll(".js-appstore-link").forEach(function (link) {
+        link.addEventListener("click", function (e) {
+          if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+          e.preventDefault();
+          window.location.href = link.href.replace(/^https:\/\//, "macappstore://");
+        });
+      });
+    }
+
+    var toggle = document.querySelector(".js-theme-toggle");
+    if (toggle) {
+      toggle.addEventListener("click", function () {
+        var doc = document.documentElement;
+        var current = doc.getAttribute("data-theme");
+        if (!current) {
+          current = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        var next = current === "light" ? "dark" : "light";
+        doc.setAttribute("data-theme", next);
+        try { localStorage.setItem("palomino-theme", next); } catch (e) {}
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>

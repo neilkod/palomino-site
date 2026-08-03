@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d0d0d">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf8f5">
+<meta name="robots" content="index, follow">
+<title>Bursts and stacks | Palomino manual</title>
+<meta name="description" content="Burst grouping, keeper crowns, focus stacks, collapsing bursts in the grid, and the side-by-side compare view.">
+<link rel="canonical" href="https://palomino-app.com/manual/bursts-and-stacks/">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/assets/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/BricolageGrotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script>(function(){try{var t=localStorage.getItem("palomino-theme");if(t==="light"||t==="dark"){document.documentElement.setAttribute("data-theme",t);}}catch(e){}})();</script>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Palomino">
+<meta property="og:title" content="Bursts and stacks | Palomino manual">
+<meta property="og:description" content="Burst grouping, keeper crowns, focus stacks, collapsing bursts in the grid, and the side-by-side compare view.">
+<meta property="og:url" content="https://palomino-app.com/manual/bursts-and-stacks/">
+<meta property="og:image" content="https://palomino-app.com/assets/screenshot-compare.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="800">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bursts and stacks | Palomino manual">
+<meta name="twitter:description" content="Burst grouping, keeper crowns, focus stacks, collapsing bursts in the grid, and the side-by-side compare view.">
+<meta name="twitter:image" content="https://palomino-app.com/assets/screenshot-compare.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Palomino", "item": "https://palomino-app.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Manual", "item": "https://palomino-app.com/manual/" },
+    { "@type": "ListItem", "position": 3, "name": "Bursts and stacks" }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/assets/global.css">
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "3b5cef76a9524b47889d1e8b460025d5"}'></script>
+</head>
+<body class="manual">
+
+<nav class="site-nav" aria-label="Site">
+  <div class="nav-inner">
+    <a class="brand" href="/"><img src="/assets/app-icon.png" width="30" height="30" alt="Palomino app icon"><span class="wordmark">Palomino<span class="accent">.</span></span></a>
+    <a class="btn-nav js-appstore-link" href="https://apps.apple.com/us/app/palomino/id6779869483?mt=12" target="_blank" rel="noopener">Download</a>
+    <button class="theme-toggle js-theme-toggle" type="button" aria-label="Switch between light and dark theme">
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9"/></svg>
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="wrap manual-layout">
+  <aside class="manual-sidebar">
+    <h2>Manual</h2>
+    <ul>
+      <li><a href="/manual/">Overview</a></li>
+      <li><a href="/manual/getting-started/">Getting started</a></li>
+      <li><a href="/manual/rating-and-flagging/">Rating and flagging</a></li>
+      <li><a href="/manual/viewing-and-filtering/">Viewing and filtering</a></li>
+      <li><a href="/manual/bursts-and-stacks/" aria-current="page">Bursts and stacks</a></li>
+      <li><a href="/manual/exporting/">Copying your selects</a></li>
+      <li><a href="/manual/ratings-and-your-editor/">Ratings and your editor</a></li>
+      <li><a href="/manual/keyboard-shortcuts/">Keyboard shortcuts</a></li>
+      <li><a href="/manual/troubleshooting/">Troubleshooting</a></li>
+    </ul>
+  </aside>
+
+  <article class="manual-article">
+    <h1>Bursts and stacks</h1>
+    <p class="dek">Palomino groups near-duplicate frames automatically and gives you tools to resolve them fast.</p>
+
+    <h2>How bursts are grouped</h2>
+    <p>Palomino looks at each photo's content in the background and groups consecutive frames that look nearly identical and were shot close together in time. Frames are grouped while each one was shot within about five seconds of the frame before it. This happens at background priority so it never delays culling.</p>
+    <p>Burst photos show a stack badge on their thumbnails with the frame's position and the group size (for example, "2/3"). In the <strong>Bursts</strong> filter, every cluster appears grouped naturally because burst frames are consecutive files.</p>
+    <p>The grouping is based on visual similarity plus timing, not camera burst mode detection. A sequence of similar frames shot manually can also form a group.</p>
+
+    <h2>Working a burst</h2>
+    <p>The fastest workflow for a burst:</p>
+    <ol>
+      <li>Move to the burst group. The thumbnail badge shows you're inside one.</li>
+      <li>Look through the frames with the arrow keys.</li>
+      <li>Pick the best frame with <kbd>P</kbd>.</li>
+      <li>Press <kbd>⌘⇧X</kbd> to reject all other members of the group in one step.</li>
+    </ol>
+    <p><kbd>⌘⇧X</kbd> (Reject Others in Burst) rejects every photo in the current burst group except the one you're on. It does not affect photos outside the group.</p>
+    <div class="callout callout-tip">
+      <p>The <strong>Bursts</strong> filter chip in the filter bar shows how many distinct groups were found. Click it to restrict navigation to burst members only, useful for a quick sweep after your initial pass.</p>
+    </div>
+
+    <h2>The best frames in a burst</h2>
+    <p>Palomino marks the best frames in each burst with a small amber crown in the upper-right corner of the thumbnail. It always crowns the best frame in the group, which Palomino judges by sharpness measured from the photo while it loads in the background. In a longer burst it can also crown up to four more frames, when they capture a visibly different moment from the best frame or come close enough in quality to be nearly indistinguishable from it. Hold the pointer over a crown to read "This frame is one of the best in its burst."</p>
+
+    <figure class="figure">
+      <img src="/assets/manual/crown-badge.jpg" width="1400" height="338" loading="lazy" alt="A burst shown as separate frames in the grid. The amber crown marks the best frame">
+      <figcaption>A burst shown as separate frames in the grid. The amber crown marks the best frame.</figcaption>
+    </figure>
+
+    <p>Short bursts of eight frames or fewer always show a single crown, so a quick sequence works the same way it always has. A frame where Palomino detects closed eyes ranks lower in the comparison, though it can still earn a crown if it remains among the best frames in the group.</p>
+
+    <h2>How Palomino measures sharpness in a burst</h2>
+    <p>When Palomino locates the subject's eye across a burst, it measures sharpness at the eye instead of across the whole frame. This matters when autofocus lands on a branch in front of a bird or a rock beside an animal, because the frame that reads sharpest overall can be the one that missed the eye.</p>
+    <p>Palomino chooses one measurement for a whole burst, so every frame in it is compared on the same terms. It also binds to a single subject for the length of the burst, which keeps the crown on the same animal when a second one is in the shot. A frame where no eye is found sits out the comparison. If that happens on more than a third of the burst, Palomino measures the whole group by overall sharpness instead, so a frame where the subject turned its head still gets judged fairly.</p>
+    <p>Palomino locates eyes on people and on many animals, including dogs, cats, foxes, and deer. Birds and insects have no eye model available on macOS today, and a burst with no detectable subject, such as a landscape sequence, is crowned by overall sharpness exactly as before.</p>
+
+    <p>The crown is a suggestion to speed up your first pass. Your own pick and star ratings always stand, so you can keep a different frame and the crowns stay where Palomino placed them.</p>
+    <p>A crown appears once a burst has at least two frames still in the folder and Palomino has measured at least one of them. On a large import the crowns may take a moment to show while that analysis runs. If you reject and remove members until a single frame is left, that frame shows no crown.</p>
+
+    <h2>Focus stacks</h2>
+    <p>A focus stack is a burst where the photographer racked focus across the scene, producing a run of frames that are each sharp in a different part of the image rather than one shot with a single focus point. Photographers combine these frames afterward in a tool built for the job, such as Helicon Focus or Adobe Lightroom Classic, which merge the sharp regions from every frame into one image with everything in focus. Phocus for Mac does not merge focus stacks, so a stack bound for Phocus still needs Helicon Focus or Lightroom Classic for that step.</p>
+    <p>Palomino treats a focus stack differently from an ordinary burst. It does not crown a best frame within a stack, since every frame earns its place by being sharp somewhere the others are not. The reject-others workflow does not apply to a stack either, since a merge needs every frame in the run rather than one winner.</p>
+
+    <h2>Detecting a focus stack</h2>
+    <p>Palomino reads focus-bracket sequences directly from <a href="/hasselblad/">Hasselblad X2D II</a> files and labels them as stacks automatically. This works even on a bracket where the camera's regular focus-distance reading stays the same across every frame, because the camera also records that the sequence was shot with focus bracketing.</p>
+    <p>For other cameras, Palomino looks at the focus distance recorded with each frame and checks whether it moves steadily across the burst, the way it would during a manual focus rack. A sensitivity slider under <strong>Stack detection</strong> in <strong>Settings</strong> (<kbd>⌘,</kbd>) controls how readily this check labels a burst as a stack. Detection can also be turned off entirely from the same section, which stops Palomino from labeling new stacks on its own without affecting any stack you have already marked by hand.</p>
+
+    <h2>Marking a stack by hand</h2>
+    <p>Any run of frames can be marked as a stack, whether or not Palomino's own detection recognized it as one, which covers cameras Palomino cannot read a focus signal from at all. Select the frames in the grid or filmstrip, or stand on a single frame already inside a burst, then choose <strong>Mark as Focus Stack</strong> from the <strong>Photo</strong> menu.</p>
+    <p>To turn a stack back into a regular burst, select it and choose <strong>Mark as Regular Burst</strong> from the <strong>Photo</strong> menu. A manual choice always stands: Palomino's automatic detection never overrides a group you marked by hand.</p>
+
+    <h2>Keep all in stack</h2>
+    <p>Press <kbd>⌘⇧K</kbd>, or choose <strong>Keep All in Stack</strong> from the <strong>Photo</strong> menu, to pick every frame in the current stack in one step. A merge tool needs the whole run, so this is the stack equivalent of picking a favorite from a regular burst and rejecting the rest.</p>
+
+    <h2>Stacks in the filter bar and on thumbnails</h2>
+    <p>A stack carries its own badge on its thumbnail, showing the frame's position and the stack size such as "2/5," with a different icon from the burst badge so the two are easy to tell apart. Once your shoot contains at least one stack, a <strong>Stacks</strong> filter chip appears next to <strong>Bursts</strong> in the filter bar. Click it to restrict navigation to stack members, the same way the <strong>Bursts</strong> chip does for ordinary bursts.</p>
+
+    <h2>Copying a stack</h2>
+    <p>Turn on <strong>Keep stacks complete</strong> in the Copy to Folder sheet to copy every frame of a stack whenever any one of its photos matches your filter. This keeps the whole run together for your merge tool even if you only picked one frame from the stack. The toggle is on by default and appears only once your shoot contains at least one stack. See <a href="/manual/exporting/">Copying Your Selects</a>.</p>
+
+    <h2>Collapsing bursts</h2>
+    <p>When a shoot has many bursts, you can collapse each burst to a single thumbnail so the filmstrip and grid show one frame per burst instead of every frame. Open the <strong>View</strong> menu and choose <strong>Collapse Bursts</strong>. The same menu item then reads <strong>Expand Bursts</strong>, which turns the behavior back off. Collapsing starts off when you open a folder, so the full set shows until you turn it on.</p>
+    <p>A collapsed burst shows one representative thumbnail with a stack badge and the frame count, for example a stack icon next to "3." The representative is the burst's best crowned frame when that frame is present and matches the active filter, otherwise the first frame of the group.</p>
+
+    <figure class="figure">
+      <img src="/assets/manual/collapsed-burst.jpg" width="1400" height="339" loading="lazy" alt="The same burst collapsed to a single thumbnail in the grid, with a stack badge showing the frame count">
+      <figcaption>A collapsed burst among the other thumbnails in the grid. The badge shows the frame count.</figcaption>
+    </figure>
+
+    <p>To open a single burst, click its representative thumbnail. The burst expands in place and the frames around it stay where they are. To collapse it again, click the chevron badge on the representative, or right-click the frame and choose <strong>Collapse burst</strong>.</p>
+    <p>While Collapse Bursts is on, the arrow keys also work: press the down arrow to open the selected burst, and press the up arrow to collapse it again.</p>
+
+    <h2>Compare view</h2>
+    <p>Press <kbd>C</kbd> to open the compare view. Two photos appear side by side: the current photo on the left (the <strong>reference pane</strong>) and another photo on the right (the <strong>compare pane</strong>).</p>
+
+    <figure class="figure">
+      <img src="/assets/manual/compare-view.jpg" width="1400" height="900" loading="lazy" alt="Compare view: the reference photo on the left, a candidate on the right, with the filmstrip below for stepping through the other frames">
+      <figcaption>The reference photo on the left, a candidate on the right, with the filmstrip below for stepping through the other frames.</figcaption>
+    </figure>
+
+    <h3>Choosing the pair</h3>
+    <p>You can choose the pair yourself. In the grid, select exactly two photos and press <kbd>C</kbd>, and those two open in the compare view directly, wherever they sit in the shoot. This is the fast way to settle a choice between two frames that are not burst neighbors.</p>
+
+    <h3>Stepping and promoting</h3>
+    <p>Leave the best candidate in the left (reference) photo. Use the left and right arrow keys to step through the other frames on the right, comparing each against your reference. The arrow keys step through the current filtered set, in compare exactly as in the single view. While the right pane shows a frame from the reference's burst, its label reads <strong>BURST n/m</strong>; once you step past the burst it reads <strong>COMPARE</strong>, so the boundary stays visible.</p>
+    <p>Press the up arrow when the right pane wins a comparison. The winning photo becomes the new reference and the next photo loads on the right, so you keep testing the rest of the shoot against your best frame so far. After a promote, closing the compare view lands you on the winning photo.</p>
+    <p>A promote on the last photo of the set works differently, because there is no next photo to load. The winner still becomes the reference, and the right pane keeps showing it, so both panes hold the same frame. The active-pane border also stays where it was, since no navigation happened; both panes show the winner, so the rating and flag keys act on it from either pane. This marks the end of the run: closing the compare view lands you on the winning photo.</p>
+
+    <h3>Zoom in compare</h3>
+    <p>Zoom works inside compare, and by default both panes zoom and pan together. Press <kbd>Z</kbd> to zoom to 300%, <kbd>V</kbd> to zoom to the largest face, and <kbd>=</kbd> or <kbd>-</kbd> to step the zoom. Scroll or drag inside a pane to move around while zoomed. The link button at the top of the compare view switches the panes to independent movement, and the match button then lines the compare pane back up with the reference pane.</p>
+    <p>The zoom keys always act on the reference pane: with the panes linked, the compare pane follows along, and with the panes unlinked, <kbd>Z</kbd>, <kbd>V</kbd>, <kbd>=</kbd>, and <kbd>-</kbd> change the reference pane alone. To zoom or move the unlinked compare pane, scroll or drag inside it, or click the match button to line it up with the reference again. Zoom uses the same preview both panes already show, so it stays fast.</p>
+
+    <h3>What each pane shows</h3>
+    <p>Each pane's bottom strip shows the photo's capture settings next to the filename: shutter speed, aperture, ISO, and focal length. Fields a file does not carry stay blank. The strip also carries the photo's cull state: the pick or reject flag, the amber crown on a group's best frames, the star rating, and the color label.</p>
+    <p>The focus mask (<kbd>⌘F</kbd>) works here too, and each pane shows its own mask. Deciding between two near-identical frames is where the mask helps most: step through the burst and keep the frame where the green sits on the subject. See <a href="/manual/viewing-and-filtering/">Viewing and Filtering</a>.</p>
+
+    <h3>Which pane the keys act on</h3>
+    <p>The rating and flag keys act on the active pane, marked by an amber border. The right (compare) pane is active when the view opens, so the keys work on the photo you are stepping through, as they always have. Press <kbd>Tab</kbd> or click a pane to make the other pane active, for example to rate the reference itself, then rate or flag it in place. Acting on the reference pane never moves the right pane forward. Every arrow step makes the right pane active again, so the photo that just arrived is always the one the keys act on.</p>
+    <p>Press <kbd>C</kbd> or <kbd>Esc</kbd> to close the compare view and return to the single-photo preview.</p>
+
+    <div class="callout callout-note">
+      <p><strong>Compare stepped past my burst group.</strong> The arrow keys walk the whole filtered set, so from the last frame of a burst the next press moves into the rest of the shoot. The right pane's label marks the boundary: it reads <strong>BURST n/m</strong> inside the group and <strong>COMPARE</strong> beyond it. To keep navigation inside bursts, click the <strong>Bursts</strong> filter chip, or select exactly two photos in the grid and press <kbd>C</kbd> to pin compare to that pair.</p>
+    </div>
+
+    <nav class="manual-prevnext" aria-label="Manual navigation">
+      <a href="/manual/viewing-and-filtering/"><span class="dir">Previous</span>Viewing and filtering</a>
+      <a class="next" href="/manual/exporting/"><span class="dir">Next</span>Copying your selects</a>
+    </nav>
+  </article>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-links">
+      <a href="/">Palomino home</a>
+      <a href="/hasselblad/">Shooting Hasselblad?</a>
+      <a href="/fuji/">Shooting Fujifilm?</a>
+      <a href="/privacy.html">Privacy policy</a>
+    </div>
+    <p>&copy; 2026 Neil Kodner. Palomino supports ARW, DNG, 3FR, NEF, CR3, RAF, ORF, FFF, HEIC, JPEG, and 20+ other formats.</p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var isMac = /Mac/.test(navigator.platform || navigator.userAgent);
+    var isTouch = navigator.maxTouchPoints > 1;
+    if (isMac && !isTouch) {
+      document.querySelectorAll(".js-appstore-link").forEach(function (link) {
+        link.addEventListener("click", function (e) {
+          if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+          e.preventDefault();
+          window.location.href = link.href.replace(/^https:\/\//, "macappstore://");
+        });
+      });
+    }
+
+    var toggle = document.querySelector(".js-theme-toggle");
+    if (toggle) {
+      toggle.addEventListener("click", function () {
+        var doc = document.documentElement;
+        var current = doc.getAttribute("data-theme");
+        if (!current) {
+          current = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        var next = current === "light" ? "dark" : "light";
+        doc.setAttribute("data-theme", next);
+        try { localStorage.setItem("palomino-theme", next); } catch (e) {}
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0d0d0d">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf8f5">
+<meta name="robots" content="index, follow">
+<title>Copying your selects | Palomino manual</title>
+<meta name="description" content="The Copy to Folder sheet step by step: copy modes, file naming, XMP and Phocus sidecars, high-ISO split, presets, and the free copy limit.">
+<link rel="canonical" href="https://palomino-app.com/manual/exporting/">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/assets/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/BricolageGrotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script>(function(){try{var t=localStorage.getItem("palomino-theme");if(t==="light"||t==="dark"){document.documentElement.setAttribute("data-theme",t);}}catch(e){}})();</script>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Palomino">
+<meta property="og:title" content="Copying your selects | Palomino manual">
+<meta property="og:description" content="The Copy to Folder sheet step by step: copy modes, file naming, XMP and Phocus sidecars, high-ISO split, presets, and the free copy limit.">
+<meta property="og:url" content="https://palomino-app.com/manual/exporting/">
+<meta property="og:image" content="https://palomino-app.com/assets/screenshot-export.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="800">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Copying your selects | Palomino manual">
+<meta name="twitter:description" content="The Copy to Folder sheet step by step: copy modes, file naming, XMP and Phocus sidecars, high-ISO split, presets, and the free copy limit.">
+<meta name="twitter:image" content="https://palomino-app.com/assets/screenshot-export.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Palomino", "item": "https://palomino-app.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Manual", "item": "https://palomino-app.com/manual/" },
+    { "@type": "ListItem", "position": 3, "name": "Copying your selects" }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/assets/global.css">
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "3b5cef76a9524b47889d1e8b460025d5"}'></script>
+</head>
+<body class="manual">
+
+<nav class="site-nav" aria-label="Site">
+  <div class="nav-inner">
+    <a class="brand" href="/"><img src="/assets/app-icon.png" width="30" height="30" alt="Palomino app icon"><span class="wordmark">Palomino<span class="accent">.</span></span></a>
+    <a class="btn-nav js-appstore-link" href="https://apps.apple.com/us/app/palomino/id6779869483?mt=12" target="_blank" rel="noopener">Download</a>
+    <button class="theme-toggle js-theme-toggle" type="button" aria-label="Switch between light and dark theme">
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9"/></svg>
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="wrap manual-layout">
+  <aside class="manual-sidebar">
+    <h2>Manual</h2>
+    <ul>
+      <li><a href="/manual/">Overview</a></li>
+      <li><a href="/manual/getting-started/">Getting started</a></li>
+      <li><a href="/manual/rating-and-flagging/">Rating and flagging</a></li>
+      <li><a href="/manual/viewing-and-filtering/">Viewing and filtering</a></li>
+      <li><a href="/manual/bursts-and-stacks/">Bursts and stacks</a></li>
+      <li><a href="/manual/exporting/" aria-current="page">Copying your selects</a></li>
+      <li><a href="/manual/ratings-and-your-editor/">Ratings and your editor</a></li>
+      <li><a href="/manual/keyboard-shortcuts/">Keyboard shortcuts</a></li>
+      <li><a href="/manual/troubleshooting/">Troubleshooting</a></li>
+    </ul>
+  </aside>
+
+  <article class="manual-article">
+    <h1>Copying your selects</h1>
+    <p class="dek">Copy to Folder copies your selected photos to a destination folder. Your originals stay in place: nothing is moved or deleted unless you explicitly turn on the trash option.</p>
+
+    <figure class="figure">
+      <img src="/assets/manual/export-sheet.jpg" width="1400" height="875" loading="eager" alt="The Copy to Folder sheet: pick what to copy with the filter chips (Picked, Not Rejected, star floors), choose a destination and copy mode, and optionally split high-ISO frames or move unrated photos to the Trash">
+      <figcaption>Pick what to copy with the filter chips, choose a destination and copy mode, and optionally split high-ISO frames or move unrated photos to the Trash.</figcaption>
+    </figure>
+
+    <h2>The Copy to Folder sheet step by step</h2>
+    <ol>
+      <li>Press <kbd>E</kbd> to open the Copy to Folder sheet. You can also open it from the <strong>File</strong> menu or the <strong>Copy to Folder</strong> button at the bottom of the info panel.</li>
+      <li>Choose what to copy using the filter chips at the top: <strong>Picked</strong>, <strong>Not Rejected</strong>, or a minimum star rating (★1 through ★5). <strong>Not Rejected</strong> works well for reject-first workflows where you reject what you don't want rather than actively picking keepers.</li>
+      <li>Click <strong>Choose…</strong> next to Destination folder and pick where the copies should go.</li>
+      <li>Choose a copy mode if you want something other than a regular copy. See Copy modes below.</li>
+      <li>Review the photo count next to the <strong>Copy</strong> button, which reflects your current filter selection.</li>
+      <li>Click <strong>Copy</strong> (or <strong>Move</strong>, if you selected Move as the copy mode). The sheet closes and the copy runs in the background, so you can keep culling while it works. When the copy finishes, a completion card appears in the bottom-right corner with an <strong>Open in Finder</strong> button that takes you to the destination, and a <strong>Done</strong> button to dismiss it.</li>
+    </ol>
+
+    <h2>Copy modes: Copy, Clone, Link, and Move</h2>
+    <p>The <strong>Copy mode</strong> row in the sheet chooses how each photo reaches the destination.</p>
+    <ul>
+      <li><strong>Copy</strong> duplicates each file. It is the default and works everywhere.</li>
+      <li><strong>Clone</strong> makes a space-free duplicate on the same drive, so a second copy of a full shoot costs no disk space. It needs the destination on the same drive as the source, and it is off while <strong>Verify copied files</strong> is on.</li>
+      <li><strong>Link</strong> creates a hard link instead of copying bytes, so both names point at the same file on disk. The same-drive and Verify limits that apply to Clone apply to Link as well.</li>
+      <li><strong>Move</strong> copies each photo, verifies the copy, and then puts the originals in the Trash. Verification is always on for a move, and a photo's originals are trashed only after every one of its copies passes, so a failed copy keeps that photo's source files in place. The originals go to the macOS Trash rather than being deleted outright, so a move you regret is recoverable. Move works across drives, and the first time you select it Palomino explains what it does and asks you to confirm. The completion card reads "Moved" instead of "Copied" when the move finishes.</li>
+    </ul>
+    <p>A move always brings each photo's sidecars along, even when the sidecar settings are off, because leaving a sidecar next to a photo that moved away would orphan it. When the source is a camera card, only Copy is available, because files on a card are never changed.</p>
+    <p>A camera card cannot be a destination either. If you pick a folder on a card as the destination or the High ISO folder, the sheet says "Palomino doesn't write to camera cards" and the Copy button stays off until you choose a folder on a regular drive.</p>
+
+    <h2>Copies run in the background</h2>
+    <p>The Copy to Folder sheet closes the moment you start the copy, and you stay on the photo you were judging. Progress shows in the "Background work" panel that floats above the main window. You can keep rating, open a different folder, or start another copy while the first one is still running.</p>
+    <p>If you start a second copy before the first finishes, it joins a queue and runs after the current one. Copies run one at a time so they do not compete for the disk. The completion card shows how many more copies are still queued.</p>
+    <p>When a copy finishes, the completion card stays on screen until you dismiss it with <strong>Done</strong>, so a finished copy never interrupts your culling. Use <strong>Open in Finder</strong> on the card to jump to the destination folder. If you split high-ISO frames into a separate folder, the card also offers <strong>Open High ISO in Finder</strong>.</p>
+    <p>When any file fails to copy, a separate card titled "Copy failed" lists the affected files. It stays on screen, including across queued copies, until you click <strong>Dismiss</strong>, so a failure that happens while you are heads-down culling is still waiting for you when you look up.</p>
+
+    <h2>Verifying your copy</h2>
+    <p>Turn on <strong>Verify copied files</strong> in the Copy to Folder sheet to have Palomino confirm each copy is intact. It is off by default (Move turns it on automatically; see Copy modes above). With it on, Palomino re-reads every copied file after the copy lands and compares it to what it wrote. Each file is read a second time, so the copy takes longer, and the check runs in the background while you keep culling.</p>
+    <p>The first time you turn verification on, Palomino explains what the check does and asks you to confirm. The completion card reports how many files were verified. When any file fails the check, a card titled "Files failed verification" lists the affected files and stays on screen until you dismiss it. Verification confirms the delivered copy matches what Palomino read. It does not re-check the original file on your card.</p>
+
+    <h2>What gets copied</h2>
+    <p>Copying follows your active filters. The rating or flag chips in the Copy to Folder sheet decide which photos qualify, and any capture-day filter you set while culling narrows the set to that day. If you have filtered to one day, copying offers only that day's photos. Clear the day filter to copy the full shoot. The photo count next to the Copy button always reflects what will actually be copied.</p>
+
+    <h2>Naming copied files</h2>
+    <p>Copy to Folder can rename each copy from a template you build in the sheet, so a delivery folder reads as a client job. The <strong>File names</strong> field sits under the destination folder. Leave it empty and the copies keep their original names, which is the default.</p>
+    <p>Type a template in the field, or use the <strong>Insert token</strong> menu to add tokens one at a time. A token is a name in square brackets that Palomino replaces for each photo, so <code>[Job]_[YYYYMMDD]_[####]</code> renders as <code>SmithWedding_20260614_0001</code>. Once the field has a template, a <strong>Job</strong> field, a <strong>Start number</strong> field, and a greyed <strong>Example</strong> line appear, and the example shows the exact name the first matching photo will get as you type. Any text that is not a token comes through as written, so separators like <code>_</code> and <code>-</code> stay in the name. Tokens are case-sensitive, so <code>[MM]</code> is the month and <code>[mm]</code> is the minute. When a photo has no value for a token, for example a lens that recorded no name, that part of the name is left empty.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Token</th><th>Renders as</th></tr></thead>
+        <tbody>
+          <tr><td><code>[Job]</code></td><td>The job name you type in the Job field</td></tr>
+          <tr><td><code>[Original]</code></td><td>The original file's name, without its extension</td></tr>
+          <tr><td><code>[####]</code></td><td>A zero-padded sequence number; the width follows the number of <code>#</code> characters, so <code>[####]</code> gives <code>0001</code></td></tr>
+          <tr><td><code>[YYYY]</code></td><td>Capture year, for example <code>2026</code></td></tr>
+          <tr><td><code>[MM]</code></td><td>Capture month, for example <code>06</code></td></tr>
+          <tr><td><code>[DD]</code></td><td>Capture day, for example <code>14</code></td></tr>
+          <tr><td><code>[YYYYMMDD]</code></td><td>Capture date shorthand, for example <code>20260614</code></td></tr>
+          <tr><td><code>[HH]</code></td><td>Capture hour, 24-hour clock, for example <code>14</code></td></tr>
+          <tr><td><code>[mm]</code></td><td>Capture minute, for example <code>32</code></td></tr>
+          <tr><td><code>[ss]</code></td><td>Capture second, for example <code>07</code></td></tr>
+          <tr><td><code>[HHmmss]</code></td><td>Capture time shorthand, for example <code>143207</code></td></tr>
+          <tr><td><code>[Camera]</code></td><td>Camera body name</td></tr>
+          <tr><td><code>[Lens]</code></td><td>Lens name</td></tr>
+          <tr><td><code>[ISO]</code></td><td>ISO value</td></tr>
+          <tr><td><code>[Aperture]</code></td><td>Aperture (f-stop)</td></tr>
+          <tr><td><code>[Shutter]</code></td><td>Shutter speed</td></tr>
+          <tr><td><code>[Focal]</code></td><td>Focal length</td></tr>
+          <tr><td><code>[ExpComp]</code></td><td>Exposure compensation</td></tr>
+          <tr><td><code>[Pixels]</code></td><td>Pixel dimensions</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The <strong>Job</strong> field fills the <code>[Job]</code> token and changes per gig while the template shape stays the same. The <strong>Start number</strong> field sets where the sequence begins, and it defaults to 1. Raise it to continue numbering across two cards of one job, so the second copy picks up where the first ended rather than restarting at <code>0001</code> and colliding in the folder. The sequence is assigned once across the whole copy in your current sort order, so a high-ISO split still numbers as one shoot: the separate high-ISO folder shows the gaps where those frames landed.</p>
+    <p>The rendered name drives the RAW, its JPEG companion, the <code>.xmp</code> sidecar, and any Phocus <code>.phos</code> sidecar together, so a renamed file and its sidecars stay one matched set on import into Lightroom, Capture One, or Phocus. When a template would give every photo the same name, for example one with no sequence, date, or time token, the sheet warns you before the files collide into numbered suffixes.</p>
+
+    <h2>RAW+JPEG pairs</h2>
+    <p>If your folder contains paired RAW+JPEG or RAW+HEIF files, an <strong>Include JPEG companions</strong> toggle appears. It is on by default, which copies both the RAW and its companion, the right choice for Lightroom and Capture One, which stack pairs on import. Turn it off to copy RAW files only.</p>
+
+    <h2>XMP sidecars travel with your copy</h2>
+    <p>By default, the <code>.xmp</code> sidecar for each copied photo is copied alongside it to the destination folder. This means your star ratings, color labels, and pick/reject flags arrive in Lightroom or Capture One intact, with no re-importing needed. To turn this off, go to <strong>Settings</strong> (<kbd>⌘,</kbd>) and disable <strong>Include XMP sidecars</strong>.</p>
+
+    <h2>Sending ratings to Phocus</h2>
+    <p>If you shoot Hasselblad and finish in Phocus, Palomino can carry your star ratings across. When your copy contains Hasselblad RAW, the Copy to Folder sheet shows a <strong>Write Phocus sidecars</strong> toggle. The same setting lives in <strong>Settings</strong> (<kbd>⌘,</kbd>) as <strong>Include Phocus sidecars</strong>, and it is off by default.</p>
+    <p>With it on, copying a Hasselblad <code>.3fr</code> file also writes a Phocus <code>.phos</code> sidecar next to the copy, so the star rating and color label appear when you open the file in Phocus. Every copied <code>.3fr</code> that is not rejected gets a sidecar, including unrated files. Color labels need Phocus 4.2.1 or later to display. An older version of Phocus keeps the label in the sidecar and displays it once you update. Phocus supports green, yellow, and red labels and treats them as approval status, where green means approved and red means rejected, so a red Palomino label reads as rejected there. Blue and purple labels have no Phocus equivalent and are written without a label. A yellow label looks the same as an untagged photo in Phocus, because yellow is what Phocus shows for any photo without a label. Picks and rejects have no Phocus equivalent and are not written.</p>
+    <p>Palomino leaves a sidecar alone once Phocus has edited it. A sidecar that still holds only Palomino's own values is updated the next time you copy, so a changed rating or label reaches Phocus.</p>
+    <p>This applies to 3FR files. A Hasselblad FFF file stores its rating inside the file, and Phocus writes no sidecar for it, so Palomino cannot copy a rating for an FFF without changing your RAW, and it does not do that. When your copy includes a rated FFF, the Copy to Folder sheet shows a note. To avoid this, rate the 3FR files in Palomino before converting them to FFF in Phocus, which carries the rating across into the new FFF.</p>
+
+    <h2>High-ISO split</h2>
+    <p>Turn on <strong>Split high ISO into separate folder</strong> to route photos above the ISO threshold into a separate folder, useful for sending a batch to a denoiser without mixing it with your standard copies. The default threshold is ISO 1600. Use the preset chips (800, 1600, 3200, 6400, 12800) or type a custom value. The High ISO folder defaults to a subfolder named "High ISO" inside your main destination, or you can choose a custom location.</p>
+
+    <h2>Disk space check</h2>
+    <p>Palomino checks available disk space at the destination before copying starts. If the selection may not fit, an amber warning appears in the Copy to Folder sheet. If there genuinely isn't room, the copy stops as soon as it starts copying with no partial mess left behind. If you copy to another folder on the same internal drive, macOS duplicates the files without using extra space, and the size check accounts for that.</p>
+
+    <h2>Moving unrated photos to Trash</h2>
+    <p>The <strong>Trash unrated photos after copying</strong> toggle (red) trashes every photo in the source folder that has no star rating and is not flagged as a Pick. That includes rejected photos that have no stars. The exact count is shown before you confirm. A confirmation alert with the count appears when you click Copy. There is no undo for this action beyond the macOS Trash.</p>
+    <p>When the source folder is on a camera card, this option is disabled. Files on a card are never changed.</p>
+    <div class="callout callout-warning">
+      <p>"Trash unrated photos after copying" affects the source folder, not the copy destination. It trashes every photo with no star rating that is not flagged as a Pick, including rejected photos with no stars. Review the count carefully before confirming.</p>
+    </div>
+
+    <h2>The sheet remembers your last settings</h2>
+    <p>The Copy to Folder sheet reopens the way you left it. The filter chips, the destination folder, and the high-ISO split keep their last values across copies and across app launches, so a repeat copy to the same folder needs nothing beyond pressing <kbd>E</kbd> and clicking <strong>Copy</strong>.</p>
+    <p>The one exception is <strong>Trash unrated photos after copying</strong>, which turns itself off every time the sheet opens. Deleting files stays a deliberate choice each time.</p>
+    <p>If the remembered folder is unavailable, for example on a disconnected external drive, the copy stops with a message asking you to choose the folder again. Your saved presets are separate and unaffected; when your current settings match a preset, that preset lights up.</p>
+
+    <h2>Saving copy presets</h2>
+    <p>If you copy the same way each time, save your settings as a named preset and apply them with one click. Set up the Copy to Folder sheet the way you want it, then click <strong>Save as preset</strong> at the right of the <strong>Preset</strong> row at the top of the sheet. Palomino asks for a name and saves the current settings under it.</p>
+    <p>A preset stores your filter choice, destination folder, file-name template, job name, start number, Include JPEG companions setting, the Keep stacks complete setting, high-ISO split and threshold, the Verify copied files setting, and the XMP and Phocus sidecar options. The <strong>Trash unrated photos after copying</strong> option is left out on purpose, so applying a preset never turns that delete on.</p>
+    <p>Saved presets appear as buttons in the <strong>Preset</strong> row. Click one to apply its settings to the current copy. The button highlights while the sheet still matches that preset, so you can see which one is active. To remove a preset, select it and click <strong>Delete</strong> in the same row.</p>
+    <p>If you save a preset with the name of one that already exists, Palomino asks "Replace preset?" before it overwrites the older settings. Click <strong>Replace</strong> to update the preset, or <strong>Cancel</strong> to keep both and save under a different name.</p>
+    <p>Presets are shared across every folder you open, so a preset you save on one shoot is ready on the next.</p>
+
+    <h2>Managing presets in Settings</h2>
+    <p>To rename, reorder, or repoint a preset, open <strong>Settings</strong> (<kbd>⌘,</kbd>) and select the <strong>Presets</strong> tab. Each saved preset has a row with a short summary of its filter, destination, and sidecar settings. The buttons in the row let you rename the preset, move it up or down to change the order it appears in the Copy to Folder sheet, choose a new destination folder, or delete it. The Copy to Folder sheet stays the place to save a new preset and to apply one to a copy.</p>
+
+    <h2>The free copy limit and Palomino Pro</h2>
+    <p>The free version of Palomino allows 50 photo copies per session. A banner in the Copy to Folder sheet shows how many remain. When the limit is reached, restart Palomino to get 50 more, or upgrade to <strong>Palomino Pro</strong> for unlimited copies, a one-time $29.99 purchase. The photo count next to the Copy button shows how many will actually be copied given the remaining budget.</p>
+    <div class="badge-row">
+      <a class="js-appstore-link" href="https://apps.apple.com/us/app/palomino/id6779869483?mt=12" target="_blank" rel="noopener"><img class="appstore-badge" src="/assets/download-on-the-mac-app-store.svg" loading="lazy" alt="Download Palomino on the Mac App Store" width="156" height="40"></a>
+    </div>
+    <div class="callout callout-note">
+      <p><strong>My copy came up short: fewer photos than I expected.</strong> Check whether the free session copy limit was hit (the Copy to Folder sheet shows a banner). Also check whether a capture-day filter was still active: copying follows your active filters, so a day filter limits the copy to that day's photos. Clear the day filter to copy the full shoot. See <a href="/manual/viewing-and-filtering/">Viewing and Filtering</a>.</p>
+    </div>
+
+    <nav class="manual-prevnext" aria-label="Manual navigation">
+      <a href="/manual/bursts-and-stacks/"><span class="dir">Previous</span>Bursts and stacks</a>
+      <a class="next" href="/manual/ratings-and-your-editor/"><span class="dir">Next</span>Ratings and your editor</a>
+    </nav>
+  </article>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-links">
+      <a href="/">Palomino home</a>
+      <a href="/hasselblad/">Shooting Hasselblad?</a>
+      <a href="/fuji/">Shooting Fujifilm?</a>
+      <a href="/privacy.html">Privacy policy</a>
+    </div>
+    <p>&copy; 2026 Neil Kodner. Palomino supports ARW, DNG, 3FR, NEF, CR3, RAF, ORF, FFF, HEIC, JPEG, and 20+ other formats.</p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var isMac = /Mac/.test(navigator.platform || navigator.userAgent);
+    var isTouch = navigator.maxTouchPoints > 1;
+    if (isMac && !isTouch) {
+      document.querySelectorAll(".js-appstore-link").forEach(function (link) {
+        link.addEventListener("click", function (e) {
+          if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+          e.preventDefault();
+          window.location.href = link.href.replace(/^https:\/\//, "macappstore://");
+        });
+      });
+    }
+
+    var toggle = document.querySelector(".js-theme-toggle");
+    if (toggle) {
+      toggle.addEventListener("click", function () {
+        var doc = document.documentElement;
+        var current = doc.getAttribute("data-theme");
+        if (!current) {
+          current = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        var next = current === "light" ? "dark" : "light";
+        doc.setAttribute("data-theme", next);
+        try { localStorage.setItem("palomino-theme", next); } catch (e) {}
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>

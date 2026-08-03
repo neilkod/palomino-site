@@ -54,6 +54,19 @@ Palomino reads Hasselblad 3FR and FFF files directly using the embedded JPEG pre
 
 Palomino reads Fujifilm RAF files directly using the embedded JPEG preview, which the camera renders with your film simulation, so you cull with the look you shot: Classic Chrome stays Classic Chrome. It handles X series and GFX files with the same speed; a 102 megapixel GFX frame browses as quickly as anything else because Palomino never decodes the sensor data. Cull before import so Lightroom or Capture One only ever builds previews for your keepers. Details: https://palomino-app.com/fuji/
 
+## Manual
+
+The full manual is at https://palomino-app.com/manual/.
+
+- Getting started: https://palomino-app.com/manual/getting-started/. What Palomino does, opening a folder, and why previews load instantly.
+- Rating and flagging: https://palomino-app.com/manual/rating-and-flagging/. Picks, rejects, star ratings, color labels, and the WASD grip.
+- Viewing and filtering: https://palomino-app.com/manual/viewing-and-filtering/. The grid, the info panel, sort order, and filtering by flag, rating, or label.
+- Bursts and stacks: https://palomino-app.com/manual/bursts-and-stacks/. Burst grouping, focus stacks, keeper crowns, and the compare view.
+- Copying your selects: https://palomino-app.com/manual/exporting/. The Copy to Folder sheet, copy modes, file naming, and copy presets.
+- Ratings and your editor: https://palomino-app.com/manual/ratings-and-your-editor/. How XMP sidecars carry your ratings into Lightroom, Capture One, and Phocus.
+- Keyboard shortcuts: https://palomino-app.com/manual/keyboard-shortcuts/. Every shortcut in the app, grouped by task.
+- Troubleshooting: https://palomino-app.com/manual/troubleshooting/. Fixes for the most common problems, from missing ratings to slow loading.
+
 ## Links
 
 - Homepage: https://palomino-app.com/
