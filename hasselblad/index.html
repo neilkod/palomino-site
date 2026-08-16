@@ -179,20 +179,9 @@
   </div>
 </footer>
 
+<script src="/assets/campaign.js"></script>
 <script>
   (function () {
-    try {
-      var utmSource = new URLSearchParams(window.location.search).get("utm_source");
-      if (utmSource && utmSource.toLowerCase() === "reddit") {
-        document.querySelectorAll(".js-appstore-link").forEach(function (link) {
-          var url = new URL(link.href);
-          url.searchParams.set("pt", "243206");
-          url.searchParams.set("ct", "reddit-hasselblad");
-          link.href = url.toString();
-        });
-      }
-    } catch (e) {}
-
     var isMac = /Mac/.test(navigator.platform || navigator.userAgent);
     var isTouch = navigator.maxTouchPoints > 1;
     if (isMac && !isTouch) {
