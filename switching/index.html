@@ -42,6 +42,8 @@
       "acceptedAnswer": { "@type": "Answer", "text": "No. Palomino copies your selects to a folder with their original filenames. If you need renaming or a simultaneous second destination during download, do that step in your current tool and open the copied folder in Palomino." } },
     { "@type": "Question", "name": "Do Photo Mechanic color classes convert to Palomino labels?",
       "acceptedAnswer": { "@type": "Answer", "text": "No. Palomino uses star ratings 1 through 5 and four color labels, and there is no direct mapping to the eight color classes. Treat them as separate systems." } },
+    { "@type": "Question", "name": "Does Palomino have a focus mask?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Press Command-F to overlay green on the areas of a photo that are in focus, with a sensitivity slider in Settings to set how strict the threshold is. Palomino also measures sharpness at the subject's eye when it ranks the frames in a burst, so the crown goes to the frame that got the eye rather than the one that reads sharpest overall." } },
     { "@type": "Question", "name": "Is Palomino as fast?",
       "acceptedAnswer": { "@type": "Answer", "text": "Palomino reads the embedded JPEG preview rather than decoding sensor data, and it prefetches the next frames in the background, so navigation keeps up with the arrow key on large shoots. Both apps take the same approach to preview speed." } },
     { "@type": "Question", "name": "What does Palomino cost?",
@@ -147,6 +149,10 @@
   <h2>What Palomino adds</h2>
   <p class="lead">Palomino analyzes the shoot in the background while you cull, so part of the first pass is already done when you start.</p>
   <p class="lead">Burst sequences are grouped automatically and ranked by sharpness, and the suggested keeper is marked with a crown. ⌘⇧X keeps that frame and rejects the rest of the burst.</p>
+  <div class="features">
+    <div class="feature"><h3>The focus mask</h3><p>Press ⌘F to paint a translucent green overlay over the areas of the photo that are in focus. The mask answers the question you would otherwise zoom in for: is the focus on the eye, or on the branch behind it? A sensitivity slider in Settings sets how strict the threshold is.</p></div>
+    <div class="feature"><h3>Sharpness measured at the eye</h3><p>When Palomino ranks the frames in a burst, it locates the subject's eye and measures sharpness there instead of across the whole frame. This matters when autofocus lands on a rock beside an animal, because the frame that reads sharpest overall can be the one that missed the eye. Palomino locates eyes on people and on many animals, including dogs, cats, foxes, and deer. Birds and insects have no eye model available on macOS today, so those bursts are ranked by overall sharpness.</p></div>
+  </div>
   <p class="lead">Soft, overexposed, and underexposed frames get a badge, and each becomes a filter chip you can click.</p>
   <p class="lead">Press V to zoom to the largest face at 300 percent, so checking focus and expressions takes one key. A badge marks frames where someone blinked.</p>
   <p class="lead">Compare view holds one frame as a reference while you move through the rest of a burst in the other pane.</p>
@@ -182,6 +188,8 @@
     <p>No. Palomino copies your selects to a folder with their original filenames. If you need renaming or a simultaneous second destination during download, do that step in your current tool and open the copied folder in Palomino.</p>
     <h3>Do Photo Mechanic color classes convert to Palomino labels?</h3>
     <p>No. Palomino uses star ratings 1 through 5 and four color labels, and there is no direct mapping to the eight color classes. Treat them as separate systems.</p>
+    <h3>Does Palomino have a focus mask?</h3>
+    <p>Yes. Press ⌘F to overlay green on the areas of a photo that are in focus, with a sensitivity slider in Settings to set how strict the threshold is. Palomino also measures sharpness at the subject's eye when it ranks the frames in a burst, so the crown goes to the frame that got the eye rather than the one that reads sharpest overall.</p>
     <h3>Is Palomino as fast?</h3>
     <p>Palomino reads the embedded JPEG preview rather than decoding sensor data, and it prefetches the next frames in the background, so navigation keeps up with the arrow key on large shoots. Both apps take the same approach to preview speed.</p>
     <h3>What does Palomino cost?</h3>
