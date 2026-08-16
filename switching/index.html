@@ -91,11 +91,13 @@
 <section class="wrap">
   <h2>What carries over</h2>
   <p class="lead">Palomino keeps the part of Photo Mechanic that matters most. Ratings go to standard sidecar files the instant you press a key, with no export step. Open any folder on a drive and every star, pick, and color label lands in an .xmp beside the RAW as you work. Your editor reads them on import, the same way it reads Photo Mechanic's.</p>
-  <p class="lead">The speed comes from the same place too. Palomino reads the JPEG preview your camera wrote into each RAW file, so a 61 megapixel frame appears as fast as a 24 megapixel one and the sensor data is never decoded.</p>
-  <p class="lead">Culling comes before import. You cull first and hand your editor only the keepers, so Lightroom or Capture One never builds previews for frames you already rejected.</p>
-  <p class="lead">The keyboard does the work. 1 through 5 set a star rating, P picks, X rejects, and 6 through 9 set a color label. Each one advances to the next frame.</p>
-  <p class="lead">Filters control what the arrow keys see. Narrow to picks, a star threshold, a color label, a burst, or a capture day, and navigation skips everything else.</p>
-  <p class="lead">Palomino uses star ratings 1 through 5 and four color labels. There is no direct mapping to Photo Mechanic's eight color classes, so treat the two as separate systems.</p>
+  <p class="prose">The speed comes from the same place too. Palomino reads the JPEG preview your camera wrote into each RAW file, so a 61 megapixel frame appears as fast as a 24 megapixel one and the sensor data is never decoded.</p>
+  <div class="features">
+    <div class="feature"><h3>Culling comes before import</h3><p>Culling comes before import. You cull first and hand your editor only the keepers, so Lightroom or Capture One never builds previews for frames you already rejected.</p></div>
+    <div class="feature"><h3>The keyboard does the work</h3><p>The keyboard does the work. 1 through 5 set a star rating, P picks, X rejects, and 6 through 9 set a color label. Each one advances to the next frame.</p></div>
+    <div class="feature"><h3>Filters control what the arrow keys see</h3><p>Filters control what the arrow keys see. Narrow to picks, a star threshold, a color label, a burst, or a capture day, and navigation skips everything else.</p></div>
+  </div>
+  <p class="prose">Palomino uses star ratings 1 through 5 and four color labels. There is no direct mapping to Photo Mechanic's eight color classes, so treat the two as separate systems.</p>
 </section>
 
 <section class="wrap">
@@ -108,7 +110,7 @@
     <div class="feature"><h3><span>4</span>Palomino writes the sidecar</h3><p>Palomino writes an .xmp beside each RAW as you rate. The sidecar appears the moment you press a key.</p></div>
     <div class="feature"><h3><span>5</span>Open the folder in your editor</h3><p>You open the same folder in your editor. The ratings arrive with no export step.</p></div>
   </div>
-  <p class="lead">If this is how you already work, nothing on the rest of this page changes your routine.</p>
+  <p class="prose">If this is how you already work, nothing on the rest of this page changes your routine.</p>
 </section>
 
 <section class="wrap">
@@ -121,7 +123,7 @@
     <div class="feature"><h3><span>4</span>Copy your selects to a drive</h3><p>You copy your selects to a drive. Each RAW arrives with its .xmp beside it.</p></div>
     <div class="feature"><h3><span>5</span>Import the folder in your editor</h3><p>You import that folder in your editor. Your ratings are already there.</p></div>
   </div>
-  <p class="lead">You can eject the card at any point and come back later. As long as you do not format it, Palomino recognizes the card the next time you insert it and restores every rating.</p>
+  <p class="prose">You can eject the card at any point and come back later. As long as you do not format it, Palomino recognizes the card the next time you insert it and restores every rating.</p>
   <div class="callout callout-warning">
     <p><strong>One habit to keep.</strong> If you rate a card in Palomino, copy it off with Palomino. That copy step is what writes the sidecars next to your photos. Copying the card in Finder instead leaves your ratings behind on your Mac.</p>
   </div>
@@ -130,11 +132,11 @@
 <section class="wrap">
   <h2>Why Palomino does not write to your card</h2>
   <p class="lead">In the classic Photo Mechanic workflow you cull the card in place and the sidecars are written onto the card, next to your RAWs. Palomino keeps them on your Mac until you copy the photos off, then writes them beside the copies. That difference is deliberate.</p>
-  <p class="lead">Writing to the card made sense for where that workflow came from. It was built for the newsroom of the early 2000s: small cards, tight deadlines, and images filed to the wire minutes after they were shot. The card was working media, and writing to it was how the work traveled.</p>
-  <p class="lead">Cards are far more reliable now than they were then, and they are still the most fragile link in the chain that runs from the shutter to your backup. Their file systems never changed. A card is still exFAT or FAT32, with no journaling, where one interrupted write through a loose reader connection can corrupt the index and take every frame with it. Meanwhile a single card grew to hold an entire wedding or a week of travel, so the cost of losing one became the whole job.</p>
-  <p class="lead">That makes the trade a lopsided one. Until a shoot is copied and backed up, the card holds the only copy of that work in existence, sitting on the weakest device you own. Writing to it risks everything, and the only thing it buys is skipping a copy you were going to make anyway.</p>
-  <p class="lead">So your ratings are saved on your Mac while you cull, the card is recognized every time you insert it, and the sidecars appear the moment your photos land on a drive. The card goes back in your bag exactly as the camera left it.</p>
-  <p class="lead">Palomino makes the read-only handling visible rather than silent. A "Card, read-only" pill appears in the status bar when a card source is detected, and the copy option that moves unrated files to the Trash is turned off, because Palomino does not change files on a card.</p>
+  <p class="prose">Writing to the card made sense for where that workflow came from. It was built for the newsroom of the early 2000s: small cards, tight deadlines, and images filed to the wire minutes after they were shot. The card was working media, and writing to it was how the work traveled.</p>
+  <p class="prose">Cards are far more reliable now than they were then, and they are still the most fragile link in the chain that runs from the shutter to your backup. Their file systems never changed. A card is still exFAT or FAT32, with no journaling, where one interrupted write through a loose reader connection can corrupt the index and take every frame with it. Meanwhile a single card grew to hold an entire wedding or a week of travel, so the cost of losing one became the whole job.</p>
+  <p class="prose">That makes the trade a lopsided one. Until a shoot is copied and backed up, the card holds the only copy of that work in existence, sitting on the weakest device you own. Writing to it risks everything, and the only thing it buys is skipping a copy you were going to make anyway.</p>
+  <p class="prose">So your ratings are saved on your Mac while you cull, the card is recognized every time you insert it, and the sidecars appear the moment your photos land on a drive. The card goes back in your bag exactly as the camera left it.</p>
+  <p class="prose">Palomino makes the read-only handling visible rather than silent. A "Card, read-only" pill appears in the status bar when a card source is detected, and the copy option that moves unrated files to the Trash is turned off, because Palomino does not change files on a card.</p>
 </section>
 
 <section class="wrap">
@@ -148,26 +150,28 @@
 <section class="wrap">
   <h2>What Palomino adds</h2>
   <p class="lead">Palomino analyzes the shoot in the background while you cull, so part of the first pass is already done when you start.</p>
-  <p class="lead">Burst sequences are grouped automatically and ranked by sharpness, and the suggested keeper is marked with a crown. ⌘⇧X keeps that frame and rejects the rest of the burst.</p>
   <div class="features">
+    <div class="feature"><h3>Burst sequences are grouped</h3><p>Burst sequences are grouped automatically and ranked by sharpness, and the suggested keeper is marked with a crown. ⌘⇧X keeps that frame and rejects the rest of the burst.</p></div>
     <div class="feature"><h3>The focus mask</h3><p>Press ⌘F to paint a translucent green overlay over the areas of the photo that are in focus. The mask answers the question you would otherwise zoom in for: is the focus on the eye, or on the branch behind it? A sensitivity slider in Settings sets how strict the threshold is.</p></div>
     <div class="feature"><h3>Sharpness measured at the eye</h3><p>When Palomino ranks the frames in a burst, it locates the subject's eye and measures sharpness there instead of across the whole frame. This matters when autofocus lands on a rock beside an animal, because the frame that reads sharpest overall can be the one that missed the eye. Palomino locates eyes on people and on many animals, including dogs, cats, foxes, and deer. Birds and insects have no eye model available on macOS today, so those bursts are ranked by overall sharpness.</p></div>
+    <div class="feature"><h3>Soft, overexposed, and underexposed frames</h3><p>Soft, overexposed, and underexposed frames get a badge, and each becomes a filter chip you can click.</p></div>
+    <div class="feature"><h3>Press V to zoom</h3><p>Press V to zoom to the largest face at 300 percent, so checking focus and expressions takes one key. A badge marks frames where someone blinked.</p></div>
+    <div class="feature"><h3>Compare view</h3><p>Compare view holds one frame as a reference while you move through the rest of a burst in the other pane.</p></div>
+    <div class="feature"><h3>Session stats</h3><p>Session stats show your total time, your photos-per-minute rate, and how the ratings came out.</p></div>
   </div>
-  <p class="lead">Soft, overexposed, and underexposed frames get a badge, and each becomes a filter chip you can click.</p>
-  <p class="lead">Press V to zoom to the largest face at 300 percent, so checking focus and expressions takes one key. A badge marks frames where someone blinked.</p>
-  <p class="lead">Compare view holds one frame as a reference while you move through the rest of a burst in the other pane.</p>
-  <p class="lead">Session stats show your total time, your photos-per-minute rate, and how the ratings came out.</p>
 </section>
 
 <section class="wrap">
   <h2>What Palomino leaves to other tools</h2>
   <p class="lead">Palomino copies your selects to a folder. It is a culling app, and the ingest features you may rely on live elsewhere.</p>
-  <p class="lead">Palomino does not rename files on copy. Files arrive with the names your camera gave them.</p>
-  <p class="lead">Palomino does not write to two destinations at once. You choose one folder per copy.</p>
-  <p class="lead">Palomino does not stamp IPTC metadata, captions, or keywords.</p>
-  <p class="lead">Palomino does not build contact sheets or web galleries.</p>
-  <p class="lead">Palomino does not edit, develop, or grade photos.</p>
-  <p class="lead">If your download step depends on renaming or a simultaneous backup, keep the tool that does it and point Palomino at the copied folder. That is the first workflow on this page, and it works the same in every respect.</p>
+  <div class="features">
+    <div class="feature"><h3>Palomino does not rename files</h3><p>Palomino does not rename files on copy. Files arrive with the names your camera gave them.</p></div>
+    <div class="feature"><h3>Palomino does not write to two destinations</h3><p>Palomino does not write to two destinations at once. You choose one folder per copy.</p></div>
+    <div class="feature"><h3>Palomino does not stamp IPTC metadata</h3><p>Palomino does not stamp IPTC metadata, captions, or keywords.</p></div>
+    <div class="feature"><h3>Palomino does not build contact sheets</h3><p>Palomino does not build contact sheets or web galleries.</p></div>
+    <div class="feature"><h3>Palomino does not edit, develop, or grade</h3><p>Palomino does not edit, develop, or grade photos.</p></div>
+  </div>
+  <p class="prose">If your download step depends on renaming or a simultaneous backup, keep the tool that does it and point Palomino at the copied folder. That is the first workflow on this page, and it works the same in every respect.</p>
 </section>
 
 <section class="wrap">
