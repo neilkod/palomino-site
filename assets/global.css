@@ -375,22 +375,22 @@ html[data-theme="dark"] .theme-toggle .moon { display: block; }
 .manual-article th { background: var(--panel-2); font-weight: 650; }
 .manual-article tbody tr:last-child td { border-bottom: none; }
 
-.manual-article .callout {
+.manual-article .callout, .marketing .callout {
   background: var(--panel); border-left: 3px solid var(--border);
   border-radius: 8px; padding: 14px 18px; margin: 20px 0; font-size: 0.95rem;
 }
-.manual-article .callout::before {
+.manual-article .callout::before, .marketing .callout::before {
   display: block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
   letter-spacing: 0.06em; margin-bottom: 6px; color: var(--muted);
 }
-.manual-article .callout p:last-child { margin-bottom: 0; }
-.manual-article .callout p { margin-bottom: 8px; }
-.manual-article .callout-tip { border-left-color: var(--accent); }
-.manual-article .callout-tip::before { content: "Tip"; color: var(--accent-ink); }
-.manual-article .callout-warning { border-left-color: #d64545; }
-.manual-article .callout-warning::before { content: "Careful"; color: #d64545; }
-.manual-article .callout-note { border-left-color: var(--border); }
-.manual-article .callout-note::before { content: "Note"; }
+.manual-article .callout p:last-child, .marketing .callout p:last-child { margin-bottom: 0; }
+.manual-article .callout p, .marketing .callout p { margin-bottom: 8px; }
+.manual-article .callout-tip, .marketing .callout-tip { border-left-color: var(--accent); }
+.manual-article .callout-tip::before, .marketing .callout-tip::before { content: "Tip"; color: var(--accent-ink); }
+.manual-article .callout-warning, .marketing .callout-warning { border-left-color: #d64545; }
+.manual-article .callout-warning::before, .marketing .callout-warning::before { content: "Careful"; color: #d64545; }
+.manual-article .callout-note, .marketing .callout-note { border-left-color: var(--border); }
+.manual-article .callout-note::before, .marketing .callout-note::before { content: "Note"; }
 
 .manual-article figure.figure { margin: 24px 0; }
 .manual-article figure.figure img {

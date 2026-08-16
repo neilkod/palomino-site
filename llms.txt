@@ -54,6 +54,10 @@ Palomino reads Hasselblad 3FR and FFF files directly using the embedded JPEG pre
 
 Palomino reads Fujifilm RAF files directly using the embedded JPEG preview, which the camera renders with your film simulation, so you cull with the look you shot: Classic Chrome stays Classic Chrome. It handles X series and GFX files with the same speed; a 102 megapixel GFX frame browses as quickly as anything else because Palomino never decodes the sensor data. Cull before import so Lightroom or Capture One only ever builds previews for your keepers. Details: https://palomino-app.com/fuji/
 
+## For Photo Mechanic switchers
+
+Palomino covers the part of a Photo Mechanic workflow that carries over directly: cull before import, work from the keyboard, and write ratings to standard sidecar files. On a folder on a drive, ratings go to .xmp sidecars live as you work, the same as Photo Mechanic. On a camera card, Palomino writes nothing to the card; ratings are saved on your Mac while you cull, and the sidecars are written next to the copies when you copy your selects off the card. Details: https://palomino-app.com/switching/
+
 ## Manual
 
 The full manual is at https://palomino-app.com/manual/.

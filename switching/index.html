@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0E0D0B">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf8f5">
+<meta name="robots" content="index, follow">
+<title>A Photo Mechanic alternative for the Mac | Palomino</title>
+<meta name="description" content="Palomino is a fast macOS culling app for photographers coming from Photo Mechanic. Ratings go to standard XMP sidecars as you work, burst grouping and sharpness run in the background, and nothing is ever written to your card.">
+<link rel="canonical" href="https://palomino-app.com/switching/">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/assets/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/BricolageGrotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script>(function(){try{var t=localStorage.getItem("palomino-theme");if(t==="light"||t==="dark"){document.documentElement.setAttribute("data-theme",t);}}catch(e){}})();</script>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Palomino">
+<meta property="og:title" content="A Photo Mechanic alternative for the Mac | Palomino">
+<meta property="og:description" content="Palomino is a fast macOS culling app for photographers coming from Photo Mechanic. Ratings go to standard XMP sidecars as you work, burst grouping and sharpness run in the background, and nothing is ever written to your card.">
+<meta property="og:url" content="https://palomino-app.com/switching/">
+<meta property="og:image" content="https://palomino-app.com/assets/screenshot-preview.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="800">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A Photo Mechanic alternative for the Mac | Palomino">
+<meta name="twitter:description" content="Palomino is a fast macOS culling app for photographers coming from Photo Mechanic. Ratings go to standard XMP sidecars as you work, burst grouping and sharpness run in the background, and nothing is ever written to your card.">
+<meta name="twitter:image" content="https://palomino-app.com/assets/screenshot-preview.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Does Palomino write anything to my memory card?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Palomino detects a camera card and treats it as read-only. Your session is stored on your Mac and keyed to that card, so your progress is restored the next time you insert it. The sidecars are written during the copy, next to the copied files." } },
+    { "@type": "Question", "name": "Do my ratings carry into Lightroom or Capture One?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Palomino writes standard XMP sidecar files, the same format Lightroom and Capture One already read. For a folder on a drive the sidecar appears the moment you press a key. Rejected photos are written with a rating of -1, which Lightroom recognizes as Rejected." } },
+    { "@type": "Question", "name": "I ingest to a drive before I cull. Does anything change?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. On a folder, Palomino works the way you are used to. Ratings go to .xmp sidecars live while you work, and your editor sees them as soon as you import that folder." } },
+    { "@type": "Question", "name": "Can Palomino ingest and rename files from a card?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Palomino copies your selects to a folder with their original filenames. If you need renaming or a simultaneous second destination during download, do that step in your current tool and open the copied folder in Palomino." } },
+    { "@type": "Question", "name": "Do Photo Mechanic color classes convert to Palomino labels?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Palomino uses star ratings 1 through 5 and four color labels, and there is no direct mapping to the eight color classes. Treat them as separate systems." } },
+    { "@type": "Question", "name": "Is Palomino as fast?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Palomino reads the embedded JPEG preview rather than decoding sensor data, and it prefetches the next frames in the background, so navigation keeps up with the arrow key on large shoots. Both apps take the same approach to preview speed." } },
+    { "@type": "Question", "name": "What does Palomino cost?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Palomino is free to download and exports up to 50 photos per session. Pro removes the export limit for a one-time $29.99 purchase." } }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Palomino", "item": "https://palomino-app.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Switching from Photo Mechanic" }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/assets/global.css">
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "3b5cef76a9524b47889d1e8b460025d5"}'></script>
+</head>
+<body class="marketing">
+
+<nav class="site-nav" aria-label="Site">
+  <div class="nav-inner">
+    <a class="brand" href="/"><img src="/assets/app-icon.png" width="30" height="30" alt="Palomino app icon"><span class="wordmark">Palomino<span class="accent">.</span></span></a>
+    <div class="nav-links">
+      <a href="/manual/">Manual</a>
+    </div>
+    <a class="btn-nav js-appstore-link" href="https://apps.apple.com/us/app/palomino/id6779869483?mt=12" target="_blank" rel="noopener">Download</a>
+    <button class="theme-toggle js-theme-toggle" type="button" aria-label="Switch between light and dark theme">
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9"/></svg>
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+    </button>
+  </div>
+</nav>
+
+<header class="hero wrap">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Palomino</a> <span aria-hidden="true">&rsaquo;</span> Switching from Photo Mechanic</nav>
+  <h1>Coming to Palomino from Photo Mechanic<span class="accent">.</span></h1>
+  <p class="pitch">You already cull before you import, you already work from the keyboard, and you already expect the next frame on screen the moment you press the arrow key. Palomino works the same way. This page covers what carries over, the one place Palomino behaves differently, and what it leaves to other tools.</p>
+  <div class="badge-row"><a class="js-appstore-link" href="https://apps.apple.com/us/app/palomino/id6779869483?mt=12" target="_blank" rel="noopener"><img class="appstore-badge" src="/assets/download-on-the-mac-app-store.svg" alt="Download Palomino on the Mac App Store" width="156" height="40"></a></div>
+  <p class="req">Palomino runs on macOS 15 Sequoia or later, on both Apple silicon and Intel Macs.</p>
+</header>
+
+<section class="wrap">
+  <h2>What carries over</h2>
+  <p class="lead">Palomino keeps the part of Photo Mechanic that matters most. Ratings go to standard sidecar files the instant you press a key, with no export step. Open any folder on a drive and every star, pick, and color label lands in an .xmp beside the RAW as you work. Your editor reads them on import, the same way it reads Photo Mechanic's.</p>
+  <p class="lead">The speed comes from the same place too. Palomino reads the JPEG preview your camera wrote into each RAW file, so a 61 megapixel frame appears as fast as a 24 megapixel one and the sensor data is never decoded.</p>
+  <p class="lead">Culling comes before import. You cull first and hand your editor only the keepers, so Lightroom or Capture One never builds previews for frames you already rejected.</p>
+  <p class="lead">The keyboard does the work. 1 through 5 set a star rating, P picks, X rejects, and 6 through 9 set a color label. Each one advances to the next frame.</p>
+  <p class="lead">Filters control what the arrow keys see. Narrow to picks, a star threshold, a color label, a burst, or a capture day, and navigation skips everything else.</p>
+  <p class="lead">Palomino uses star ratings 1 through 5 and four color labels. There is no direct mapping to Photo Mechanic's eight color classes, so treat the two as separate systems.</p>
+</section>
+
+<section class="wrap">
+  <h2>If you copy the card to a drive first</h2>
+  <p class="lead">This is the Photo Mechanic pattern, and on a folder it works identically in Palomino.</p>
+  <div class="features">
+    <div class="feature"><h3><span>1</span>Copy the card to your drive</h3><p>You copy the card to your drive, in Finder or any ingest tool you already use.</p></div>
+    <div class="feature"><h3><span>2</span>Open the folder in Palomino</h3><p>You open that folder in Palomino.</p></div>
+    <div class="feature"><h3><span>3</span>Cull the shoot</h3><p>You cull the shoot with stars, picks, and color labels.</p></div>
+    <div class="feature"><h3><span>4</span>Palomino writes the sidecar</h3><p>Palomino writes an .xmp beside each RAW as you rate. The sidecar appears the moment you press a key.</p></div>
+    <div class="feature"><h3><span>5</span>Open the folder in your editor</h3><p>You open the same folder in your editor. The ratings arrive with no export step.</p></div>
+  </div>
+  <p class="lead">If this is how you already work, nothing on the rest of this page changes your routine.</p>
+</section>
+
+<section class="wrap">
+  <h2>If you cull straight from the card</h2>
+  <p class="lead">This one is faster for a quick turnaround right after a shoot, and it is the one place Palomino behaves differently.</p>
+  <div class="features">
+    <div class="feature"><h3><span>1</span>Open the card in Palomino</h3><p>You open the card in Palomino, from a reader or a camera connected over USB.</p></div>
+    <div class="feature"><h3><span>2</span>Cull the shoot</h3><p>You cull the shoot with stars, picks, and color labels.</p></div>
+    <div class="feature"><h3><span>3</span>Palomino saves your session</h3><p>Palomino saves your session on your Mac. The card itself stays untouched.</p></div>
+    <div class="feature"><h3><span>4</span>Copy your selects to a drive</h3><p>You copy your selects to a drive. Each RAW arrives with its .xmp beside it.</p></div>
+    <div class="feature"><h3><span>5</span>Import the folder in your editor</h3><p>You import that folder in your editor. Your ratings are already there.</p></div>
+  </div>
+  <p class="lead">You can eject the card at any point and come back later. As long as you do not format it, Palomino recognizes the card the next time you insert it and restores every rating.</p>
+  <div class="callout callout-warning">
+    <p><strong>One habit to keep.</strong> If you rate a card in Palomino, copy it off with Palomino. That copy step is what writes the sidecars next to your photos. Copying the card in Finder instead leaves your ratings behind on your Mac.</p>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Why Palomino does not write to your card</h2>
+  <p class="lead">In the classic Photo Mechanic workflow you cull the card in place and the sidecars are written onto the card, next to your RAWs. Palomino keeps them on your Mac until you copy the photos off, then writes them beside the copies. That difference is deliberate.</p>
+  <p class="lead">Writing to the card made sense for where that workflow came from. It was built for the newsroom of the early 2000s: small cards, tight deadlines, and images filed to the wire minutes after they were shot. The card was working media, and writing to it was how the work traveled.</p>
+  <p class="lead">Cards are far more reliable now than they were then, and they are still the most fragile link in the chain that runs from the shutter to your backup. Their file systems never changed. A card is still exFAT or FAT32, with no journaling, where one interrupted write through a loose reader connection can corrupt the index and take every frame with it. Meanwhile a single card grew to hold an entire wedding or a week of travel, so the cost of losing one became the whole job.</p>
+  <p class="lead">That makes the trade a lopsided one. Until a shoot is copied and backed up, the card holds the only copy of that work in existence, sitting on the weakest device you own. Writing to it risks everything, and the only thing it buys is skipping a copy you were going to make anyway.</p>
+  <p class="lead">So your ratings are saved on your Mac while you cull, the card is recognized every time you insert it, and the sidecars appear the moment your photos land on a drive. The card goes back in your bag exactly as the camera left it.</p>
+  <p class="lead">Palomino makes the read-only handling visible rather than silent. A "Card, read-only" pill appears in the status bar when a card source is detected, and the copy option that moves unrated files to the Trash is turned off, because Palomino does not change files on a card.</p>
+</section>
+
+<section class="wrap">
+  <h2>Where your ratings live</h2>
+  <div class="features">
+    <div class="feature"><h3>A folder on a drive</h3><p>While you cull, every rating is written to an .xmp sidecar beside each RAW, instantly. To reach your editor, import the folder. The ratings are already there.</p></div>
+    <div class="feature"><h3>A camera card</h3><p>While you cull, your ratings are saved on your Mac, and Palomino writes nothing to the card. To reach your editor, copy your photos off the card in Palomino. The sidecars are written next to the copies.</p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>What Palomino adds</h2>
+  <p class="lead">Palomino analyzes the shoot in the background while you cull, so part of the first pass is already done when you start.</p>
+  <p class="lead">Burst sequences are grouped automatically and ranked by sharpness, and the suggested keeper is marked with a crown. ⌘⇧X keeps that frame and rejects the rest of the burst.</p>
+  <p class="lead">Soft, overexposed, and underexposed frames get a badge, and each becomes a filter chip you can click.</p>
+  <p class="lead">Press V to zoom to the largest face at 300 percent, so checking focus and expressions takes one key. A badge marks frames where someone blinked.</p>
+  <p class="lead">Compare view holds one frame as a reference while you move through the rest of a burst in the other pane.</p>
+  <p class="lead">Session stats show your total time, your photos-per-minute rate, and how the ratings came out.</p>
+</section>
+
+<section class="wrap">
+  <h2>What Palomino leaves to other tools</h2>
+  <p class="lead">Palomino copies your selects to a folder. It is a culling app, and the ingest features you may rely on live elsewhere.</p>
+  <p class="lead">Palomino does not rename files on copy. Files arrive with the names your camera gave them.</p>
+  <p class="lead">Palomino does not write to two destinations at once. You choose one folder per copy.</p>
+  <p class="lead">Palomino does not stamp IPTC metadata, captions, or keywords.</p>
+  <p class="lead">Palomino does not build contact sheets or web galleries.</p>
+  <p class="lead">Palomino does not edit, develop, or grade photos.</p>
+  <p class="lead">If your download step depends on renaming or a simultaneous backup, keep the tool that does it and point Palomino at the copied folder. That is the first workflow on this page, and it works the same in every respect.</p>
+</section>
+
+<section class="wrap">
+  <h2>Price</h2>
+  <p class="lead">Palomino is free to download and exports up to 50 photos per session. Palomino Pro removes the limit for a one-time $29.99 purchase. There is no subscription and no account.</p>
+</section>
+
+<section class="wrap">
+  <h2>Frequently asked questions</h2>
+  <div class="faq">
+    <h3>Does Palomino write anything to my memory card?</h3>
+    <p>No. Palomino detects a camera card and treats it as read-only. Your session is stored on your Mac and keyed to that card, so your progress is restored the next time you insert it. The sidecars are written during the copy, next to the copied files.</p>
+    <h3>Do my ratings carry into Lightroom or Capture One?</h3>
+    <p>Yes. Palomino writes standard XMP sidecar files, the same format Lightroom and Capture One already read. For a folder on a drive the sidecar appears the moment you press a key. Rejected photos are written with a rating of -1, which Lightroom recognizes as Rejected.</p>
+    <h3>I ingest to a drive before I cull. Does anything change?</h3>
+    <p>No. On a folder, Palomino works the way you are used to. Ratings go to .xmp sidecars live while you work, and your editor sees them as soon as you import that folder.</p>
+    <h3>Can Palomino ingest and rename files from a card?</h3>
+    <p>No. Palomino copies your selects to a folder with their original filenames. If you need renaming or a simultaneous second destination during download, do that step in your current tool and open the copied folder in Palomino.</p>
+    <h3>Do Photo Mechanic color classes convert to Palomino labels?</h3>
+    <p>No. Palomino uses star ratings 1 through 5 and four color labels, and there is no direct mapping to the eight color classes. Treat them as separate systems.</p>
+    <h3>Is Palomino as fast?</h3>
+    <p>Palomino reads the embedded JPEG preview rather than decoding sensor data, and it prefetches the next frames in the background, so navigation keeps up with the arrow key on large shoots. Both apps take the same approach to preview speed.</p>
+    <h3>What does Palomino cost?</h3>
+    <p>Palomino is free to download and exports up to 50 photos per session. Pro removes the export limit for a one-time $29.99 purchase.</p>
+  </div>
+</section>
+
+<section class="wrap" style="text-align:center;">
+  <h2>Try it on your next shoot</h2>
+  <p class="lead">Palomino is on the Mac App Store, free to download. Open your next shoot in it and cull it down to your keepers the way you already work.</p>
+  <div class="badge-row"><a class="js-appstore-link" href="https://apps.apple.com/us/app/palomino/id6779869483?mt=12" target="_blank" rel="noopener"><img class="appstore-badge" src="/assets/download-on-the-mac-app-store.svg" loading="lazy" alt="Download Palomino on the Mac App Store" width="156" height="40"></a></div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-links">
+      <a href="/">Palomino home</a>
+      <a href="/manual/">Manual</a>
+      <a href="/hasselblad/">Shooting Hasselblad?</a>
+      <a href="/fuji/">Shooting Fujifilm?</a>
+      <a href="/privacy.html">Privacy policy</a>
+    </div>
+    <p>&copy; 2026 Neil Kodner. Palomino supports ARW, DNG, 3FR, NEF, CR3, RAF, ORF, FFF, HEIC, JPEG, and 20+ other formats.</p>
+    <p>Photo Mechanic is a trademark of Camera Bits, Inc. Palomino is not affiliated with Camera Bits.</p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var isMac = /Mac/.test(navigator.platform || navigator.userAgent);
+    var isTouch = navigator.maxTouchPoints > 1;
+    if (isMac && !isTouch) {
+      document.querySelectorAll(".js-appstore-link").forEach(function (link) {
+        link.addEventListener("click", function (e) {
+          if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+          e.preventDefault();
+          window.location.href = link.href.replace(/^https:\/\//, "macappstore://");
+        });
+      });
+    }
+
+    var toggle = document.querySelector(".js-theme-toggle");
+    if (toggle) {
+      toggle.addEventListener("click", function () {
+        var doc = document.documentElement;
+        var current = doc.getAttribute("data-theme");
+        if (!current) {
+          current = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        var next = current === "light" ? "dark" : "light";
+        doc.setAttribute("data-theme", next);
+        try { localStorage.setItem("palomino-theme", next); } catch (e) {}
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>
