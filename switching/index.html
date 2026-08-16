@@ -38,8 +38,8 @@
       "acceptedAnswer": { "@type": "Answer", "text": "Yes. Palomino writes standard XMP sidecar files, the same format Lightroom and Capture One already read. For a folder on a drive the sidecar appears the moment you press a key. Rejected photos are written with a rating of -1, which Lightroom recognizes as Rejected." } },
     { "@type": "Question", "name": "I ingest to a drive before I cull. Does anything change?",
       "acceptedAnswer": { "@type": "Answer", "text": "No. On a folder, Palomino works the way you are used to. Ratings go to .xmp sidecars live while you work, and your editor sees them as soon as you import that folder." } },
-    { "@type": "Question", "name": "Can Palomino ingest and rename files from a card?",
-      "acceptedAnswer": { "@type": "Answer", "text": "No. Palomino copies your selects to a folder with their original filenames. If you need renaming or a simultaneous second destination during download, do that step in your current tool and open the copied folder in Palomino." } },
+    { "@type": "Question", "name": "Can Palomino rename files as it copies them?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Copy to Folder sheet has a File names field where you build a template from tokens, so [Job]_[YYYYMMDD]_[####] renders as SmithWedding_20260614_0001. Tokens cover the job name, the original stem, a zero-padded sequence, capture date and time, and every camera setting the info panel shows. The rendered name drives the RAW, its JPEG companion, and the .xmp sidecar together, so they stay one matched set on import. Leave the field empty and the copies keep their original names. Palomino copies your selects rather than ingesting a whole card, and it writes to one destination per copy." } },
     { "@type": "Question", "name": "Do Photo Mechanic color classes convert to Palomino labels?",
       "acceptedAnswer": { "@type": "Answer", "text": "No. Palomino uses star ratings 1 through 5 and four color labels, and there is no direct mapping to the eight color classes. Treat them as separate systems." } },
     { "@type": "Question", "name": "Does Palomino have a focus mask?",
@@ -83,7 +83,7 @@
 <header class="hero wrap">
   <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Palomino</a> <span aria-hidden="true">&rsaquo;</span> Switching from Photo Mechanic</nav>
   <h1>Coming to Palomino from Photo Mechanic<span class="accent">.</span></h1>
-  <p class="pitch">You already cull before you import, you already work from the keyboard, and you already expect the next frame on screen the moment you press the arrow key. Palomino works the same way. This page covers what carries over, the one place Palomino behaves differently, and what it leaves to other tools.</p>
+  <p class="pitch">You already cull before you import, you already work from the keyboard, and you already expect the next frame on screen the moment you press the arrow key. Palomino works the same way.</p>
   <div class="badge-row"><a class="js-appstore-link" href="https://apps.apple.com/us/app/palomino/id6779869483?mt=12" target="_blank" rel="noopener"><img class="appstore-badge" src="/assets/download-on-the-mac-app-store.svg" alt="Download Palomino on the Mac App Store" width="156" height="40"></a></div>
   <p class="req">Palomino runs on macOS 15 Sequoia or later, on both Apple silicon and Intel Macs.</p>
 </header>
@@ -96,6 +96,7 @@
     <div class="feature"><h3>Culling comes before import</h3><p>Culling comes before import. You cull first and hand your editor only the keepers, so Lightroom or Capture One never builds previews for frames you already rejected.</p></div>
     <div class="feature"><h3>The keyboard does the work</h3><p>The keyboard does the work. 1 through 5 set a star rating, P picks, X rejects, and 6 through 9 set a color label. Each one advances to the next frame.</p></div>
     <div class="feature"><h3>Filters control what the arrow keys see</h3><p>Filters control what the arrow keys see. Narrow to picks, a star threshold, a color label, a burst, or a capture day, and navigation skips everything else.</p></div>
+    <div class="feature"><h3>Renaming happens on copy</h3><p>Copy to Folder builds file names from a template you set in the sheet, so [Job]_[YYYYMMDD]_[####] renders as SmithWedding_20260614_0001. Tokens cover the job name, the original stem, a zero-padded sequence, capture date and time, and every camera setting the info panel shows. The rendered name drives the RAW, its JPEG companion, and the .xmp sidecar together, so a renamed file and its sidecars stay one matched set.</p></div>
   </div>
   <p class="prose">Palomino uses star ratings 1 through 5 and four color labels. There is no direct mapping to Photo Mechanic's eight color classes, so treat the two as separate systems.</p>
 </section>
@@ -165,13 +166,12 @@
   <h2>What Palomino leaves to other tools</h2>
   <p class="lead">Palomino copies your selects to a folder. It is a culling app, and the ingest features you may rely on live elsewhere.</p>
   <div class="features">
-    <div class="feature"><h3>Palomino does not rename files</h3><p>Palomino does not rename files on copy. Files arrive with the names your camera gave them.</p></div>
     <div class="feature"><h3>Palomino does not write to two destinations</h3><p>Palomino does not write to two destinations at once. You choose one folder per copy.</p></div>
     <div class="feature"><h3>Palomino does not stamp IPTC metadata</h3><p>Palomino does not stamp IPTC metadata, captions, or keywords.</p></div>
     <div class="feature"><h3>Palomino does not build contact sheets</h3><p>Palomino does not build contact sheets or web galleries.</p></div>
     <div class="feature"><h3>Palomino does not edit, develop, or grade</h3><p>Palomino does not edit, develop, or grade photos.</p></div>
   </div>
-  <p class="prose">If your download step depends on renaming or a simultaneous backup, keep the tool that does it and point Palomino at the copied folder. That is the first workflow on this page, and it works the same in every respect.</p>
+  <p class="prose">If your download step depends on a simultaneous backup to two drives, keep the tool that does it and point Palomino at the copied folder. That is the first workflow on this page, and it works the same in every respect.</p>
 </section>
 
 <section class="wrap">
@@ -188,8 +188,8 @@
     <p>Yes. Palomino writes standard XMP sidecar files, the same format Lightroom and Capture One already read. For a folder on a drive the sidecar appears the moment you press a key. Rejected photos are written with a rating of -1, which Lightroom recognizes as Rejected.</p>
     <h3>I ingest to a drive before I cull. Does anything change?</h3>
     <p>No. On a folder, Palomino works the way you are used to. Ratings go to .xmp sidecars live while you work, and your editor sees them as soon as you import that folder.</p>
-    <h3>Can Palomino ingest and rename files from a card?</h3>
-    <p>No. Palomino copies your selects to a folder with their original filenames. If you need renaming or a simultaneous second destination during download, do that step in your current tool and open the copied folder in Palomino.</p>
+    <h3>Can Palomino rename files as it copies them?</h3>
+    <p>Yes. The Copy to Folder sheet has a File names field where you build a template from tokens, so [Job]_[YYYYMMDD]_[####] renders as SmithWedding_20260614_0001. Tokens cover the job name, the original stem, a zero-padded sequence, capture date and time, and every camera setting the info panel shows. The rendered name drives the RAW, its JPEG companion, and the .xmp sidecar together, so they stay one matched set on import. Leave the field empty and the copies keep their original names. Palomino copies your selects rather than ingesting a whole card, and it writes to one destination per copy.</p>
     <h3>Do Photo Mechanic color classes convert to Palomino labels?</h3>
     <p>No. Palomino uses star ratings 1 through 5 and four color labels, and there is no direct mapping to the eight color classes. Treat them as separate systems.</p>
     <h3>Does Palomino have a focus mask?</h3>
