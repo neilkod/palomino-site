@@ -11,7 +11,7 @@ Palomino is a native macOS app for photographers who need to get through a large
 
 ## Download and requirements
 
-- Download on the Mac App Store: https://apps.apple.com/us/app/palomino/id6779869483?mt=12
+- [Download Palomino on the Mac App Store](https://apps.apple.com/us/app/palomino/id6779869483?mt=12): free, with Pro available as a one-time in-app purchase.
 - Requires macOS 15 Sequoia or later.
 - Runs on both Apple silicon and Intel Macs.
 
@@ -48,34 +48,38 @@ ARW, DNG, NEF, CR3, RAF, ORF, HEIC, JPEG, and more than 20 other formats.
 
 ## For Hasselblad shooters
 
-Palomino reads Hasselblad 3FR and FFF files directly using the embedded JPEG preview, so you can cull thousands of frames fast and then hand your keepers to Phocus to develop. It complements Phocus rather than replacing it: cull in Palomino, export the keepers to a folder, open that folder in Phocus. With Phocus sidecars turned on in Settings, exporting a 3FR file also writes a Phocus sidecar so your star rating appears in Phocus. Details: https://palomino-app.com/hasselblad/
+Palomino reads Hasselblad 3FR and FFF files directly using the embedded JPEG preview, so you can cull thousands of frames fast and then hand your keepers to Phocus to develop. It complements Phocus rather than replacing it: cull in Palomino, export the keepers to a folder, open that folder in Phocus. With Phocus sidecars turned on in Settings, exporting a 3FR file also writes a Phocus sidecar so your star rating appears in Phocus. Details: [Cull Hasselblad shoots fast on your Mac](https://palomino-app.com/hasselblad/).
 
 ## For Fujifilm shooters
 
-Palomino reads Fujifilm RAF files directly using the embedded JPEG preview, which the camera renders with your film simulation, so you cull with the look you shot: Classic Chrome stays Classic Chrome. It handles X series and GFX files with the same speed; a 102 megapixel GFX frame browses as quickly as anything else because Palomino never decodes the sensor data. Cull before import so Lightroom or Capture One only ever builds previews for your keepers. Details: https://palomino-app.com/fuji/
+Palomino reads Fujifilm RAF files directly using the embedded JPEG preview, which the camera renders with your film simulation, so you cull with the look you shot: Classic Chrome stays Classic Chrome. It handles X series and GFX files with the same speed; a 102 megapixel GFX frame browses as quickly as anything else because Palomino never decodes the sensor data. Cull before import so Lightroom or Capture One only ever builds previews for your keepers. Details: [Cull Fujifilm shoots fast, before Lightroom imports them](https://palomino-app.com/fuji/).
 
 ## For Photo Mechanic switchers
 
-Palomino covers the part of a Photo Mechanic workflow that carries over directly: cull before import, work from the keyboard, and write ratings to standard sidecar files. On a folder on a drive, ratings go to .xmp sidecars live as you work, the same as Photo Mechanic. On a camera card, Palomino writes nothing to the card; ratings are saved on your Mac while you cull, and the sidecars are written next to the copies when you copy your selects off the card. Details: https://palomino-app.com/switching/
+Palomino covers the part of a Photo Mechanic workflow that carries over directly: cull before import, work from the keyboard, and write ratings to standard sidecar files. On a folder on a drive, ratings go to .xmp sidecars live as you work, the same as Photo Mechanic. On a camera card, Palomino writes nothing to the card; ratings are saved on your Mac while you cull, and the sidecars are written next to the copies when you copy your selects off the card. Details: [A Photo Mechanic alternative for the Mac](https://palomino-app.com/switching/).
 
 ## Manual
 
-The full manual is at https://palomino-app.com/manual/.
+Every page of the manual is listed below.
 
-- Getting started: https://palomino-app.com/manual/getting-started/. What Palomino does, opening a folder, and why previews load instantly.
-- Rating and flagging: https://palomino-app.com/manual/rating-and-flagging/. Picks, rejects, star ratings, color labels, and the WASD grip.
-- Viewing and filtering: https://palomino-app.com/manual/viewing-and-filtering/. The grid, the info panel, sort order, and filtering by flag, rating, or label.
-- Bursts and stacks: https://palomino-app.com/manual/bursts-and-stacks/. Burst grouping, focus stacks, keeper crowns, and the compare view.
-- Copying your selects: https://palomino-app.com/manual/exporting/. The Copy to Folder sheet, copy modes, file naming, and copy presets.
-- Ratings and your editor: https://palomino-app.com/manual/ratings-and-your-editor/. How XMP sidecars carry your ratings into Lightroom, Capture One, and Phocus.
-- Keyboard shortcuts: https://palomino-app.com/manual/keyboard-shortcuts/. Every shortcut in the app, grouped by task.
-- Troubleshooting: https://palomino-app.com/manual/troubleshooting/. Fixes for the most common problems, from missing ratings to slow loading.
+- [The Palomino manual](https://palomino-app.com/manual/): the contents page for everything below.
+- [Getting started](https://palomino-app.com/manual/getting-started/): what Palomino does, opening a folder, and why previews load instantly.
+- [Rating and flagging](https://palomino-app.com/manual/rating-and-flagging/): picks, rejects, star ratings, color labels, and the WASD grip.
+- [Viewing and filtering](https://palomino-app.com/manual/viewing-and-filtering/): the grid, the info panel, sort order, and filtering by flag, rating, or label.
+- [Bursts and stacks](https://palomino-app.com/manual/bursts-and-stacks/): burst grouping, focus stacks, keeper crowns, and the compare view.
+- [Copying your selects](https://palomino-app.com/manual/exporting/): the Copy to Folder sheet, copy modes, file naming, and copy presets.
+- [Ratings and your editor](https://palomino-app.com/manual/ratings-and-your-editor/): how XMP sidecars carry your ratings into Lightroom, Capture One, and Phocus.
+- [Keyboard shortcuts](https://palomino-app.com/manual/keyboard-shortcuts/): every shortcut in the app, grouped by task.
+- [Troubleshooting](https://palomino-app.com/manual/troubleshooting/): fixes for the most common problems, from missing ratings to slow loading.
 
 ## Links
 
-- Homepage: https://palomino-app.com/
-- Download on the Mac App Store: https://apps.apple.com/us/app/palomino/id6779869483?mt=12
-- Privacy policy: https://palomino-app.com/privacy.html
-- Threads: https://www.threads.com/@palomino.photo
-- Instagram: https://www.instagram.com/palomino.photo
-- YouTube: https://www.youtube.com/@palomino-photo
+- [Palomino homepage](https://palomino-app.com/): what the app is, what it costs, and how it works.
+- [Download Palomino on the Mac App Store](https://apps.apple.com/us/app/palomino/id6779869483?mt=12): free to download, with Pro as a one-time purchase.
+- [Cull Hasselblad shoots fast on your Mac](https://palomino-app.com/hasselblad/): 3FR and FFF culling, and handing keepers to Phocus.
+- [Cull Fujifilm shoots fast, before Lightroom imports them](https://palomino-app.com/fuji/): RAF culling with your film simulation, on X series and GFX.
+- [A Photo Mechanic alternative for the Mac](https://palomino-app.com/switching/): what carries over, where ratings live, and why Palomino leaves your card alone.
+- [Privacy policy](https://palomino-app.com/privacy.html): what the app and the website do and do not collect.
+- [Palomino on Threads](https://www.threads.com/@palomino.photo): release notes and shots from people using the app.
+- [Palomino on Instagram](https://www.instagram.com/palomino.photo): release notes and shots from people using the app.
+- [Palomino on YouTube](https://www.youtube.com/@palomino-photo): short videos showing the app in use.
