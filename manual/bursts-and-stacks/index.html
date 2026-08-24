@@ -115,6 +115,11 @@
     <p>The crown is a suggestion to speed up your first pass. Your own pick and star ratings always stand, so you can keep a different frame and the crowns stay where Palomino placed them.</p>
     <p>A crown appears once a burst has at least two frames still in the folder and Palomino has measured at least one of them. On a large import the crowns may take a moment to show while that analysis runs. If you reject and remove members until a single frame is left, that frame shows no crown.</p>
 
+    <h2>Seeing why a frame was crowned</h2>
+    <p>Click a crown to see a short popover explaining the rank in plain language, for example "Sharpest of 12 frames, measured at the eye. Both eyes open."</p>
+    <p>The info panel's <strong>Score</strong> section shows the same explanation with more room: the frame's rank among the others in its burst (for example "2 of 12"), a bar for Palomino's on-device aesthetics score, and the reason sentence. Press <kbd>I</kbd> to open the info panel if it is hidden. See <a href="/manual/viewing-and-filtering/">Viewing and Filtering</a> for what else the panel shows.</p>
+    <p>The rank, the aesthetics score, and the reason sentence are all read-only. Nothing here changes which frame gets the crown: the crown is decided first, by the measurements described above, and the Score section only explains that decision after the fact.</p>
+
     <h2>Focus stacks</h2>
     <p>A focus stack is a burst where the photographer racked focus across the scene, producing a run of frames that are each sharp in a different part of the image rather than one shot with a single focus point. Photographers combine these frames afterward in a tool built for the job, such as Helicon Focus or Adobe Lightroom Classic, which merge the sharp regions from every frame into one image with everything in focus. Phocus for Mac does not merge focus stacks, so a stack bound for Phocus still needs Helicon Focus or Lightroom Classic for that step.</p>
     <p>Palomino treats a focus stack differently from an ordinary burst. It does not crown a best frame within a stack, since every frame earns its place by being sharp somewhere the others are not. The reject-others workflow does not apply to a stack either, since a merge needs every frame in the run rather than one winner.</p>
