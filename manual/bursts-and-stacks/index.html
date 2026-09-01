@@ -76,7 +76,7 @@
     <p class="dek">Palomino groups near-duplicate frames automatically and gives you tools to resolve them fast.</p>
 
     <h2>How bursts are grouped</h2>
-    <p>Palomino looks at each photo's content in the background and groups consecutive frames that look nearly identical and were shot close together in time. Frames are grouped while each one was shot within about five seconds of the frame before it. This happens at background priority so it never delays culling.</p>
+    <p>Palomino looks at each photo's content in the background and groups consecutive frames that look nearly identical and were shot close together in time. Frames are grouped while each one was shot within about five seconds of the frame before it. Frames fired in rapid succession, within half a second of each other, are grouped by that timing alone, so a fast wildlife or sports burst holds together even when a small subject keeps the frames from looking alike. This happens at background priority so it never delays culling.</p>
     <p>Burst photos show a stack badge on their thumbnails with the frame's position and the group size (for example, "2/3"). In the <strong>Bursts</strong> filter, every cluster appears grouped naturally because burst frames are consecutive files.</p>
     <p>The grouping is based on visual similarity plus timing, not camera burst mode detection. A sequence of similar frames shot manually can also form a group.</p>
 
@@ -119,6 +119,12 @@
     <p>Click a crown to see a short popover explaining the rank in plain language, for example "Sharpest of 12 frames, measured at the eye. Both eyes open."</p>
     <p>The info panel's <strong>Score</strong> section shows the same explanation with more room: the frame's rank among the others in its burst (for example "2 of 12"), a bar for Palomino's on-device aesthetics score, and the reason sentence. Press <kbd>I</kbd> to open the info panel if it is hidden. See <a href="/manual/viewing-and-filtering/">Viewing and Filtering</a> for what else the panel shows.</p>
     <p>The rank, the aesthetics score, and the reason sentence are all read-only. Nothing here changes which frame gets the crown: the crown is decided first, by the measurements described above, and the Score section only explains that decision after the fact.</p>
+
+    <h3>AI-written reasons</h3>
+    <p>On a Mac that can run Apple's on-device model, Palomino writes the reason sentence itself instead of assembling it from a fixed set of phrases. The wording reads more naturally and can mention more than one thing about a frame at once. It runs entirely on your Mac, and your photographs are never uploaded.</p>
+    <p>The sentence is checked before you see it. Palomino asks the model which measurements it used, and discards any sentence that refers to something the photo does not actually carry. When that happens, or when the model is unavailable, you get the measured wording instead. The rank and the crown never change either way.</p>
+    <p>Model-written reasons are part of Pro, with one exception: crowned frames get one for everyone, so you can see what the feature does on your own photographs. Every other frame gets the measured wording until you upgrade.</p>
+    <p>Turn the feature off in Settings under Reasons if you prefer the measured wording everywhere. On a Mac without the on-device model, the setting is switched off and explains why.</p>
 
     <h2>Focus stacks</h2>
     <p>A focus stack is a burst where the photographer racked focus across the scene, producing a run of frames that are each sharp in a different part of the image rather than one shot with a single focus point. Photographers combine these frames afterward in a tool built for the job, such as Helicon Focus or Adobe Lightroom Classic, which merge the sharp regions from every frame into one image with everything in focus. Phocus for Mac does not merge focus stacks, so a stack bound for Phocus still needs Helicon Focus or Lightroom Classic for that step.</p>
@@ -170,7 +176,7 @@
     <p>A promote on the last photo of the set works differently, because there is no next photo to load. The winner still becomes the reference, and the right pane keeps showing it, so both panes hold the same frame. The active-pane border also stays where it was, since no navigation happened; both panes show the winner, so the rating and flag keys act on it from either pane. This marks the end of the run: closing the compare view lands you on the winning photo.</p>
 
     <h3>Zoom in compare</h3>
-    <p>Zoom works inside compare, and by default both panes zoom and pan together. Press <kbd>Z</kbd> to zoom to 300%, <kbd>V</kbd> to zoom to the largest face, and <kbd>=</kbd> or <kbd>-</kbd> to step the zoom. Scroll or drag inside a pane to move around while zoomed. The link button at the top of the compare view switches the panes to independent movement, and the match button then lines the compare pane back up with the reference pane.</p>
+    <p>Zoom works inside compare, and by default both panes zoom and pan together. Press <kbd>Z</kbd> to zoom to 300%, centered on the reference photo's sharpest eyes when Palomino has found them, <kbd>V</kbd> to zoom to the largest face, and <kbd>=</kbd> or <kbd>-</kbd> to step the zoom. Scroll or drag inside a pane to move around while zoomed. The link button at the top of the compare view switches the panes to independent movement, and the match button then lines the compare pane back up with the reference pane.</p>
     <p>The zoom keys always act on the reference pane: with the panes linked, the compare pane follows along, and with the panes unlinked, <kbd>Z</kbd>, <kbd>V</kbd>, <kbd>=</kbd>, and <kbd>-</kbd> change the reference pane alone. To zoom or move the unlinked compare pane, scroll or drag inside it, or click the match button to line it up with the reference again. Zoom uses the same preview both panes already show, so it stays fast.</p>
 
     <h3>What each pane shows</h3>
