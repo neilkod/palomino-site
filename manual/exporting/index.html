@@ -174,6 +174,10 @@
       <p>"Trash unrated photos after copying" affects the source folder, not the copy destination. It trashes every photo with no star rating that is not flagged as a Pick, including rejected photos with no stars. Review the count carefully before confirming.</p>
     </div>
 
+    <h2>Drives without a Trash</h2>
+    <p>Some drives have no Trash. Network shares are the usual case: an SMB share or a NAS volume mounted in Finder usually has none, which is why Finder deletes files there immediately. Move and <strong>Trash unrated photos after copying</strong> both put originals in the Trash, so on a drive without one the copy completes and the originals stay in the source folder. Palomino never deletes a file outright.</p>
+    <p>When the source folder is on such a drive, the Copy to Folder sheet shows a note next to Move and next to the trash toggle before you start, and the completion card says why the files stayed. To clear a folder on a network share, copy your picks out with Palomino, then delete the rest in Finder.</p>
+
     <h2>The sheet remembers your last settings</h2>
     <p>The Copy to Folder sheet reopens the way you left it. The filter chips, the destination folder, and the high-ISO split keep their last values across copies and across app launches, so a repeat copy to the same folder needs nothing beyond pressing <kbd>E</kbd> and clicking <strong>Copy</strong>.</p>
     <p>The one exception is <strong>Trash unrated photos after copying</strong>, which turns itself off every time the sheet opens. Deleting files stays a deliberate choice each time.</p>
