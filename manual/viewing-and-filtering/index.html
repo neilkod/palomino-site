@@ -106,6 +106,7 @@
     <h2>Filmstrip</h2>
     <p>The filmstrip shows every photo in the current folder as a thumbnail. Press <kbd>Tab</kbd> to show or hide it. While the compare view is open, <kbd>Tab</kbd> switches the active pane instead; use the filmstrip button in the title bar to show or hide the strip. By default, photos that don't match the active filter are dropped from the strip, so a filtered strip shows only the photos you are working through. To keep non-matching photos visible instead, turn off <strong>Hide filtered-out photos</strong> in <strong>Settings</strong> (<kbd>⌘,</kbd>); they then stay in the strip dimmed to 20% opacity, so you keep your place in the full set while you work a filter.</p>
     <p>Filmstrip placement (left side or bottom edge) is also set in <strong>Settings</strong>. Drag the divider to resize the strip. The main photo shrinks to fit the space that is left rather than being covered, so the whole image stays visible.</p>
+    <p>A bar across the head of the strip names the open folder and holds the rank order button. The folder name shows the last part of the path. Hold the pointer over it to see the full path, and click it for <strong>Reveal in Finder</strong> and <strong>Copy Path</strong>. The rank order button, or <kbd>R</kbd>, lays out each burst with its best frame first. See <a href="/manual/bursts-and-stacks/">Bursts and stacks</a> for how rank order works.</p>
 
     <h2>Grid view</h2>
     <p>Press <kbd>G</kbd> to switch to the thumbnail grid. Click any thumbnail to jump to that photo. Press <kbd>G</kbd> or <kbd>Esc</kbd> to return to the single-photo view. A slider in the grid's toolbar adjusts thumbnail size.</p>
@@ -142,6 +143,8 @@
 
     <p>The filter list lets you filter without leaving the single-photo view, and you can do the same from the keyboard by pressing <kbd>F</kbd>. See below for the full set of filters and the star direction toggle.</p>
 
+    <p>The genre chip stays at the top of the panel while the sections below it scroll. Click the FILTER, EXIF, SCORE, or ZOOM header to collapse that section, and click it again to expand it. Palomino remembers which sections are collapsed between launches. The Copy to Folder section stays open and has no collapse control.</p>
+
     <h2>Reading the status bar</h2>
     <p>The status bar at the bottom of the preview window always shows:</p>
     <ul>
@@ -159,6 +162,13 @@
 
     <h2>Sort order</h2>
     <p>By default, photos are sorted by capture date and time from EXIF data. You can switch to filename, file size, or modification date from the sort menu, marked with up and down arrows. In the preview the menu sits at the right end of the toolbar, and in grid view it sits at the right end of the filter bar. The same choices live under View &gt; Sort Order in the menu bar. Capture date is the right choice for most shoots; filename order may disagree with capture order on multi-camera or multi-card jobs.</p>
+
+    <h2>Shoot genre</h2>
+    <p>Palomino reads the open folder and works out what kind of shoot it is, such as a wedding, a wildlife outing, a sports fixture, a landscape trip, a macro sitting, a portrait sitting, or an event. The genre appears as a chip at the top of the info panel in preview mode, and beside the sort menu in the grid filter bar.</p>
+    <p>Click the chip to see what Palomino read and to change it. The popover names the genre in plain language, for example &ldquo;Looks like a wedding.&rdquo; Below that, Auto leaves the reading to Palomino and the genre list sets the folder yourself. Your choice is saved with the folder and comes back the next time you open it.</p>
+    <p>The genre is read on your own Mac, from a sample of the photographs and from what Palomino has already measured about them. Your photographs are never uploaded. It needs macOS 27 and a Mac that can run Apple&rsquo;s on-device model. On earlier versions of macOS the reading was wrong often enough to be misleading, so the chip stays hidden there rather than showing a guess.</p>
+    <p>The genre is a label on the folder. It does not change ratings, flags, or which frame gets the crown.</p>
+    <p>The popover also names what the score leads with for that kind of shoot. A wedding, an event, or a portrait sitting leads with whether the eyes are open. A wildlife or sports shoot leads with sharpness and how much of the frame the subject fills. A macro shoot leads with sharpness and whether the frame is part of a stack. A landscape shoot leads with light and exposure. This changes what the reason sentence in the Score section talks about first. See <a href="/manual/bursts-and-stacks/">Bursts and Stacks</a> for the reason sentence itself.</p>
 
     <h2>Filter by flag, rating, or label</h2>
     <p>Filters restrict what you see and move through. When a filter is active, the arrow keys skip non-matching photos, the position counter reflects only the filtered set, and the grid shows only matching thumbnails.</p>

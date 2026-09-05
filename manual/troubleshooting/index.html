@@ -93,6 +93,9 @@
     <h2>The out-of-focus badge is wrong and the photo is sharp</h2>
     <p>The blur detection runs on the embedded JPEG preview and uses a fixed sharpness threshold. Strong bokeh, intentional motion blur, or a macro shot with a very shallow depth of field can trigger it incorrectly. Press <kbd>B</kbd> on the photo to mark it as intentionally soft. The badge is suppressed and the override is saved with the session. See <a href="/manual/viewing-and-filtering/">Viewing and Filtering</a>.</p>
 
+    <h2>Previews from my camera look soft or blurry</h2>
+    <p>Palomino shows the preview image that the camera stores inside each raw file instead of decoding the raw, which is what keeps culling fast. Some cameras, mostly older medium-format bodies, store a preview only a few hundred pixels wide, and stretching it to fill the window makes it look soft. When that happens, the HUD shows a <strong>Low-res preview</strong> pill, and the info panel adds a <strong>Preview</strong> row with the stored preview size under <strong>Pixels</strong>. Photos from the same camera remain safe to rate and copy; only the on-screen preview is affected. Some camera makers' software writes a larger preview when it saves a file, so a file that has been through that software can look sharp in Palomino where the original from the card looked soft.</p>
+
     <h2>The focus mask is hard to see on my photo</h2>
     <p>The overlay is green by default, and on foliage, grass, or any other green subject it blends into the scene. Press <kbd>⌘F</kbd> to turn the mask on and click a different color in the row of swatches that appears at the top-right of the photo; magenta or cyan stands out against greenery. The same choice is <strong>Overlay color</strong> under <strong>Focus mask</strong> in <strong>Settings</strong> (<kbd>⌘,</kbd>). The color is remembered and applies in the compare view too.</p>
     <h2>The focus mask shows no overlay on a photo</h2>

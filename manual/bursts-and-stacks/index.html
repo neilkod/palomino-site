@@ -107,6 +107,10 @@
 
     <p>Short bursts of eight frames or fewer always show a single crown, so a quick sequence works the same way it always has. A frame where Palomino detects closed eyes ranks lower in the comparison, though it can still earn a crown if it remains among the best frames in the group.</p>
 
+    <h3>Reading a burst in rank order</h3>
+    <p>The filmstrip shows each burst in shooting order. To read a burst with its best frame first, click the rank order button at the trailing end of the filmstrip's head bar, or press <kbd>R</kbd>. Each burst then lays out its frames in the rank order Palomino measured, best first, while bursts keep their place among the other photos and the folder sort stays as it was. Frames that did not compete for the crown, such as a frame with no located eye in a burst measured at the eye, follow the ranked frames in shooting order. The arrow keys step through the strip in the order shown, and with <strong>Collapse Bursts</strong> on, a collapsed burst shows its rank 1 frame. Press <kbd>R</kbd> again to return to shooting order.</p>
+    <p>The button stays dimmed while analysis is still running, because ranks can change until it finishes. Rank order is a view setting: it turns off when you reopen Palomino, and it leaves the sort order, the session file, and every rating as they are.</p>
+
     <h2>How Palomino measures sharpness in a burst</h2>
     <p>When Palomino locates the subject's eye across a burst, it measures sharpness at the eye instead of across the whole frame. This matters when autofocus lands on a branch in front of a bird or a rock beside an animal, because the frame that reads sharpest overall can be the one that missed the eye.</p>
     <p>Palomino chooses one measurement for a whole burst, so every frame in it is compared on the same terms. It also binds to a single subject for the length of the burst, which keeps the crown on the same animal when a second one is in the shot. A frame where no eye is found sits out the comparison. If that happens on more than a third of the burst, Palomino measures the whole group by overall sharpness instead, so a frame where the subject turned its head still gets judged fairly.</p>
@@ -119,11 +123,13 @@
     <p>Click a crown to see a short popover explaining the rank in plain language, for example "Sharpest of 12 frames, measured at the eye. Both eyes open."</p>
     <p>The info panel's <strong>Score</strong> section shows the same explanation with more room: the frame's rank among the others in its burst (for example "2 of 12"), a bar for Palomino's on-device aesthetics score, and the reason sentence. Press <kbd>I</kbd> to open the info panel if it is hidden. See <a href="/manual/viewing-and-filtering/">Viewing and Filtering</a> for what else the panel shows.</p>
     <p>The rank, the aesthetics score, and the reason sentence are all read-only. Nothing here changes which frame gets the crown: the crown is decided first, by the measurements described above, and the Score section only explains that decision after the fact.</p>
+    <p>When Palomino has worked out, or you have set, the folder's genre, the reason sentence leads with the criteria that matter most for that kind of shoot: the eyes for a wedding, sharpness and the subject for wildlife or sports, focus and stacking for macro, light and exposure for landscape. See <a href="/manual/viewing-and-filtering/">Viewing and Filtering</a> for the genre chip and its popover.</p>
 
     <h3>AI-written reasons</h3>
     <p>On a Mac that can run Apple's on-device model, Palomino writes the reason sentence itself instead of assembling it from a fixed set of phrases. The wording reads more naturally and can mention more than one thing about a frame at once. It runs entirely on your Mac, and your photographs are never uploaded.</p>
     <p>The sentence is checked before you see it. Palomino asks the model which measurements it used, and discards any sentence that refers to something the photo does not actually carry. When that happens, or when the model is unavailable, you get the measured wording instead. The rank and the crown never change either way.</p>
     <p>Model-written reasons are part of Pro, with one exception: crowned frames get one for everyone, so you can see what the feature does on your own photographs. Every other frame gets the measured wording, with a link under it to upgrade.</p>
+    <p>On macOS 27, Palomino also shows the model the photograph itself, downsampled, so the reason can mention things no measurement captures: motion blur on a wing, a distracting highlight, rain on the lens. Those appear under their own heading, "Noticed in the photo", so you can always tell what Palomino measured apart from what the model saw. The photograph is passed to the model on your own Mac and is never uploaded. On earlier versions of macOS the sentence is written from the measurements alone.</p>
     <p>Turn the feature off in Settings under Reasons if you prefer the measured wording everywhere. On a Mac without the on-device model, the setting is switched off and explains why.</p>
 
     <h2>Focus stacks</h2>
@@ -149,7 +155,7 @@
 
     <h2>Collapsing bursts</h2>
     <p>When a shoot has many bursts, you can collapse each burst to a single thumbnail so the filmstrip and grid show one frame per burst instead of every frame. Open the <strong>View</strong> menu and choose <strong>Collapse Bursts</strong>. The same menu item then reads <strong>Expand Bursts</strong>, which turns the behavior back off. Collapsing starts off when you open a folder, so the full set shows until you turn it on.</p>
-    <p>A collapsed burst shows one representative thumbnail with a stack badge and the frame count, for example a stack icon next to "3." The representative is the burst's best crowned frame when that frame is present and matches the active filter, otherwise the first frame of the group.</p>
+    <p>A collapsed burst shows one representative thumbnail with a stack badge and the frame count, for example a stack icon next to "3." The representative is the burst's best crowned frame when that frame is present and matches the active filter, otherwise the first frame of the group. With rank order on, it is the best-ranked frame the strip can show.</p>
 
     <figure class="figure">
       <img src="/assets/manual/collapsed-burst.jpg" width="1400" height="339" loading="lazy" alt="The same burst collapsed to a single thumbnail in the grid, with a stack badge showing the frame count">
