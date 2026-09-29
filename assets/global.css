@@ -410,6 +410,9 @@ html[data-theme="dark"] .darkroom { background: #0b0a09; border-top: 1px solid #
 .ed-columns > div + div { padding-left: 32px; border-left: 1px solid var(--rule); }
 .ed-columns h3 { font-size: 1rem; margin-bottom: 8px; }
 .ed-columns p { color: var(--muted); font-size: 0.95rem; }
+.ed-columns.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.ed-intro { grid-column: 1 / span 8; max-width: 38em; margin-bottom: 28px; }
+.darkroom .darkroom-lede { grid-column: 1 / span 8; margin-top: 18px; color: #d9d3c8; max-width: 40em; }
 
 /* The belief, set as a single typographic statement. */
 .statement { padding: 120px 0 104px; }
@@ -575,6 +578,10 @@ html[data-theme="dark"] .darkroom { background: #0b0a09; border-top: 1px solid #
   .ed-split > h2, .ed-split > .ed-aside { grid-column: 1 / span 5; }
   .ed-split > .ed-body { grid-column: 6 / span 7; }
   .statement h2, .statement .statement-lead { grid-column: 1 / span 11; }
+  .ed-columns.four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ed-columns.four > div:nth-child(3) { padding-left: 0; border-left: 0; }
+  .ed-columns.four > div:nth-child(n+3) { border-top: 1px solid var(--rule); margin-top: 18px; padding-top: 22px; }
+  .ed-intro { grid-column: 1 / -1; }
   .statement .statement-follow { grid-column: 1 / span 8; }
   .spread-bleed { grid-template-columns: minmax(14rem, 20rem) minmax(0, 1fr); column-gap: 40px; }
   .spread-bleed.from-left { grid-template-columns: minmax(0, 1fr) minmax(14rem, 20rem); }
@@ -611,6 +618,8 @@ html[data-theme="dark"] .darkroom { background: #0b0a09; border-top: 1px solid #
   .video-frame .play-badge { left: 16px; bottom: 16px; }
   .video-frame .play-badge span { width: 48px; height: 48px; }
   .ed-columns, .marketing .features, .marketing .features.two-up, .plans, .contact-grid { grid-template-columns: 1fr; }
+  .ed-columns.four { grid-template-columns: 1fr; }
+  .ed-columns.four > div:nth-child(n+3) { margin-top: 0; }
   .ed-columns > div, .ed-columns > div + div,
   .marketing .feature, .marketing .features > .feature + .feature,
   .plan, .plan + .plan,
