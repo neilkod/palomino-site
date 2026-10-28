@@ -34,6 +34,7 @@ function load(src, search, storage, ctx) {
   ctx.sessionStorage = storage || memoryStorage();
   ctx.URLSearchParams = URLSearchParams;
   ctx.document = {
+    referrer: ctx.referrer || "",
     createElement: function () { return {}; },
     getElementsByTagName: function () {
       return [{ parentNode: { insertBefore: function (el) { injected.push(el.src); } } }];
@@ -102,6 +103,15 @@ load(withId, "?utm_source=reddit", session);
 assert.strictEqual(load(withId, "", session).injected.length, 1);
 assert.strictEqual(load(withId, "?utm_source=newsletter", session).injected.length, 0);
 assert.strictEqual(load(withId, "", session).injected.length, 0);
+
+// Reddit's event setup tool loads the pixel without starting an ad session.
+const toolSession = memoryStorage();
+assert.strictEqual(load(withId, "?reddit_open_est=true", toolSession).injected.length, 1);
+assert.strictEqual(load(withId, "", toolSession).injected.length, 0);
+assert.strictEqual(load(withId, "", undefined, { opener: {} }).injected.length, 1);
+assert.strictEqual(load(withId, "", undefined, { referrer: "https://ads.reddit.com/events-manager" }).injected.length, 1);
+assert.strictEqual(load(withId, "", undefined, { referrer: "https://www.reddit.com/r/WeddingPhotography/" }).injected.length, 0);
+assert.strictEqual(load(withId, "", undefined, { referrer: "https://ads.reddit.com.example.net/" }).injected.length, 0);
 
 // Blocked storage falls back to the URL alone instead of throwing.
 const blocked = { getItem: function () { throw new Error("blocked"); }, setItem: function () { throw new Error("blocked"); } };
