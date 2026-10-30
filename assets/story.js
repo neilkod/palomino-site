@@ -3,21 +3,20 @@
   if (!root) return;
   var stage = root.querySelector(".story-stage");
   var scenes = Array.prototype.slice.call(stage.querySelectorAll(".story-scene"));
-  var ticksEl = root.querySelector(".story-ticks");
+  var dotsEl = root.querySelector(".story-dots");
   var toggle = root.querySelector(".story-toggle");
   var count = root.querySelector(".story-count");
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var cur = 0, timer = null, started = 0, remaining = 0, playing = false, userPaused = reduce;
 
-  ticksEl.style.gridTemplateColumns = "repeat(" + scenes.length + ", 1fr)";
-  var ticks = scenes.map(function (s, i) {
+  var dots = scenes.map(function (s, i) {
     s.setAttribute("aria-label", "Scene " + (i + 1) + " of " + scenes.length);
     var b = document.createElement("button");
-    b.className = "story-tick";
+    b.className = "story-dot";
     b.type = "button";
-    b.setAttribute("aria-label", "Go to scene " + (i + 1));
+    b.setAttribute("aria-label", "Show scene " + (i + 1) + " of " + scenes.length);
     b.addEventListener("click", function () { show(i); });
-    ticksEl.appendChild(b);
+    dotsEl.appendChild(b);
     return b;
   });
 
@@ -29,14 +28,9 @@
       s.classList.toggle("on", k === cur);
       s.setAttribute("aria-hidden", k === cur ? "false" : "true");
     });
-    ticks.forEach(function (t, k) {
-      t.classList.remove("active", "done");
-      if (k < cur) t.classList.add("done");
-    });
+    dots.forEach(function (t, k) { t.setAttribute("aria-current", k === cur ? "true" : "false"); });
     var d = dur(cur);
     stage.style.setProperty("--story-dur", d + "ms");
-    void ticks[cur].offsetWidth;
-    ticks[cur].classList.add("active");
     count.textContent = (cur + 1) + " / " + scenes.length;
     remaining = d;
     if (playing) schedule();

@@ -656,13 +656,13 @@ html[data-theme="dark"] .darkroom { background: #0b0a09; border-top: 1px solid #
 }
 
 /* 9. Boardwalk story: a looping walkthrough inside a .darkroom band. */
-.story { --story-accent: #d2a56f; --story-fade: 1200ms; }
+.story { --story-fade: 1200ms; }
 .story h2 { grid-column: 1 / span 8; }
 .story .story-stage {
   grid-column: 1 / -1; margin-top: 40px;
   position: relative; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 4px; isolation: isolate; background: #0b0a09;
 }
-.story .story-bar { grid-column: 1 / -1; display: flex; align-items: center; gap: 14px; margin-top: 14px; }
+.story .story-bar { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 14px; margin-top: 14px; }
 .story .story-note { grid-column: 1 / span 8; margin-top: 22px; color: var(--muted); font-size: 0.95rem; max-width: 44em; }
 .story-scene {
   position: absolute; inset: 0; opacity: 0; visibility: hidden;
@@ -695,16 +695,18 @@ html[data-theme="dark"] .darkroom { background: #0b0a09; border-top: 1px solid #
   font: 600 0.72rem/1 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; height: 32px; padding: 0 12px; border-radius: 6px;
 }
 .story-ctl:hover { border-color: var(--muted); }
-.story-ctl:focus-visible, .story-tick:focus-visible, .story-scene a:focus-visible { outline: 2px solid #ebe6dc; outline-offset: 3px; }
-.story-ticks { flex: 1; display: grid; gap: 6px; min-width: 0; }
-.story-tick { appearance: none; border: 0; padding: 14px 0; background: none; cursor: pointer; position: relative; }
-.story-tick::before, .story-tick::after { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 2px; margin-top: -1px; background: var(--rule); }
-.story-tick::after { background: var(--story-accent); transform-origin: left; transform: scaleX(0); }
-.story-tick.done::after { transform: scaleX(1); }
-.story-tick.active::after { animation: story-fill var(--story-dur) linear forwards; }
-@keyframes story-fill { to { transform: scaleX(1); } }
-.story.paused .story-tick.active::after, .story.paused .story-scene.on .story-photo img { animation-play-state: paused; }
-.story-count { font: 0.72rem var(--mono); color: var(--muted); letter-spacing: 0.06em; white-space: nowrap; }
+.story-ctl:focus-visible, .story-dot:focus-visible, .story-scene a:focus-visible { outline: 2px solid #ebe6dc; outline-offset: 3px; }
+.story-dots { display: flex; justify-content: center; gap: 2px; }
+.story-dot { appearance: none; border: 0; background: none; padding: 0; width: 24px; height: 24px; cursor: pointer; position: relative; }
+.story-dot::before {
+  content: ""; position: absolute; left: 50%; top: 50%; width: 8px; height: 8px; margin: -4px 0 0 -4px; border-radius: 50%;
+  background: rgba(235, 230, 220, 0.28); transition: background 0.2s ease, transform 0.2s ease;
+}
+.story-dot:hover::before { background: rgba(235, 230, 220, 0.55); }
+.story-dot[aria-current="true"]::before { background: #ebe6dc; transform: scale(1.25); }
+.story.paused .story-scene.on .story-photo img { animation-play-state: paused; }
+.story-count { font: 0.72rem var(--mono); color: var(--muted); letter-spacing: 0.06em; white-space: nowrap; justify-self: end; }
+.story-toggle { justify-self: start; }
 @media (max-width: 720px) {
   .story h2 { grid-column: 1 / -1; }
   .story .story-note { grid-column: 1 / -1; }
@@ -719,5 +721,4 @@ html[data-theme="dark"] .darkroom { background: #0b0a09; border-top: 1px solid #
 @media (prefers-reduced-motion: reduce) {
   .story { --story-fade: 1ms; }
   .story-scene.on .story-photo img { animation: none; }
-  .story-tick.active::after { animation: none; transform: scaleX(1); }
 }
