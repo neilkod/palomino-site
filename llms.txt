@@ -50,6 +50,14 @@ ARW, DNG, NEF, CR3, RAF, ORF, HEIC, JPEG, and more than 20 other formats.
 
 A wedding runs to several thousand frames, and Palomino is built to get that card down to its keepers in one sitting. Face-priority zoom on the V key checks eyes at 300 percent in one key, a badge flags closed eyes, and bursts from moments like the first kiss are grouped with a crown on the sharpest frame. You can cull a full wedding in the free version; exports are capped at 50 photos per session, and Palomino Pro removes the cap for a one-time $29.99 purchase. Details: [Wedding photo culling on the Mac](https://palomino-app.com/weddings/).
 
+## For sports photographers
+
+A game or a jam shot at 20 frames a second fills a card with near-identical frames. Palomino groups each burst, frames shot within half a second of each other stay together by timing alone, and a crown marks the sharpest frame. Compare shows two frames side by side with linked zoom, the reject-others shortcut clears the rest of a burst, and Copy to Folder sends the picks to a folder for the editor. Details: [Sports photo culling on the Mac](https://palomino-app.com/sports/).
+
+## For wildlife photographers
+
+Wildlife bursts run long and differ by a wingbeat. Palomino measures sharpness at the subject's eye when it finds one, on people and many animals including dogs, cats, foxes, and deer, and ranks bird bursts by overall sharpness because macOS has no bird eye model. Rank order (R) lays out each burst best first. Details: [Wildlife photo culling on the Mac](https://palomino-app.com/wildlife/).
+
 ## For Hasselblad shooters
 
 Palomino reads Hasselblad 3FR and FFF files directly using the embedded JPEG preview, so you can cull thousands of frames fast and then hand your keepers to Phocus to develop. It complements Phocus rather than replacing it: cull in Palomino, export the keepers to a folder, open that folder in Phocus. With Phocus sidecars turned on in Settings, exporting a 3FR file also writes a Phocus sidecar so your star rating appears in Phocus. Details: [Cull Hasselblad shoots fast on your Mac](https://palomino-app.com/hasselblad/).
@@ -81,6 +89,8 @@ Every page of the manual is listed below.
 - [Palomino homepage](https://palomino-app.com/): what the app is, what it costs, and how it works.
 - [Download Palomino on the Mac App Store](https://apps.apple.com/us/app/palomino/id6779869483?mt=12): free to download, with Pro as a one-time purchase.
 - [Wedding photo culling on the Mac](https://palomino-app.com/weddings/): culling a wedding card in one sitting, face-priority zoom, blink flags, and pricing.
+- [Sports photo culling on the Mac](https://palomino-app.com/sports/): grouping bursts, keeping the sharpest frame, and sending selects to the editor the same night.
+- [Wildlife photo culling on the Mac](https://palomino-app.com/wildlife/): sharpness measured at the eye, bursts in rank order, and sending keepers to the editor.
 - [Cull Hasselblad shoots fast on your Mac](https://palomino-app.com/hasselblad/): 3FR and FFF culling, and handing keepers to Phocus.
 - [Cull Fujifilm shoots fast, before Lightroom imports them](https://palomino-app.com/fuji/): RAF culling with your film simulation, on X series and GFX.
 - [A Photo Mechanic alternative for the Mac](https://palomino-app.com/switching/): what carries over, where ratings live, and why Palomino leaves your card alone.

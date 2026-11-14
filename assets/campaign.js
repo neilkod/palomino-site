@@ -6,7 +6,9 @@
       "lightroom-wildlife": "reddit-lightroom-wildlife",
       "sunday": "reddit-sunday",
       "burst": "reddit-burst",
-      "lightroom-import": "reddit-lr-import"
+      "lightroom-import": "reddit-lr-import",
+      "sports": "reddit-sports",
+      "wildlife": "reddit-wildlife"
     };
     var fallback = "reddit-other";
     var storageKey = "palomino-ct";

@@ -64,6 +64,8 @@ assertTagged(run("?utm_source=reddit&utm_campaign=Lightroom-Wildlife", "/"), "re
 assertTagged(run("?utm_source=reddit&utm_campaign=sunday", "/weddings/"), "reddit-sunday");
 assertTagged(run("?utm_source=reddit&utm_campaign=burst&rdt_cid=123", "/"), "reddit-burst");
 assertTagged(run("?utm_source=reddit&utm_campaign=lightroom-import", "/"), "reddit-lr-import");
+assertTagged(run("?utm_source=reddit&utm_campaign=sports", "/sports/"), "reddit-sports");
+assertTagged(run("?utm_source=reddit&utm_campaign=Wildlife", "/wildlife/"), "reddit-wildlife");
 
 const session = memoryStorage();
 assertTagged(run("?utm_source=reddit&utm_campaign=sunday", "/weddings/", session), "reddit-sunday");
