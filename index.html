@@ -227,11 +227,11 @@ src="https://www.facebook.com/tr?id=1594358832218153&ev=PageView&noscript=1"
       <p class="req">It requires macOS 15 Sequoia or later and runs on Apple silicon and Intel Macs.</p>
     </div>
   </div>
-  <figure class="plate-wide crop-phone">
+  <figure class="plate-wide">
     <div class="ratio-box">
-      <img src="assets/screenshot-wedding-grid.jpg" width="2000" height="1250" fetchpriority="high" alt="Palomino grid view of a 70-photo wedding folder, with star ratings, pick flags, rejects, and color labels on the thumbnails and a filter bar that counts picks, rejects, ratings, labels, and underexposed frames">
+      <video class="js-hero-video" src="/assets/boardwalk-cull.mp4" poster="/assets/boardwalk-cull-poster.jpg" width="1600" height="1000" muted loop playsinline controls preload="none" aria-label="Screen recording of Palomino culling 425 Sony RAW files from the Santa Cruz boardwalk in real time: it collapses near-identical frames into bursts, compares two frames of one burst zoomed together, picks one and rejects the rest of that burst, picks four more bursts, and copies the 5 picks to a folder"></video>
     </div>
-    <figcaption><strong>Grid view</strong> A wedding folder mid-cull, with stars, picks, rejects, and color labels on the thumbnails.</figcaption>
+    <figcaption><strong>Real time</strong> An afternoon of Sony RAW files from the Santa Cruz boardwalk, culled from bursts down to picks and copied to a folder.</figcaption>
   </figure>
 </header>
 
@@ -548,6 +548,12 @@ src="https://www.facebook.com/tr?id=1594358832218153&ev=PageView&noscript=1"
 <script src="/assets/reddit-pixel.js"></script>
 <script>
   (function () {
+    var heroVideo = document.querySelector(".js-hero-video");
+    if (heroVideo && !(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches)) {
+      var playing = heroVideo.play();
+      if (playing && playing.catch) playing.catch(function () {});
+    }
+
     var isMac = /Mac/.test(navigator.platform || navigator.userAgent);
     var isTouch = navigator.maxTouchPoints > 1;
     if (isMac && !isTouch) {
