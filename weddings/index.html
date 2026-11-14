@@ -92,8 +92,9 @@
   </div>
   <figure class="plate-wide crop-phone">
     <div class="ratio-box">
-      <img src="/assets/screenshot-wedding-grid.jpg" width="2000" height="1250" fetchpriority="high" alt="Palomino grid view of a 70-photo wedding folder, with star ratings, pick flags, rejects, and color labels on the thumbnails and a filter bar that counts picks, rejects, ratings, labels, and underexposed frames">
+      <video class="js-hero-video" src="/assets/wedding-cull.mp4" poster="/assets/wedding-cull-poster.jpg" width="1600" height="1000" muted loop playsinline controls preload="none" aria-label="Screen recording of Palomino culling a 70-photo wedding folder: it zooms to the couple's faces with an eyes-open check, steps through the frames one key at a time, marks a pick, and switches to the grid view with ratings, flags, and labels"></video>
     </div>
+    <figcaption>A 70-photo wedding folder in Palomino: one key zooms to the faces, the arrow keys step through the frames, and G shows the whole folder as a grid.</figcaption>
   </figure>
 </header>
 
@@ -225,6 +226,12 @@
           window.location.href = link.href.replace(/^https:\/\//, "macappstore://");
         });
       });
+    }
+
+    var heroVideo = document.querySelector(".js-hero-video");
+    if (heroVideo && !(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches)) {
+      var playing = heroVideo.play();
+      if (playing && playing.catch) playing.catch(function () {});
     }
 
     var toggle = document.querySelector(".js-theme-toggle");
