@@ -8,7 +8,10 @@
       "burst": "reddit-burst",
       "lightroom-import": "reddit-lr-import",
       "sports": "reddit-sports",
-      "wildlife": "reddit-wildlife"
+      "wildlife": "reddit-wildlife",
+      "wedding-kiss": "reddit-wedding-kiss",
+      "wedding-blink": "reddit-wedding-blink",
+      "wedding-sneakpeek": "reddit-wedding-sneakpeek"
     };
     var fallback = "reddit-other";
     var storageKey = "palomino-ct";
