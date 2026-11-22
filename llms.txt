@@ -52,7 +52,7 @@ A wedding runs to several thousand frames, and Palomino is built to get that car
 
 ## For sports photographers
 
-A game or a jam shot at 20 frames a second fills a card with near-identical frames. Palomino groups each burst, frames shot within half a second of each other stay together by timing alone, and a crown marks the sharpest frame. Compare shows two frames side by side with linked zoom, the reject-others shortcut clears the rest of a burst, and Copy to Folder sends the picks to a folder for the editor. Details: [Sports photo culling on the Mac](https://palomino-app.com/sports/).
+A game or a jam shot at 20 frames a second fills a card with near-identical frames. Palomino groups each burst, frames shot within half a second of each other stay together by timing alone, and a crown marks the sharpest frame. Compare shows two frames side by side with linked zoom, the reject-others shortcut clears the rest of a burst, and Export to Folder sends the picks to a folder for the editor. Details: [Sports photo culling on the Mac](https://palomino-app.com/sports/).
 
 ## For wildlife photographers
 
@@ -79,7 +79,7 @@ Every page of the manual is listed below.
 - [Rating and flagging](https://palomino-app.com/manual/rating-and-flagging/): picks, rejects, star ratings, color labels, and the WASD grip.
 - [Viewing and filtering](https://palomino-app.com/manual/viewing-and-filtering/): the grid, the info panel, sort order, and filtering by flag, rating, or label.
 - [Bursts and stacks](https://palomino-app.com/manual/bursts-and-stacks/): burst grouping, focus stacks, keeper crowns, and the compare view.
-- [Copying your selects](https://palomino-app.com/manual/exporting/): the Copy to Folder sheet, copy modes, file naming, and copy presets.
+- [Copying your selects](https://palomino-app.com/manual/exporting/): the Export to Folder sheet, methods, file naming, and copy presets.
 - [Ratings and your editor](https://palomino-app.com/manual/ratings-and-your-editor/): how XMP sidecars carry your ratings into Lightroom, Capture One, and Phocus.
 - [Keyboard shortcuts](https://palomino-app.com/manual/keyboard-shortcuts/): every shortcut in the app, grouped by task.
 - [Troubleshooting](https://palomino-app.com/manual/troubleshooting/): fixes for the most common problems, from missing ratings to slow loading.
