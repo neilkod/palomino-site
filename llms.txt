@@ -56,7 +56,7 @@ A game or a jam shot at 20 frames a second fills a card with near-identical fram
 
 ## For wildlife photographers
 
-Wildlife bursts run long and differ by a wingbeat. Palomino measures sharpness at the subject's eye when it finds one, on people and many animals including dogs, cats, foxes, and deer, and ranks bird bursts by overall sharpness because macOS has no bird eye model. Rank order (R) lays out each burst best first. Details: [Wildlife photo culling on the Mac](https://palomino-app.com/wildlife/).
+Wildlife bursts run long and differ by a step or a turn of the head. Palomino measures sharpness at the subject's eye when it finds one, on people and many animals including dogs, cats, foxes, and deer, and ranks bird bursts by overall sharpness because macOS has no bird eye model. Rank order (R) lays out each burst best first. Details: [Wildlife photo culling on the Mac](https://palomino-app.com/wildlife/).
 
 ## For Hasselblad shooters
 
