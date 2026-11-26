@@ -23,7 +23,8 @@
     };
     var sources = {
       "reddit": { campaigns: redditCampaigns, fallback: "reddit-other" },
-      "meta": { campaigns: metaCampaigns, fallback: "meta-other" }
+      "meta": { campaigns: metaCampaigns, fallback: "meta-other" },
+      "tonalphoto": { campaigns: {}, fallback: "tonalphoto" }
     };
     var storageKey = "palomino-ct";
     var known = function (ct) {

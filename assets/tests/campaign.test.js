@@ -101,4 +101,12 @@ assertTagged(run("?utm_source=reddit&utm_campaign=sports", "/sports/", metaSessi
 assertTagged(run("", "/", metaSession), "reddit-sports");
 assertTagged(run("", "/", memoryStorage({ "palomino-ct": "meta-other" })), "meta-other");
 
+assertTagged(run("?utm_source=tonalphoto", "/hasselblad/"), "tonalphoto");
+assertTagged(run("?utm_source=TonalPhoto&utm_medium=referral&utm_campaign=firmware-tracker", "/hasselblad/"), "tonalphoto");
+assertTagged(run("?utm_source=tonalphoto&utm_campaign=__proto__", "/"), "tonalphoto");
+const blogSession = memoryStorage();
+assertTagged(run("?utm_source=tonalphoto", "/hasselblad/", blogSession), "tonalphoto");
+assertTagged(run("", "/manual/", blogSession), "tonalphoto");
+assertUntouched(run("?utm_source=newsletter", "/", blogSession));
+
 console.log("campaign.test.js: all assertions passed");
