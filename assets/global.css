@@ -722,3 +722,15 @@ html[data-theme="dark"] .darkroom { background: #0b0a09; border-top: 1px solid #
   .story { --story-fade: 1ms; }
   .story-scene.on .story-photo img { animation: none; }
 }
+
+.reviews { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 32px; margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--rule); }
+.reviews:has(> .review:only-child) { grid-template-columns: minmax(0, 560px); }
+.review { margin: 0; }
+.review blockquote { margin: 0; }
+.review blockquote p { font-family: var(--serif); font-size: 1.05rem; line-height: 1.45; margin: 0; }
+.review blockquote p::before { content: "\201C"; color: var(--accent-ink); }
+.review blockquote p::after { content: "\201D"; }
+.review figcaption { margin-top: 8px; font-family: var(--mono); font-size: 0.74rem; color: var(--faint); letter-spacing: 0.02em; }
+.hero-review { margin-top: 20px; max-width: 34em; }
+.hero-review blockquote p { font-size: 0.98rem; }
+@media (max-width: 720px) { .reviews { grid-template-columns: 1fr; } }
