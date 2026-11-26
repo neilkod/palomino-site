@@ -123,10 +123,6 @@ kbd {
 }
 
 /* Nav: a plain bar, the wordmark, a few links, one button. */
-.sale-bar {
-  background: var(--ink-button); color: var(--on-ink-button);
-  text-align: center; font-size: 0.86rem; line-height: 1.4; padding: 9px var(--gutter);
-}
 .site-nav { border-bottom: 1px solid var(--rule); }
 .site-nav .nav-inner {
   max-width: var(--page); margin: 0 auto; padding: 0 var(--gutter);
@@ -291,8 +287,6 @@ html[data-theme="dark"] .theme-toggle .moon { display: block; }
   display: block; margin: 6px 0 14px;
   font-family: var(--serif); font-size: 2.6rem; font-weight: 400; letter-spacing: -0.02em; line-height: 1.05;
 }
-.plan .price .price-was { font-size: 0.55em; color: var(--muted); margin-right: 0.35em; text-decoration-thickness: 1px; }
-.plan .price .price-was ~ small { display: block; margin: 8px 0 0; }
 .plan .price small { font-family: var(--sans); font-size: 0.85rem; color: var(--muted); letter-spacing: 0; margin-left: 10px; }
 .plan p { color: var(--muted); font-size: 0.94rem; max-width: 26em; }
 
