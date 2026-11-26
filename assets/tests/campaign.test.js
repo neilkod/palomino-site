@@ -82,4 +82,23 @@ assertUntouched(run("", "/", memoryStorage({ "palomino-ct": "attacker-token" }))
 assertUntouched(run("", "/", { getItem: function () { throw new Error("blocked"); } }));
 assertTagged(run("?utm_source=reddit&utm_campaign=burst", "/", { getItem: function () { throw new Error("blocked"); }, setItem: function () { throw new Error("blocked"); } }), "reddit-burst");
 
+assertTagged(run("?utm_source=meta", "/"), "meta-other");
+assertTagged(run("?utm_source=meta&utm_campaign=unknown", "/"), "meta-other");
+assertTagged(run("?utm_source=meta&utm_campaign=sunday", "/weddings/"), "meta-other");
+assertTagged(run("?utm_source=meta", "/hasselblad/"), "meta-other");
+assertTagged(run("?utm_source=meta&utm_campaign=__proto__", "/"), "meta-other");
+assertTagged(run("?utm_source=Meta&utm_campaign=BFCM", "/"), "meta-bfcm");
+assertTagged(run("?utm_source=meta&utm_campaign=general&fbclid=abc", "/"), "meta-general");
+assertTagged(run("?utm_source=meta&utm_campaign=wedding", "/weddings/"), "meta-wedding");
+assertTagged(run("?utm_source=meta&utm_campaign=sports", "/sports/"), "meta-sports");
+assertTagged(run("?utm_source=meta&utm_campaign=Wildlife", "/wildlife/"), "meta-wildlife");
+assertUntouched(run("?fbclid=abc", "/"));
+
+const metaSession = memoryStorage();
+assertTagged(run("?utm_source=meta&utm_campaign=sports", "/sports/", metaSession), "meta-sports");
+assertTagged(run("", "/manual/", metaSession), "meta-sports");
+assertTagged(run("?utm_source=reddit&utm_campaign=sports", "/sports/", metaSession), "reddit-sports");
+assertTagged(run("", "/", metaSession), "reddit-sports");
+assertTagged(run("", "/", memoryStorage({ "palomino-ct": "meta-other" })), "meta-other");
+
 console.log("campaign.test.js: all assertions passed");
