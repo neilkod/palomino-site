@@ -69,6 +69,7 @@ assertTagged(run("?utm_source=reddit&utm_campaign=Wildlife", "/wildlife/"), "red
 assertTagged(run("?utm_source=reddit&utm_campaign=wedding-kiss", "/weddings/"), "reddit-wedding-kiss");
 assertTagged(run("?utm_source=reddit&utm_campaign=Wedding-Blink", "/weddings/"), "reddit-wedding-blink");
 assertTagged(run("?utm_source=reddit&utm_campaign=wedding-sneakpeek", "/weddings/"), "reddit-wedding-sneakpeek");
+assertTagged(run("?utm_source=reddit&utm_campaign=BFCM", "/"), "reddit-bfcm");
 
 const session = memoryStorage();
 assertTagged(run("?utm_source=reddit&utm_campaign=sunday", "/weddings/", session), "reddit-sunday");

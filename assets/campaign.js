@@ -11,7 +11,8 @@
       "wildlife": "reddit-wildlife",
       "wedding-kiss": "reddit-wedding-kiss",
       "wedding-blink": "reddit-wedding-blink",
-      "wedding-sneakpeek": "reddit-wedding-sneakpeek"
+      "wedding-sneakpeek": "reddit-wedding-sneakpeek",
+      "bfcm": "reddit-bfcm"
     };
     var fallback = "reddit-other";
     var storageKey = "palomino-ct";
