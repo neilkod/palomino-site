@@ -19,6 +19,7 @@ function makePrice(text) {
 function run(iso, search) {
   const bodyKids = [{ tag: "nav" }];
   const prices = [makePrice("$29.99"), makePrice("Free")];
+  const inline = [{ textContent: "$29.99" }, { textContent: "$29.99" }, { textContent: "$19.99" }];
   const body = {
     get firstChild() { return bodyKids[0]; },
     insertBefore: function (el, ref) { bodyKids.splice(bodyKids.indexOf(ref), 0, el); }
@@ -33,11 +34,11 @@ function run(iso, search) {
       head: head,
       querySelector: function (sel) { return sel === ".js-appstore-link" ? storeLink : null; },
       createElement: function (tag) { return { tag: tag, nodeType: 1 }; },
-      querySelectorAll: function (sel) { return sel === ".price" ? prices : []; }
+      querySelectorAll: function (sel) { return sel === ".price" ? prices : sel === ".js-pro-price" ? inline : []; }
     }
   };
   vm.runInNewContext(src, ctx);
-  return { bodyKids: bodyKids, prices: prices, head: head };
+  return { bodyKids: bodyKids, prices: prices, inline: inline, head: head };
 }
 
 function onSale(r) { return r.bodyKids[0].className === "sale-bar"; }
@@ -46,6 +47,7 @@ function onSale(r) { return r.bodyKids[0].className === "sale-bar"; }
 let r = run("2026-11-26T07:59:59Z");
 assert.ok(!onSale(r));
 assert.strictEqual(r.prices[0].kids[0].nodeValue, "$29.99");
+assert.deepStrictEqual(r.inline.map(function (e) { return e.textContent; }), ["$29.99", "$29.99", "$19.99"]);
 assert.strictEqual(r.head.kids.length, 0);
 
 // Thanksgiving midnight Pacific shows the banner and the sale price.
@@ -58,6 +60,8 @@ assert.ok(/\.sale-bar\{/.test(r.head.kids[0].textContent));
 assert.strictEqual(r.prices[0].kids[0].className, "price-was");
 assert.strictEqual(r.prices[0].kids[0].textContent, "$29.99");
 assert.strictEqual(r.prices[0].kids[1].nodeValue, "$14.99");
+// Inline price mentions in body copy follow the sale; anything other than the full price is left alone.
+assert.deepStrictEqual(r.inline.map(function (e) { return e.textContent; }), ["$14.99", "$14.99", "$19.99"]);
 assert.strictEqual(r.prices[1].kids[0].nodeValue, "Free");
 
 // The last minute of December 1 Pacific is still on sale.

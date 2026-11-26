@@ -39,5 +39,9 @@
       first.nodeValue = "$14.99";
       el.insertBefore(was, first);
     });
+
+    document.querySelectorAll(".js-pro-price").forEach(function (el) {
+      if (el.textContent.trim() === "$29.99") el.textContent = "$14.99";
+    });
   } catch (e) {}
 })();
